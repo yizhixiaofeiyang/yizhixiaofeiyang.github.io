@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/qwe/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/qwe/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="记录字符集修改过程中的坑," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="请进入查看">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql5.7修改字符集为utf8">
+<meta property="og:url" content="http://example.com/2022/08/09/mysql5-7%E4%BF%AE%E6%94%B9%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%BAutf8/index.html">
+<meta property="og:site_name" content="hfy up up">
+<meta property="og:description" content="请进入查看">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/08/09/mysql5-7%E4%BF%AE%E6%94%B9%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%BAutf8/Users/HuangFeiYang/AppData/Roaming/Typora/typora-user-images/image-20220809012938150.png">
+<meta property="og:image" content="http://example.com/2022/08/09/mysql5-7%E4%BF%AE%E6%94%B9%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%BAutf8/Users/HuangFeiYang/AppData/Roaming/Typora/typora-user-images/image-20220809013006672.png">
+<meta property="og:image" content="http://example.com/2022/08/09/mysql5-7%E4%BF%AE%E6%94%B9%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%BAutf8/Users/HuangFeiYang/AppData/Roaming/Typora/typora-user-images/image-20220809013030766.png">
+<meta property="og:image" content="http://example.com/2022/08/09/mysql5-7%E4%BF%AE%E6%94%B9%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%BAutf8/Users/HuangFeiYang/AppData/Roaming/Typora/typora-user-images/image-20220809013137777.png">
+<meta property="article:published_time" content="2022-08-08T17:27:05.000Z">
+<meta property="article:modified_time" content="2022-08-08T17:32:18.366Z">
+<meta property="article:author" content="feiyangHuang">
+<meta property="article:tag" content="记录字符集修改过程中的坑">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/08/09/mysql5-7%E4%BF%AE%E6%94%B9%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%BAutf8/Users/HuangFeiYang/AppData/Roaming/Typora/typora-user-images/image-20220809012938150.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2022/08/09/mysql5-7修改字符集为utf8/"/>
+
+
+
+
+
+  <title>mysql5.7修改字符集为utf8 | hfy up up</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">hfy up up</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/09/mysql5-7%E4%BF%AE%E6%94%B9%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%BAutf8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hfy up up">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">mysql5.7修改字符集为utf8</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-09T01:27:05+08:00">
+                2022-08-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>请进入查看</p>
+<a id="more"></a>
+
+<p><strong>首先</strong></p>
+<p>按照百度的自己创建在mysql server下创建my.ini没有用，完全没法修改，重要的是找到default的my.ini</p>
+<p>两种方法</p>
+<ul>
+<li>win+R—-&gt;regedit—-&gt;HKEY_LOCAL_MACHINE—-&gt;SYSTEM—-&gt;CurrentControlSet—-&gt;Services—-&gt;MySQL而imagepath的值为：”D:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld” –defaults-file=”C:\ProgramData\MySQL\MySQL Server 5.7\my.ini” MySQL57此时它的配置文件存放在：C:\ProgramData\MySQL\MySQL Server 5.7\my.ini<br>查看它的my.ini文件在哪里，然后通过那个再修改。</li>
+<li><img src="/2022/08/09/mysql5-7%E4%BF%AE%E6%94%B9%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%BAutf8/Users\HuangFeiYang\AppData\Roaming\Typora\typora-user-images\image-20220809012938150.png" alt="image-20220809012938150" style="zoom:50%;">
+
+</li>
+</ul>
+<p><strong>其次</strong></p>
+<p>找到后打开文件。主要修改有三处</p>
+<p><img src="/2022/08/09/mysql5-7%E4%BF%AE%E6%94%B9%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%BAutf8/Users\HuangFeiYang\AppData\Roaming\Typora\typora-user-images\image-20220809013006672.png" alt="image-20220809013006672"></p>
+<p><img src="/2022/08/09/mysql5-7%E4%BF%AE%E6%94%B9%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%BAutf8/Users\HuangFeiYang\AppData\Roaming\Typora\typora-user-images\image-20220809013030766.png" alt="image-20220809013030766"></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br></pre></td><td class="code"><pre><span class="line"># Other default tuning values</span><br><span class="line"># MySQL Server Instance Configuration File</span><br><span class="line"># ----------------------------------------------------------------------</span><br><span class="line"># Generated by the MySQL Server Instance Configuration Wizard</span><br><span class="line"># </span><br><span class="line"># Installation Instructions</span><br><span class="line"># ----------------------------------------------------------------------</span><br><span class="line"># </span><br><span class="line"># On Linux you can copy this file to /etc/my.cnf to set global options,</span><br><span class="line"># mysql-data-dir/my.cnf to set server-specific options</span><br><span class="line"># (@localstatedir@ for this installation) or to</span><br><span class="line"># ~/.my.cnf to set user-specific options.</span><br><span class="line"># </span><br><span class="line"># On Windows you should keep this file in the installation directory </span><br><span class="line"># of your server (e.g. C:\Program Files\MySQL\MySQL Server X.Y). To</span><br><span class="line"># make sure the server reads the config file use the startup option </span><br><span class="line"># &quot;--defaults-file&quot;. </span><br><span class="line"># </span><br><span class="line"># To run the server from the command line, execute this in a </span><br><span class="line"># command line shell, e.g.</span><br><span class="line"># mysqld --defaults-file=&quot;C:\Program Files\MySQL\MySQL Server X.Y\my.ini&quot;</span><br><span class="line"># </span><br><span class="line"># To install the server as a Windows service manually, execute this in a </span><br><span class="line"># command line shell, e.g.</span><br><span class="line"># mysqld --install MySQLXY --defaults-file=&quot;C:\Program Files\MySQL\MySQL Server X.Y\my.ini&quot;</span><br><span class="line"># </span><br><span class="line"># And then execute this in a command line shell to start the server, e.g.</span><br><span class="line"># net start MySQLXY</span><br><span class="line"># </span><br><span class="line"># Guidelines for editing this file</span><br><span class="line"># ----------------------------------------------------------------------</span><br><span class="line"># </span><br><span class="line"># In this file, you can use all long options that the program supports.</span><br><span class="line"># If you want to know the options a program supports, start the program</span><br><span class="line"># with the &quot;--help&quot; option.</span><br><span class="line"># </span><br><span class="line"># More detailed information about the individual options can also be</span><br><span class="line"># found in the manual.</span><br><span class="line"># </span><br><span class="line"># For advice on how to change settings please see</span><br><span class="line"># https://dev.mysql.com/doc/refman/5.7/en/server-configuration-defaults.html</span><br><span class="line"># </span><br><span class="line"># CLIENT SECTION</span><br><span class="line"># ----------------------------------------------------------------------</span><br><span class="line"># </span><br><span class="line"># The following options will be read by MySQL client applications.</span><br><span class="line"># Note that only client applications shipped by MySQL are guaranteed</span><br><span class="line"># to read this section. If you want your own MySQL client program to</span><br><span class="line"># honor these values, you need to specify it as an option during the</span><br><span class="line"># MySQL client library initialization.</span><br><span class="line"># </span><br><span class="line">[client]</span><br><span class="line"># pipe=</span><br><span class="line"></span><br><span class="line"># socket=MYSQL</span><br><span class="line"></span><br><span class="line">port=3306</span><br><span class="line">default-character-set=utf8  # 修改1</span><br><span class="line"></span><br><span class="line">[mysql]</span><br><span class="line">no-beep</span><br><span class="line">default-character-set=utf8  # 修改2</span><br><span class="line"></span><br><span class="line"># SERVER SECTION</span><br><span class="line"># ----------------------------------------------------------------------</span><br><span class="line"># </span><br><span class="line"># The following options will be read by the MySQL Server. Make sure that</span><br><span class="line"># you have installed the server correctly (see above) so it reads this </span><br><span class="line"># file.</span><br><span class="line"># </span><br><span class="line"># server_type=3</span><br><span class="line">[mysqld]</span><br><span class="line"></span><br><span class="line"># The next three options are mutually exclusive to SERVER_PORT below.</span><br><span class="line"># skip-networking</span><br><span class="line"># enable-named-pipe</span><br><span class="line"># shared-memory</span><br><span class="line"></span><br><span class="line"># shared-memory-base-name=MYSQL</span><br><span class="line"></span><br><span class="line"># The Pipe the MySQL Server will use</span><br><span class="line"># socket=MYSQL</span><br><span class="line"></span><br><span class="line"># The TCP/IP Port the MySQL Server will listen on</span><br><span class="line">port=3306</span><br><span class="line"></span><br><span class="line"># Path to installation directory. All paths are usually resolved relative to this.</span><br><span class="line"># basedir=&quot;C:/Program Files/MySQL/MySQL Server 5.7/&quot;</span><br><span class="line"></span><br><span class="line"># Path to the database root</span><br><span class="line">datadir=C:/ProgramData/MySQL/MySQL Server 5.7/Data</span><br><span class="line"></span><br><span class="line"># The default character set that will be used when a new schema or table is</span><br><span class="line"># created and no character set is defined</span><br><span class="line">character-set-server=utf8  # 修改3</span><br><span class="line"></span><br><span class="line"># The default storage engine that will be used when create new tables when</span><br><span class="line">default-storage-engine=INNODB</span><br><span class="line"></span><br><span class="line"># Set the SQL mode to strict</span><br><span class="line">sql-mode=&quot;STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION&quot;</span><br><span class="line"></span><br><span class="line"># General and Slow logging.</span><br><span class="line">log-output=FILE</span><br><span class="line"></span><br><span class="line">general-log=0</span><br><span class="line"></span><br><span class="line">general_log_file=&quot;LAPTOP-L5LMS0BI.log&quot;</span><br><span class="line"></span><br><span class="line">slow-query-log=1</span><br><span class="line"></span><br><span class="line">slow_query_log_file=&quot;LAPTOP-L5LMS0BI-slow.log&quot;</span><br><span class="line"></span><br><span class="line">long_query_time=10</span><br><span class="line"></span><br><span class="line"># Error Logging.</span><br><span class="line">log-error=&quot;LAPTOP-L5LMS0BI.err&quot;</span><br><span class="line"></span><br><span class="line"># ***** Group Replication Related *****</span><br><span class="line"># Specifies the base name to use for binary log files. With binary logging</span><br><span class="line"># enabled, the server logs all statements that change data to the binary</span><br><span class="line"># log, which is used for backup and replication.</span><br><span class="line"># log-bin</span><br><span class="line"></span><br><span class="line"># ***** Group Replication Related *****</span><br><span class="line"># Specifies the server ID. For servers that are used in a replication topology,</span><br><span class="line"># you must specify a unique server ID for each replication server, in the</span><br><span class="line"># range from 1 to 2^32 − 1. “Unique” means that each ID must be different</span><br><span class="line"># from every other ID in use by any other replication source or replica.</span><br><span class="line">server-id=1</span><br><span class="line"># ***** Group Replication Related *****</span><br><span class="line"># The host name or IP address of the replica to be reported to the source</span><br><span class="line"># during replica registration. This value appears in the output of SHOW SLAVE HOSTS</span><br><span class="line"># on the source server. Leave the value unset if you do not want the replica to</span><br><span class="line"># register itself with the source.</span><br><span class="line"># report_host=0.0</span><br><span class="line"></span><br><span class="line"># ***** Group Replication Related *****</span><br><span class="line"># Defines the algorithm used to hash the writes extracted during a transaction. If you</span><br><span class="line"># are using Group Replication, this variable must be set to XXHASH64 because the process</span><br><span class="line"># of extracting the writes from a transaction is required for conflict detection on all</span><br><span class="line"># group members.</span><br><span class="line"># transaction_write_set_extraction=0.0</span><br><span class="line">lower_case_table_names=1</span><br><span class="line"></span><br><span class="line"># Secure File Priv.</span><br><span class="line">secure-file-priv=&quot;C:/ProgramData/MySQL/MySQL Server 5.7/Uploads&quot;</span><br><span class="line"></span><br><span class="line"># The maximum amount of concurrent sessions the MySQL server will</span><br><span class="line"># allow. One of these connections will be reserved for a user with</span><br><span class="line"># SUPER privileges to allow the administrator to login even if the</span><br><span class="line"># connection limit has been reached.</span><br><span class="line">max_connections=151</span><br><span class="line"></span><br><span class="line"># The number of open tables for all threads. Increasing this value</span><br><span class="line"># increases the number of file descriptors that mysqld requires.</span><br><span class="line"># Therefore you have to make sure to set the amount of open files</span><br><span class="line"># allowed to at least 4096 in the variable &quot;open-files-limit&quot; in</span><br><span class="line"># section [mysqld_safe]</span><br><span class="line">table_open_cache=2000</span><br><span class="line"></span><br><span class="line"># Maximum size for internal (in-memory) temporary tables. If a table</span><br><span class="line"># grows larger than this value, it is automatically converted to disk</span><br><span class="line"># based table This limitation is for a single table. There can be many</span><br><span class="line"># of them.</span><br><span class="line">tmp_table_size=37M</span><br><span class="line"></span><br><span class="line"># How many threads we should keep in a cache for reuse. When a client</span><br><span class="line"># disconnects, the client&#x27;s threads are put in the cache if there aren&#x27;t</span><br><span class="line"># more than thread_cache_size threads from before.  This greatly reduces</span><br><span class="line"># the amount of thread creations needed if you have a lot of new</span><br><span class="line"># connections. (Normally this doesn&#x27;t give a notable performance</span><br><span class="line"># improvement if you have a good thread implementation.)</span><br><span class="line">thread_cache_size=10</span><br><span class="line"></span><br><span class="line"># *** MyISAM Specific options</span><br><span class="line"># The maximum size of the temporary file MySQL is allowed to use while</span><br><span class="line"># recreating the index (during REPAIR, ALTER TABLE or LOAD DATA INFILE.</span><br><span class="line"># If the file-size would be bigger than this, the index will be created</span><br><span class="line"># through the key cache (which is slower).</span><br><span class="line">myisam_max_sort_file_size=100G</span><br><span class="line"></span><br><span class="line"># The size of the buffer that is allocated when sorting MyISAM indexes</span><br><span class="line"># during a REPAIR TABLE or when creating indexes with CREATE INDEX</span><br><span class="line"># or ALTER TABLE.</span><br><span class="line">myisam_sort_buffer_size=65M</span><br><span class="line"></span><br><span class="line"># Size of the Key Buffer, used to cache index blocks for MyISAM tables.</span><br><span class="line"># Do not set it larger than 30% of your available memory, as some memory</span><br><span class="line"># is also required by the OS to cache rows. Even if you&#x27;re not using</span><br><span class="line"># MyISAM tables, you should still set it to 8-64M as it will also be</span><br><span class="line"># used for internal temporary disk tables.</span><br><span class="line">key_buffer_size=8M</span><br><span class="line"></span><br><span class="line"># Size of the buffer used for doing full table scans of MyISAM tables.</span><br><span class="line"># Allocated per thread, if a full scan is needed.</span><br><span class="line">read_buffer_size=64K</span><br><span class="line"></span><br><span class="line">read_rnd_buffer_size=256K</span><br><span class="line"></span><br><span class="line"># *** INNODB Specific options ***</span><br><span class="line"># innodb_data_home_dir=</span><br><span class="line"></span><br><span class="line"># Use this option if you have a MySQL server with InnoDB support enabled</span><br><span class="line"># but you do not plan to use it. This will save memory and disk space</span><br><span class="line"># and speed up some things.</span><br><span class="line"># skip-innodb</span><br><span class="line"></span><br><span class="line"># If set to 1, InnoDB will flush (fsync) the transaction logs to the</span><br><span class="line"># disk at each commit, which offers full ACID behavior. If you are</span><br><span class="line"># willing to compromise this safety, and you are running small</span><br><span class="line"># transactions, you may set this to 0 or 2 to reduce disk I/O to the</span><br><span class="line"># logs. Value 0 means that the log is only written to the log file and</span><br><span class="line"># the log file flushed to disk approximately once per second. Value 2</span><br><span class="line"># means the log is written to the log file at each commit, but the log</span><br><span class="line"># file is only flushed to disk approximately once per second.</span><br><span class="line">innodb_flush_log_at_trx_commit=1</span><br><span class="line"></span><br><span class="line"># The size of the buffer InnoDB uses for buffering log data. As soon as</span><br><span class="line"># it is full, InnoDB will have to flush it to disk. As it is flushed</span><br><span class="line"># once per second anyway, it does not make sense to have it very large</span><br><span class="line"># (even with long transactions).</span><br><span class="line">innodb_log_buffer_size=1M</span><br><span class="line"></span><br><span class="line"># InnoDB, unlike MyISAM, uses a buffer pool to cache both indexes and</span><br><span class="line"># row data. The bigger you set this the less disk I/O is needed to</span><br><span class="line"># access data in tables. On a dedicated database server you may set this</span><br><span class="line"># parameter up to 80% of the machine physical memory size. Do not set it</span><br><span class="line"># too large, though, because competition of the physical memory may</span><br><span class="line"># cause paging in the operating system.  Note that on 32bit systems you</span><br><span class="line"># might be limited to 2-3.5G of user level memory per process, so do not</span><br><span class="line"># set it too high.</span><br><span class="line">innodb_buffer_pool_size=8M</span><br><span class="line"></span><br><span class="line"># Size of each log file in a log group. You should set the combined size</span><br><span class="line"># of log files to about 25%-100% of your buffer pool size to avoid</span><br><span class="line"># unneeded buffer pool flush activity on log file overwrite. However,</span><br><span class="line"># note that a larger logfile size will increase the time needed for the</span><br><span class="line"># recovery process.</span><br><span class="line">innodb_log_file_size=48M</span><br><span class="line"></span><br><span class="line"># Number of threads allowed inside the InnoDB kernel. The optimal value</span><br><span class="line"># depends highly on the application, hardware as well as the OS</span><br><span class="line"># scheduler properties. A too high value may lead to thread thrashing.</span><br><span class="line">innodb_thread_concurrency=33</span><br><span class="line"></span><br><span class="line"># The increment size (in MB) for extending the size of an auto-extend InnoDB system tablespace file when it becomes full.</span><br><span class="line">innodb_autoextend_increment=64</span><br><span class="line"></span><br><span class="line"># The number of regions that the InnoDB buffer pool is divided into.</span><br><span class="line"># For systems with buffer pools in the multi-gigabyte range, dividing the buffer pool into separate instances can improve concurrency,</span><br><span class="line"># by reducing contention as different threads read and write to cached pages.</span><br><span class="line">innodb_buffer_pool_instances=8</span><br><span class="line"></span><br><span class="line"># Determines the number of threads that can enter InnoDB concurrently.</span><br><span class="line">innodb_concurrency_tickets=5000</span><br><span class="line"></span><br><span class="line"># Specifies how long in milliseconds (ms) a block inserted into the old sublist must stay there after its first access before</span><br><span class="line"># it can be moved to the new sublist.</span><br><span class="line">innodb_old_blocks_time=1000</span><br><span class="line"></span><br><span class="line"># It specifies the maximum number of .ibd files that MySQL can keep open at one time. The minimum value is 10.</span><br><span class="line">innodb_open_files=300</span><br><span class="line"></span><br><span class="line"># When this variable is enabled, InnoDB updates statistics during metadata statements.</span><br><span class="line">innodb_stats_on_metadata=0</span><br><span class="line"></span><br><span class="line"># When innodb_file_per_table is enabled (the default in 5.6.6 and higher), InnoDB stores the data and indexes for each newly created table</span><br><span class="line"># in a separate .ibd file, rather than in the system tablespace.</span><br><span class="line">innodb_file_per_table=1</span><br><span class="line"></span><br><span class="line"># Use the following list of values: 0 for crc32, 1 for strict_crc32, 2 for innodb, 3 for strict_innodb, 4 for none, 5 for strict_none.</span><br><span class="line">innodb_checksum_algorithm=0</span><br><span class="line"></span><br><span class="line"># The number of outstanding connection requests MySQL can have.</span><br><span class="line"># This option is useful when the main MySQL thread gets many connection requests in a very short time.</span><br><span class="line"># It then takes some time (although very little) for the main thread to check the connection and start a new thread.</span><br><span class="line"># The back_log value indicates how many requests can be stacked during this short time before MySQL momentarily</span><br><span class="line"># stops answering new requests.</span><br><span class="line"># You need to increase this only if you expect a large number of connections in a short period of time.</span><br><span class="line">back_log=80</span><br><span class="line"></span><br><span class="line"># If this is set to a nonzero value, all tables are closed every flush_time seconds to free up resources and</span><br><span class="line"># synchronize unflushed data to disk.</span><br><span class="line"># This option is best used only on systems with minimal resources.</span><br><span class="line">flush_time=0</span><br><span class="line"></span><br><span class="line"># The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use</span><br><span class="line"># indexes and thus perform full table scans.</span><br><span class="line">join_buffer_size=256K</span><br><span class="line"></span><br><span class="line"># The maximum size of one packet or any generated or intermediate string, or any parameter sent by the</span><br><span class="line"># mysql_stmt_send_long_data() C API function.</span><br><span class="line">max_allowed_packet=4M</span><br><span class="line"></span><br><span class="line"># If more than this many successive connection requests from a host are interrupted without a successful connection,</span><br><span class="line"># the server blocks that host from performing further connections.</span><br><span class="line">max_connect_errors=100</span><br><span class="line"></span><br><span class="line"># Changes the number of file descriptors available to mysqld.</span><br><span class="line"># You should try increasing the value of this option if mysqld gives you the error &quot;Too many open files&quot;.</span><br><span class="line">open_files_limit=4161</span><br><span class="line"></span><br><span class="line"># If you see many sort_merge_passes per second in SHOW GLOBAL STATUS output, you can consider increasing the</span><br><span class="line"># sort_buffer_size value to speed up ORDER BY or GROUP BY operations that cannot be improved with query optimization</span><br><span class="line"># or improved indexing.</span><br><span class="line">sort_buffer_size=256K</span><br><span class="line"></span><br><span class="line"># The number of table definitions (from .frm files) that can be stored in the definition cache.</span><br><span class="line"># If you use a large number of tables, you can create a large table definition cache to speed up opening of tables.</span><br><span class="line"># The table definition cache takes less space and does not use file descriptors, unlike the normal table cache.</span><br><span class="line"># The minimum and default values are both 400.</span><br><span class="line">table_definition_cache=1400</span><br><span class="line"></span><br><span class="line"># Specify the maximum size of a row-based binary log event, in bytes.</span><br><span class="line"># Rows are grouped into events smaller than this size if possible. The value should be a multiple of 256.</span><br><span class="line">binlog_row_event_max_size=8K</span><br><span class="line"></span><br><span class="line"># If the value of this variable is greater than 0, a replica synchronizes its master.info file to disk.</span><br><span class="line"># (using fdatasync()) after every sync_master_info events.</span><br><span class="line">sync_master_info=10000</span><br><span class="line"></span><br><span class="line"># If the value of this variable is greater than 0, the MySQL server synchronizes its relay log to disk.</span><br><span class="line"># (using fdatasync()) after every sync_relay_log writes to the relay log.</span><br><span class="line">sync_relay_log=10000</span><br><span class="line"></span><br><span class="line"># If the value of this variable is greater than 0, a replica synchronizes its relay-log.info file to disk.</span><br><span class="line"># (using fdatasync()) after every sync_relay_log_info transactions.</span><br><span class="line">sync_relay_log_info=10000</span><br><span class="line"></span><br><span class="line"># Load mysql plugins at start.&quot;plugin_x ; plugin_y&quot;.</span><br><span class="line"># plugin_load</span><br><span class="line"></span><br><span class="line"># The TCP/IP Port the MySQL Server X Protocol will listen on.</span><br><span class="line"># loose_mysqlx_port=33060</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>最后利用服务停止再重启服务。</p>
+<p>发现</p>
+<p><img src="/2022/08/09/mysql5-7%E4%BF%AE%E6%94%B9%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%BAutf8/Users\HuangFeiYang\AppData\Roaming\Typora\typora-user-images\image-20220809013137777.png" alt="image-20220809013137777"></p>
+<p>修改成功~</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E8%AE%B0%E5%BD%95%E5%AD%97%E7%AC%A6%E9%9B%86%E4%BF%AE%E6%94%B9%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%9D%91/" rel="tag"># 记录字符集修改过程中的坑</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/07/13/Pytorch/" rel="next" title="Pytorch">
+                <i class="fa fa-chevron-left"></i> Pytorch
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/09/15/CentOS-8-%E5%AE%89%E8%A3%85MySQL/" rel="prev" title="CentOS 8 安装MySQL">
+                CentOS 8 安装MySQL <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">❤feiyangHuang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by fy</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">
+   博客-feiyang
+   </div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/qwe/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/qwe/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/qwe/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="操作系统," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="操作系统相关知识">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统">
+<meta property="og:url" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.html">
+<meta property="og:site_name" content="hfy up up">
+<meta property="og:description" content="操作系统相关知识">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210314231754774.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210314232640462.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210314232724500.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210314232937175.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210315000502988.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210315001801845.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210315001855515.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210406224819563.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210406230013283.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210406230714315.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210406231117432.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210406231204673.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210406235432218.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210406231950614.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210406234821760.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210406234933678.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210407093452026.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210407085727650.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210407091047321.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210407091622190.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210407091815251.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408133039612.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408133328513.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408133439870.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408133750438.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408135126884.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408135254471.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408135753517.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408140603072.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408140646499.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408140654413.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408151251061.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408143714782.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408145648975.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408150249512.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408150521467.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408151129733.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408151238756.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415085457366.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415090316049.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415091439112.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415092349354.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415103510294.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415104616799.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415111005439.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415111957531.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415153305462.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415152635850.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415152848954.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415154008269.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415154844202.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210418092218302.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210418094635173.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210418095011292.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210418095123122.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210418095728817.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210418102502309.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210418103024943.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210419224059039.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210419224628094.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210420083002182.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210420083707573.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210420083835395.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210420084034071.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422204538219.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422203346371.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422203736298.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422203906605.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422204058042.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422204220393.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422204644016.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422204425291.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422205727034.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422205919380.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422210331640.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422210603932.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422211843531.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422211535124.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422212058946.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425143256197.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425143805810.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425144010476.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425144240661.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425152033669.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425152129960.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425153737997.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425155839387.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425192515688.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425195522887.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425201535686.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425202105285.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425202748933.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425202809230.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210427200939654.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425202934435.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210427200727215.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210427200931745.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210427201409435.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210427201745813.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210427201946132.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210427202132473.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210427204022451.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504094453459.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504095649220.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504095657480.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504112205928.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504103511085.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504103908880.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504111832844.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504112651607.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504142913318.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504162527903.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504162902012.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210512100154666.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210512100542384.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210512100915100.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210512101444226.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210512101720888.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210512101918117.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210512102447398.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513113853349.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513113954168.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513114146670.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513114350637.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513114532515.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513114859080.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513115012297.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513115204279.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513115253145.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513115323057.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513115515034.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513115614398.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513115826299.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513120201504.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513120457509.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513120640347.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513120935007.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513121420931.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513121512807.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210514093558290.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210514095433678.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210514095605753.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210514095731840.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210514100222399.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210514102124362.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210514110233707.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210514110448654.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519085608771.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519085737581.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519091113797.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519095315357.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519095541844.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519095657882.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519095801460.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519095941306.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519101922183.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519100147618.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519100529458.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519100804470.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519101308692.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519101444479.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519101843353.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523093515540.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523090433764.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523091352497.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523091920815.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523092058238.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523093041581.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523093358236.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523093642679.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523095852791.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523094616407.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523094604908.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523094715830.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523094904225.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523095030011.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523095122389.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523101052156.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523095925376.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523100041188.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523100656839.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523100833429.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523101037052.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526085554714.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526085848211.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526090046018.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526090341306.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526091105279.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526091215185.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526091409172.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526091735237.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526092031400.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526092106853.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526092445360.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526092619647.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526092701759.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526092948706.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526093041532.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526093117719.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526093611109.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526093533040.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526094029868.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526094036912.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526094330680.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526094616587.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526095057442.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526095354325.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526095841360.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526101303259.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526101354348.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526101401627.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530191852383.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530192124309.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530192156346.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530192356933.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530192844112.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530192908161.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530193454501.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530194148225.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530194313472.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530194708539.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530194911025.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530195541653.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530195657091.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530195755767.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530200820264.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530200929375.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530201040201.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530201237722.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530201509059.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530201611006.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530201726531.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530201747914.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530201835674.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530202724240.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530202819200.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530203028000.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530203134237.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530203556096.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530204148877.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530204245092.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530204851463.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530210506141.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530210516544.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622175510605.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622175728916.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622175751813.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622175853191.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622180005396.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622180158634.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622180249553.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622180716564.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622183745454.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622180843087.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622181627220.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622182028443.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622182547638.png">
+<meta property="og:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622183341429.png">
+<meta property="article:published_time" content="2021-03-14T15:11:37.000Z">
+<meta property="article:modified_time" content="2021-06-22T10:37:46.006Z">
+<meta property="article:author" content="feiyangHuang">
+<meta property="article:tag" content="操作系统">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210314231754774.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2021/03/14/操作系统/"/>
+
+
+
+
+
+  <title>操作系统 | hfy up up</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">hfy up up</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hfy up up">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">操作系统</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-03-14T23:11:37+08:00">
+                2021-03-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>操作系统相关知识</p>
+<a id="more"></a>
+
+<h2 id="1-操作系统的概念，-功能和目标"><a href="#1-操作系统的概念，-功能和目标" class="headerlink" title="1. 操作系统的概念， 功能和目标"></a>1. 操作系统的概念， 功能和目标</h2><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210314231754774.png" alt="image-20210314231754774"></p>
+<h3 id="1-1-操作系统的功能"><a href="#1-1-操作系统的功能" class="headerlink" title="1.1 操作系统的功能"></a>1.1 操作系统的功能</h3><ol>
+<li>负责管理协调硬件， 软件等计算机资源的工作(从下往上看)</li>
+<li>为上层的应用程序、 用户提供简单易用的服务(从上往下看)</li>
+<li>操作系统是系统软件， 而不是硬件</li>
+</ol>
+<h3 id="1-2-操作系统的定义"><a href="#1-2-操作系统的定义" class="headerlink" title="1.2 操作系统的定义"></a>1.2 操作系统的定义</h3><p>​    <strong>操作系统(Operating System， OS)</strong> 是指 <em>(1)<em>控制和管理整个计算机系统的硬件和软件资源， *(2)*并合理地组织调度计算机的工作和资源的分配， 以提供给用户和其他软件方便的接口和环境，</em>(3)</em> 它是计算机系统中最基本的系统软件。</p>
+<h3 id="1-3-操作系统的功能和目标"><a href="#1-3-操作系统的功能和目标" class="headerlink" title="1.3 操作系统的功能和目标"></a>1.3 操作系统的功能和目标</h3><p>补充知识: 进程是一个程序的执行过程。 执行前需要将该程序放到内存中， 才能被CPU处理。</p>
+<ol>
+<li><p>操作系统作为系统资源的管理者(这些资源包括软件， 硬件， 文件等)</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210314232640462.png" alt="image-20210314232640462"></p>
+</li>
+</ol>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210314232724500.png" alt="image-20210314232724500"></p>
+<ol start="2">
+<li>自下往上看， 操作系统作为用户和计算机硬件之间的接口</li>
+</ol>
+<p>​    命令接口: 允许用户直接使用。</p>
+<p>​    程序接口: 允许用户间接使用 由一组系统调用组成(程序接口 = 系统调用)。</p>
+<p>​    GUI: 现代操作系统中最流行的图形用户接口。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210314232937175.png" alt="image-20210314232937175"></p>
+<p>系统调用 = 系统调用命令 = <strong>广义指令</strong></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210315000502988.png" alt="image-20210315000502988"></p>
+<h2 id="2-操作系统的特征"><a href="#2-操作系统的特征" class="headerlink" title="2. 操作系统的特征"></a>2. 操作系统的特征</h2><p>并发和共享是操作系统两个最基本的特征， 二者互为存在条件</p>
+<h3 id="2-1-并发"><a href="#2-1-并发" class="headerlink" title="2.1 并发"></a>2.1 并发</h3><p>并发: 指两个或多个事件在同一时间间隔内发生。 这些事件宏观上是同时发生的， 但微观上是交替发生的。 </p>
+<p>并行: 指两个或多个事件在同一时刻同时发生。</p>
+<p>一个单核处理器(CPU) 同一时刻只能执行一个程序， 因此操作系统会负责协调多个程序交替执行(这些程序微观上是交替执行的， 但宏观上看起来就像在同时执行)</p>
+<p>操作系统和程序并发是一起诞生的。</p>
+<p>多核CPU: 同一时刻有多个程序可以并行执行。但是操作系统的并发性依然必不可少。</p>
+<h3 id="2-2-共享"><a href="#2-2-共享" class="headerlink" title="2.2 共享"></a>2.2 共享</h3><p><strong>共享</strong> 即资源共享， 是指系统中的资源可供内存中多个并发执行的进程共同使用。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210315001801845.png" alt="image-20210315001801845"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210315001855515.png" alt="image-20210315001855515"></p>
+<p>并发性是指计算机系统中同时存在多个运行着的程序。</p>
+<p>共享性是指系统中的资源可供内存中多个并发执行的进程共同使用。</p>
+<h3 id="2-3-虚拟"><a href="#2-3-虚拟" class="headerlink" title="2.3 虚拟"></a>2.3 虚拟</h3><p>一个程序需要放入内存并分给他分配CPU才能执行。</p>
+<p>虚拟是指把一个物理上的实体变为若干个逻辑上的对应物。 物理实体（前者）是实际存在的， 而逻辑上对应物（后者）是用户感受到的。</p>
+<p>时分复用: 虚拟技术中的”时分复用技术”。 微观上处理机在各个微小的时间段内交替着为各个进程服务。</p>
+<p>空分复用 (虚拟存储技术)</p>
+<h3 id="2-4-异步"><a href="#2-4-异步" class="headerlink" title="2.4 异步"></a>2.4 异步</h3><p><strong>异步</strong>是指，在多道程序环境下， 允许多个程序并发执行， 但由于资源有限， 进程的执行不是一贯到底的， 而是走走停停， 以不可预知的速度向前推进， 这就是进程的异步性。</p>
+<h1 id="3-操作系统的运行体制与体系"><a href="#3-操作系统的运行体制与体系" class="headerlink" title="3.操作系统的运行体制与体系"></a>3.操作系统的运行体制与体系</h1><h3 id="3-1-预览"><a href="#3-1-预览" class="headerlink" title="3.1 预览"></a>3.1 预览</h3><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210406224819563.png" alt="image-20210406224819563"></p>
+<h3 id="3-2-操作系统的运行体制与体系结构"><a href="#3-2-操作系统的运行体制与体系结构" class="headerlink" title="3.2 操作系统的运行体制与体系结构"></a>3.2 操作系统的运行体制与体系结构</h3><p>两种指令，两种状态，两种程序</p>
+<p>指令 一条高级语言代码可能翻译过来对应多句机器语言指令。指令就是处理器(CPU)能识别，执行的最基本的命令。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210406230013283.png" alt="image-20210406230013283"></p>
+<p>比如 加法指令就是让CPU进行加法运算。</p>
+<p><strong>两种指令</strong> </p>
+<p>分为<strong>特权指令</strong>(不允许用户程序使用)和<strong>非特权指令</strong>。</p>
+<p><strong>两种状态</strong></p>
+<p>**用户态(目态)**：此时CPU只能执行非特权指令</p>
+<p>和</p>
+<p><strong>核心态(管态)</strong>: 此时特权指令和非特权指令都能执行</p>
+<p>两种状态的实现</p>
+<p>用程序状态寄存器(PSW) 中的某标志位来标识当前处理器处于什么状态。如0为用户态，1为核心态。</p>
+<p>**两种程序:    **内核程序(操作系统的内核程序是系统的管理者，既可以执行特权指令，也可以执行非特权指令，运行在核心态) 和 应用程序(为了保证系统能安全运行，普通应用程序只能执行非特权指令，运行在用户态)</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210406230714315.png" alt="image-20210406230714315"></p>
+<p>内核是计算机上配置的底层软件，是操作系统最基本最核心的地方。实现操作系统内核功能的那些程序就是内核程序。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210406231117432.png" alt="image-20210406231117432">操作系统的体系结构:大内核和微内核。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210406231204673.png" alt="image-20210406231204673"></p>
+<h3 id="3-2-中断和异常"><a href="#3-2-中断和异常" class="headerlink" title="3.2 中断和异常"></a>3.2 中断和异常</h3><p>总结图</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210406235432218.png" alt="image-20210406235432218"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210406231950614.png" alt="image-20210406231950614"></p>
+<ol>
+<li>当中断发生的时候，CPU立即进入核心态。</li>
+<li>当中断发生后，当前运行的进程暂停运行，并由操作系统内核对中断进行处理。</li>
+<li>对于不同的中断信号，操作系统会进行不同的处理。</li>
+</ol>
+<p>发生了中断，就意味着操作系统介入，开展管理工作。由于操作系统的管理工作(比如进程切换、分配I/O设备等)需要使用特权指令，因此CPU需要从用户态转为核心态。中断可以使CPU从用户态切换为核心态，使操作系统获得计算机的控制权。有了中断，才能实现多道程序并发执行。</p>
+<p>用户态-&gt;核心态的切换是通过中断实现的，<strong>且中断是唯一途径。</strong></p>
+<p>核心态-&gt;用户态的切换是通过执行一个特权指令，将程序状态字(PSW)的标志位设置为”用户态”。</p>
+<p>中断的分类</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210406234821760.png" alt="image-20210406234821760"></p>
+<p>另一种方式</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210406234933678.png" alt="image-20210406234933678"></p>
+<p>外部中断的过程</p>
+<ol>
+<li>CPU执行每一个指令的之后，都要检查是否有外部中断信号。</li>
+<li>如果检测到外部中断信号，则需要保护被中断的CPU环境(如程序状态字PSW,程序计数器PC,各种通用的寄存器)</li>
+<li>根据中断信号类型转入相应的中断处理程序。</li>
+<li>恢复原进程的CPU环境并退出中断，返回原进程并继续往下执行。</li>
+</ol>
+<h4 id="3-3-系统调用"><a href="#3-3-系统调用" class="headerlink" title="3.3 系统调用"></a>3.3 系统调用</h4><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210407093452026.png" alt="image-20210407093452026"></p>
+<p>​    陷入指令使得操作系统从用户态转为核心态。</p>
+<p>​    凡是与资源有关的操作， 会直接影响到其他进程的操作，一定需要操作系统的介入，即需要通过系统调用实现。    </p>
+<p>​    操作系统作为计算机用户和硬件之间的接口，需要向上提供一些简单易用的服务。主要包括命令接口和程序接口。其中，程序接口由一组系统调用组成。</p>
+<p>​    <img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210407085727650.png" alt="image-20210407085727650"></p>
+<p>​    “系统调用” 是操作系统提供给应用程序（程序员/编程人员）使用的接口，可以理解为一种可供应用程序调用的特殊函数，应用程序可以发出系统调用请求来获得操作系统的服务。</p>
+<p>​    应用程序通过系统调用请求操作系统的服务。 系统中的各种共享资源都由操作系统统一掌管， 因此在用户程序中，凡是与资源有关的操作(如存储分配,I/O操作,文件管理等), 都必须通过系统调用的方式向操作系统提出服务请求, 由操作系统带未完成。这样可以保证系统的稳定性和安全性，防止用户非法操作。</p>
+<p>​    <img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210407091047321.png" alt="image-20210407091047321"></p>
+<p>​    系统调用相关处理涉及到对系统资源的管理，对进程的控制，这些功能需要执行一些特权指令才能完成，因此系统调用的相关处理需要在<strong>核心态</strong>下运行。、</p>
+<p>3.3.1 系统调用和库函数的区别</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210407091622190.png" alt="image-20210407091622190"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210407091815251.png" alt="image-20210407091815251"></p>
+<p>有些库函数涉及到系统调用，而有些库函数则涉及不到。</p>
+<h4 id="3-4-进程控制"><a href="#3-4-进程控制" class="headerlink" title="3.4 进程控制"></a>3.4 进程控制</h4><p>知识总览</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408133039612.png" alt="image-20210408133039612"></p>
+<p>​    进程控制的主要功能就是对系统中的所有进程实施有效的管理，它具有创建新进程，撤销已有进程、实现进程状态转换等功能。</p>
+<p>​    简化理解: 反正进程控制就是要实现状态转换。</p>
+<p>​    <img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408133328513.png" alt="image-20210408133328513"></p>
+<p>​    进程组织的问题:</p>
+<p>​    <img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408133439870.png" alt="image-20210408133439870"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408133750438.png" alt="image-20210408133750438"></p>
+<p>​    用原语实现进程控制。 原语的特点是执行期间不允许中断，只能一气呵成。这种不可被终端的操作即为原子操作，原语采用“关中断指令”和“开中断指令”实现。</p>
+<p>​    显然， 关/开中断指令的权限非常大， 必然是只允许在核心态下执行的特权指令。</p>
+<p>​    进程控制相关的原语</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408135126884.png" alt="image-20210408135126884"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408135254471.png" alt="image-20210408135254471"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408135753517.png" alt="image-20210408135753517"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408140603072.png" alt="image-20210408140603072"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408140646499.png" alt="image-20210408140646499"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408140654413.png" alt="image-20210408140654413"></p>
+<h4 id="3-5-进程通信"><a href="#3-5-进程通信" class="headerlink" title="3.5 进程通信"></a>3.5 进程通信</h4><p>内容视图:</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408151251061.png" alt="image-20210408151251061"></p>
+<p>​    进程通信就是进程之间的信息交换。</p>
+<p>​    进程是分配系统资源的单位(包括内存地址空间)，因此各进程拥有的内存空间相互独立。</p>
+<p>​    为了保证安全，一个进程不能直接访问另一个进程的地址空间。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408143714782.png" alt="image-20210408143714782"></p>
+<p>操作系统提供的进程通信方式分为共享存储，消息传递，管道通信。</p>
+<ol>
+<li><p>共享存储</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408145648975.png" alt="image-20210408145648975"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408150249512.png" alt="image-20210408150249512"></p>
+<ol start="3">
+<li><p>消息传递</p>
+<p>进程间的数据交换以格式化的消息为单位。进程通过操作系统提供的“发送消息，接收消息”两个原语进行数据交换。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408150521467.png" alt="image-20210408150521467">z</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>直接通信方式: 消息直接挂到接受进程的消息缓冲队列上，</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408151129733.png" alt="image-20210408151129733"></p>
+<p>间接通信方式:消息要先发送到中间实体(信箱)中，因此也成“信箱通信方式”，.Eg:计网中的电子邮件系统。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210408151238756.png" alt="image-20210408151238756"></p>
+<h1 id="4-线程概念和多线程模型"><a href="#4-线程概念和多线程模型" class="headerlink" title="4. 线程概念和多线程模型"></a>4. 线程概念和多线程模型</h1><p>​    进程是程序的一次执行。 但这些功能显然不可能是由一个程序顺序处理能实现的。一个进程对应一份代码。</p>
+<p>​    引入线程后，线程成为了程序执行流的最小单位。可以把线程理解为”轻量级进程”。</p>
+<p>​    线程是一个基本的CPU执行单元，也是程序执行流的最小单位。引入线程后，不仅是进程之间可以并发，进程内的各线程之间也可以并发，从而进一步提升了系统的并发度，市的一个进程内也可以并发处理各种任务(如QQ视频，文字聊天，传文件)</p>
+<p>​    </p>
+<p>​    <img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415085457366.png" alt="image-20210415085457366"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415090316049.png" alt="image-20210415090316049"></p>
+<h2 id="4-1-线程的实现方式"><a href="#4-1-线程的实现方式" class="headerlink" title="4.1 线程的实现方式"></a>4.1 线程的实现方式</h2><ol>
+<li>用户级线程</li>
+</ol>
+<p>​    用户级线程是由应用程序通过线程库实现。所有的线程管理工作都由应用程序负责（包括线程切换），用户级线程中，线程切换可以在用户态下即可完成，无需操作系统的干预。</p>
+<p>​    在用户看来，是有多个线程。但是在操作系统内核看来，并意识不到线程的存在。(用户级线程对用户不透明，对操作系统透明)</p>
+<p>​    可以这样理解，“用户级线程” 就是“从用户视角能看到的线程”</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415091439112.png" alt="image-20210415091439112"></p>
+<ol start="2">
+<li><p>内核级线程(kernel-level Thread, KLT, 又称”内核支持的线程”)</p>
+<p>​    内核级线程的管理工作由操作系统内核完成。线程调度、切换等工作都由内核负责，因此内核级线程的切换必然需要在核心态下才能完成。</p>
+<p>​    可以这样理解，“内核级线程”就是从操作系统内核视角能看到的线程。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415092349354.png" alt="image-20210415092349354"></p>
+</li>
+</ol>
+<p>​    在同时支持用户级线程和内核级线程的系统中， 可采用二者组合的方式: 将n个用户级线程映射到m个内核级线程上(n&gt;=m)</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415103510294.png" alt="image-20210415103510294"></p>
+<p>​    操作系统之”看得见”内核级线程，因此只有内核级线程才时处理机分配的单位。</p>
+<p>​    例如 上边这个模型中，该进程由两个内核级线程，三个用户级线程，在用户看来，这个进程中有三个线程， 但即使该进程在一个四核处理机上运行，也最多只能被分配到两个核，最多只能有两个用户线程并行执行。</p>
+<p>​    <strong>多线程模型</strong></p>
+<p>​    在同时支持用户级线程和内核级线程的系统中， 由几个用户级线程映射到几个内核级线程的问题引出了”多线程模型”问题。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415104616799.png" alt="image-20210415104616799"></p>
+<p>​    <strong>多对一模型</strong></p>
+<p>​    多个用户及线程映射到一个内核级线程。 每个用户进程只对应一个内核级线程。</p>
+<p>​    优点:用户级线程的切换在用户空间即可完成， 不需要切换到核心态， 线程管理的系统开销小，效率高。</p>
+<p>​    缺点:当一个用户级线程被阻塞后， 整个进程都会被阻塞，并发度不高。多个线程不可在多核处理机上并行运行。</p>
+<p>​    <strong>一对一模型</strong></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415111005439.png" alt="image-20210415111005439"></p>
+<p>​    一对一模型: 一个用户及线程映射到一个内核级线程。 每个用户进程有与用户级线程同数量的内核级线程</p>
+<p>​    优点:当一个线程被阻塞后， 别的线程还可以继续执行，并发能力强。多线程可在多核处理机上并行执行。</p>
+<p>​    缺点: 一个用户进程会占用多个内核级线程，线程切换由操作系统内核完成，需要切换到核心态，因此线程管理成本高，开销大。</p>
+<p>​    <strong>多对多模型</strong></p>
+<p>​    多对多模型: n用户及线程映射到m个内核级线程(n&gt;=m).每个用户进程对应m个内核级线程。</p>
+<p>​    优点:克服了多对一模型并发度不高的缺点，又克服了一对一模型中一个用户进程占用太多内核级线程，开销太大的缺点。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415111957531.png" alt="image-20210415111957531"></p>
+<h1 id="5-处理器调度的概念，层次"><a href="#5-处理器调度的概念，层次" class="headerlink" title="5. 处理器调度的概念，层次"></a>5. 处理器调度的概念，层次</h1><h2 id="5-1-进程调度"><a href="#5-1-进程调度" class="headerlink" title="5.1 进程调度"></a>5.1 进程调度</h2><p>总结:</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415153305462.png" alt="image-20210415153305462"></p>
+<p>​    当有一堆任务要处理， 但是由于资源有限， 这些事情没法同时处理。 这就需要确定某种规则来决定处理这些任务的顺序，这就是”调度”研究的问题。</p>
+<p>​    在多道程序系统中， 进程的数量往往是多于处理器的个数的， 这样不可能同时并行地处理各个进程。</p>
+<p>​    处理器调度, 就是从就绪队列中按照一定的算法选择一个进程并将处理器分配给他运行，以实现进程的并发执行。</p>
+<p>​    调度的三个层级</p>
+<p>​    1. 高级调度(作业调度)</p>
+<p>​        按一定的原则从外存上处于后背队列的作用中挑选一个(或多个)作业，给他们分配内存等必要资源，并建立相应的进程(建立PCB), 以使它们获得竞争处理器的权利。</p>
+<p>​        高级调度是辅存(外存)与内存之间的调度。每个作业只调入一次，调出一次。作业调入时会建立相应的PCB，作业调出是才撤销PCB。高级调度主要是指调入的问题，因为只有调入的时机需要操作系统来确定，但调出的时机必然是作业运行结束才调出。</p>
+<ol start="2">
+<li><p>中级调度</p>
+<p>引入虚拟存储技术之后，可将暂时不能运行的进程调至外存等待。 等它重新具备了运行条件且内存又稍有空闲时，再重新调入内存。</p>
+<p>这么做的目的是为了提高利用率和系统吞吐量。</p>
+<p>暂时调到外存等待的进程状态为挂起状态。值得注意的是，PCB并不会一起调到外村，而是会常驻内存。PCB中会记录进程数据在外存中的存放位置， 进程状态等信息，操作系统通过内存中的PCB来保持对各个进程的监控，管理。被挂起的进程PCB会被放到挂起队列中。</p>
+<p>中级调度(内存调度): 就是决定将哪个处于挂起状态的进程重新调入内存。一个进程可能会被多次调出，调入内存，因此中级调度发生的频率要比高级调度要高。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415152635850.png" alt="image-20210415152635850"></p>
+</li>
+<li><p>低级调度</p>
+<p>低级调度(进程调度), 其主要任务是按照某种方法和策略从就绪队列中选取一个进程，将处理器分配给它。</p>
+<p>进程调度是操作系统中最基本的一种调度，在一般的操作系统中都必须配置进程调度。</p>
+</li>
+</ol>
+<p>   <img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415152848954.png" alt="image-20210415152848954"></p>
+<h2 id="5-2-进程调度的时机，切换与方式"><a href="#5-2-进程调度的时机，切换与方式" class="headerlink" title="5.2 进程调度的时机，切换与方式"></a>5.2 进程调度的时机，切换与方式</h2><p>知识总览</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415154008269.png" alt="image-20210415154008269"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210415154844202.png" alt="image-20210415154844202"></p>
+<h3 id="5-2-1-调度算法的评价指标"><a href="#5-2-1-调度算法的评价指标" class="headerlink" title="5.2.1 调度算法的评价指标"></a>5.2.1 调度算法的评价指标</h3><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210418092218302.png" alt="image-20210418092218302"></p>
+<p><strong>CPU利用率</strong></p>
+<p>​    指CPU忙碌的时间占总时间的比例。</p>
+<p>​    利用率 = 忙碌的时间/总时间</p>
+<p><strong>系统吞吐量</strong></p>
+<p>​    单位时间内完成的作业的数量</p>
+<p>​    系统吞吐量 = 总共完成了多少道作业/总共花了多少时间</p>
+<p><strong>周转时间</strong></p>
+<p>​    对于计算机的用户来说， 他很关心自己的作业从提交到完成花了多少时间。</p>
+<p>​    周转时间， 是指从作业被提交给系统开始，到作业完成为止的这段时间间隔。</p>
+<p>​    它包括四个部分： 作业在外存后备队列上等待作业调度（高级调度）的时间、进程在就绪队列上等待进程调度（低级调度）的时间， 进程在CPU上执行的时间， 进程等待I/O操作完成的时间。 后三项在一个作业的整个处理过程在， 可能发生多次。</p>
+<p>​    周转时间 = 作业完成时间 - 作业提交时间</p>
+<p>​    平均周转时间 =  各作业周转时间之和 / 作业数</p>
+<p>​    带权周转时间 = 作业周转时间 / 作业实际运行的时间 = (作业完成时间 - 作业提交时间) / 作业实际运行的时间   ≥1</p>
+<p>​    平均带权周转时间 = 各作业带权周转时间之和/作业数</p>
+<p><strong>等待时间</strong></p>
+<p>​    等待时间，指进程/作业处于等待处理机状态时间之和，等待时间越长，用户满意度越低。</p>
+<p>​    作业被调入内存后， 建立对应的进程。这个进程会被CPU服务，会被I/O设备服务，当然也会有等待被服务的时间。</p>
+<p>​    对于进程来说，等待时间就是指进程被创建后等待被服务的时间之和，在等待I/O完成的期间其实进程也是在被服务的，所以不计入等待时间。</p>
+<p>​    对于作业来说，不仅要考虑建立进城后等待的时间，还要加上作业在外存后背队列中等待的时间。</p>
+<p>​    一个作业总共要被CPU服务多久，被I/O设备服务多久一般是确定不变的，因此调度算法其实只会影响作业/进程的等待时间。当然，与前面指标类似，也有“平均等待时间”来评价整体性能。</p>
+<p><strong>响应时间</strong></p>
+<p>​    对于计算机用户来说，会希望自己提交的请求(比如输入了一个调试命令)尽早地开始被系统服务、回应。</p>
+<p>​    响应时间，指从用户提交请求到首次产生响应所用的时间。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210418094635173.png" alt="image-20210418094635173"></p>
+<h2 id="5-3-调度算法"><a href="#5-3-调度算法" class="headerlink" title="5.3 调度算法"></a>5.3 调度算法</h2><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210418095011292.png" alt="image-20210418095011292"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210418095123122.png" alt="image-20210418095123122"></p>
+<h4 id="5-3-1-先来先服务算法-FCFS"><a href="#5-3-1-先来先服务算法-FCFS" class="headerlink" title="5.3.1 先来先服务算法(FCFS)"></a>5.3.1 先来先服务算法(FCFS)</h4><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210418095728817.png" alt="image-20210418095728817"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210418102502309.png" alt="image-20210418102502309"></p>
+<h4 id="5-3-2-短作业优先"><a href="#5-3-2-短作业优先" class="headerlink" title="5.3.2 短作业优先"></a>5.3.2 短作业优先</h4><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210418103024943.png" alt="image-20210418103024943"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210419224059039.png" alt="image-20210419224059039"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210419224628094.png" alt="image-20210419224628094"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210420083002182.png" alt="image-20210420083002182"></p>
+<h4 id="5-3-3-高响应比优先算法"><a href="#5-3-3-高响应比优先算法" class="headerlink" title="5.3.3 高响应比优先算法"></a>5.3.3 高响应比优先算法</h4><p>(综合考虑等待时间和运行时间)</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210420083707573.png" alt="image-20210420083707573"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210420083835395.png" alt="image-20210420083835395"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210420084034071.png" alt="image-20210420084034071"></p>
+<h4 id="5-3-4-时间片轮转-RR-Round-Robin"><a href="#5-3-4-时间片轮转-RR-Round-Robin" class="headerlink" title="5.3.4 时间片轮转(RR,Round-Robin)"></a>5.3.4 时间片轮转(RR,Round-Robin)</h4><p>常用于分时操作系统，更注重”响应时间”, 因而此处不计算周转时间。</p>
+<p><strong>时间片调度</strong> 算法: 轮流让就绪队列中的进程依次执行一个时间片(每次选择的都是排在就绪队列队头的进程)</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422204538219.png" alt="image-20210422204538219"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422203346371.png" alt="image-20210422203346371"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422203736298.png" alt="image-20210422203736298"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422203906605.png" alt="image-20210422203906605"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422204058042.png" alt="image-20210422204058042"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422204220393.png" alt="image-20210422204220393"></p>
+<p>时间片太大，退化为先来先服务(FCFS)算法。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422204644016.png" alt="image-20210422204644016"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422204425291.png" alt="image-20210422204425291"></p>
+<h4 id="5-3-5-优先级调度算法"><a href="#5-3-5-优先级调度算法" class="headerlink" title="5.3.5  优先级调度算法"></a>5.3.5  优先级调度算法</h4><p>非抢占式的很好理解，一个运行完上另一个优先级最高的就行。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422205727034.png" alt="image-20210422205727034"></p>
+<p>抢占式的优先级调度算法</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422205919380.png" alt="image-20210422205919380"></p>
+<p>补充:</p>
+<p>​    就绪队列未必只有一个， 可以按照不同优先级来组织。 另外， 也可以把优先级更高的进程排在更靠近队头的位置。</p>
+<p>​    根据优先级是否可以动态改变，可以将优先级分为静态优先级和动态优先级两种。</p>
+<p>​    静态优先级: 创建进程时确定， 之后一直不变。</p>
+<p>​    动态优先级: 创建进程时有一个初始值，之后会根据情况动态的调整优先级。</p>
+<p>​    通常: </p>
+<p>​    系统进程优先级高于用户进程。</p>
+<p>​    前台进程优先级高于后台进程</p>
+<p>​    操作系统更偏好I/O型进程(或称I/O繁忙型进程)</p>
+<p>注: 与I/O型进程相对的是<strong>计算型进程</strong>(或称CPU繁忙型进程)</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422210331640.png" alt="image-20210422210331640"></p>
+<p>如果采用的是动态优先级， 什么时候应该调整？</p>
+<p>可以从追求公平，提升资源利用率等角度考虑</p>
+<p>如果某进程在就绪队列中等待了很长时间，则可以适当提升其优先级。</p>
+<p>如果某进程占用处理器运行了很长时间，则可以适当降低其优先级。</p>
+<p>如果发现一个进程频繁地进行I/O操作，则可以适当提升其优先级。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422210603932.png" alt="image-20210422210603932"></p>
+<h4 id="5-3-6-多级反馈队列调度算法"><a href="#5-3-6-多级反馈队列调度算法" class="headerlink" title="5.3.6 多级反馈队列调度算法"></a>5.3.6 多级反馈队列调度算法</h4><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422211843531.png" alt="image-20210422211843531"></p>
+<p>​    导致饥饿的原因是，如果有源源不断地短进程席卷而来，后面队列的进程就GG，挂掉。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422211535124.png" alt="image-20210422211535124"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210422212058946.png" alt="image-20210422212058946"></p>
+<h2 id="5-4-进程同步，互斥问题"><a href="#5-4-进程同步，互斥问题" class="headerlink" title="5.4 进程同步，互斥问题"></a>5.4 进程同步，互斥问题</h2><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425143256197.png" alt="image-20210425143256197"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425143805810.png" alt="image-20210425143805810"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425144010476.png" alt="image-20210425144010476"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425144240661.png" alt="image-20210425144240661"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425152033669.png" alt="image-20210425152033669"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425152129960.png" alt="image-20210425152129960"></p>
+<h3 id="5-4-1-进程互斥的软件实现方法"><a href="#5-4-1-进程互斥的软件实现方法" class="headerlink" title="5.4.1 进程互斥的软件实现方法"></a>5.4.1 进程互斥的软件实现方法</h3><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425153737997.png" alt="image-20210425153737997"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425155839387.png" alt="image-20210425155839387"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425192515688.png" alt="image-20210425192515688"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425195522887.png" alt="image-20210425195522887"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425201535686.png" alt="image-20210425201535686"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425202105285.png" alt="image-20210425202105285"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425202748933.png" alt="image-20210425202748933"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425202809230.png" alt="image-20210425202809230"></p>
+<h3 id="5-4-2-进程互斥的软件使用方法"><a href="#5-4-2-进程互斥的软件使用方法" class="headerlink" title="5.4.2 进程互斥的软件使用方法"></a>5.4.2 进程互斥的软件使用方法</h3><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210427200939654.png" alt="image-20210427200939654"></p>
+<ol>
+<li>中断屏蔽方法</li>
+</ol>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210425202934435.png" alt="image-20210425202934435"></p>
+<ol start="2">
+<li><p>TestAndSet指令</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210427200727215.png" alt="image-20210427200727215"></p>
+</li>
+</ol>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210427200931745.png" alt="image-20210427200931745"></p>
+<p>作用都是，判断+上锁。如果没锁就执行，有锁就卡在那，浪费CPU资源。</p>
+<h3 id="5-4-3-信号量机制"><a href="#5-4-3-信号量机制" class="headerlink" title="5.4.3 信号量机制"></a>5.4.3 信号量机制</h3><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210427201409435.png" alt="image-20210427201409435"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210427201745813.png" alt="image-20210427201745813"></p>
+<p>用一个整数型的变量作为信号量，用来标识系统中某种资源的数量。</p>
+<p>与普通整数型变量的区别（对信号量的操作只有三种，初始化，P操作, V操作）</p>
+<p>?通过什么方式避免两个wait同时执行while的时候</p>
+<p>答案: 检查和上锁一气呵成，避免了并发，异步导致的问题。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210427201946132.png" alt="image-20210427201946132"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210427202132473.png" alt="image-20210427202132473"></p>
+<p>问题：不满足”让权等待”原则， 会发生“忙等待”。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210427204022451.png" alt="image-20210427204022451"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504094453459.png" alt="image-20210504094453459"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504095649220.png" alt="image-20210504095649220"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504095657480.png" alt="image-20210504095657480"></p>
+<h3 id="5-4-4-用信号量实现互斥"><a href="#5-4-4-用信号量实现互斥" class="headerlink" title="5.4.4 用信号量实现互斥"></a>5.4.4 用信号量实现互斥</h3><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504112205928.png" alt="image-20210504112205928"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504103511085.png" alt="image-20210504103511085"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504103908880.png" alt="image-20210504103908880"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504111832844.png" alt="image-20210504111832844"></p>
+<h3 id="5-4-5-PV一些实际问题"><a href="#5-4-5-PV一些实际问题" class="headerlink" title="5.4.5 PV一些实际问题"></a>5.4.5 PV一些实际问题</h3><h4 id="5-4-5-1-生产者消费者问题"><a href="#5-4-5-1-生产者消费者问题" class="headerlink" title="5.4.5.1 生产者消费者问题"></a>5.4.5.1 生产者消费者问题</h4><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504112651607.png" alt="image-20210504112651607"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504142913318.png" alt="image-20210504142913318"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504162527903.png" alt="image-20210504162527903"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210504162902012.png" alt="image-20210504162902012"></p>
+<p>实现互斥的P操作一定要在实现同步的P操作之后。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210512100154666.png" alt="image-20210512100154666"></p>
+<h4 id="5-4-5-2-多生产者多消费者问题"><a href="#5-4-5-2-多生产者多消费者问题" class="headerlink" title="5.4.5.2 多生产者多消费者问题"></a>5.4.5.2 多生产者多消费者问题</h4><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210512100542384.png" alt="image-20210512100542384"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210512100915100.png" alt="image-20210512100915100"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210512101444226.png" alt="image-20210512101444226"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210512101720888.png" alt="image-20210512101720888"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210512101918117.png" alt="image-20210512101918117"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210512102447398.png" alt="image-20210512102447398"></p>
+<h4 id="5-4-5-3-抽烟者问题"><a href="#5-4-5-3-抽烟者问题" class="headerlink" title="5.4.5.3 抽烟者问题"></a>5.4.5.3 抽烟者问题</h4><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513113853349.png" alt="image-20210513113853349"></p>
+<p>三个组合的原因是要对应三个消费者</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513113954168.png" alt="image-20210513113954168"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513114146670.png" alt="image-20210513114146670"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513114350637.png" alt="image-20210513114350637"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513114532515.png" alt="image-20210513114532515"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513114859080.png" alt="image-20210513114859080"></p>
+<h4 id="5-4-5-4-读者写者问题"><a href="#5-4-5-4-读者写者问题" class="headerlink" title="5.4.5.4 读者写者问题"></a>5.4.5.4 读者写者问题</h4><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513115012297.png" alt="image-20210513115012297"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513115204279.png" alt="image-20210513115204279"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513115253145.png" alt="image-20210513115253145"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513115323057.png" alt="image-20210513115323057"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513115515034.png" alt="image-20210513115515034"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513115614398.png" alt="image-20210513115614398"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513115826299.png" alt="image-20210513115826299"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513120201504.png" alt="image-20210513120201504"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513120457509.png" alt="image-20210513120457509"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513120640347.png" alt="image-20210513120640347"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513120935007.png" alt="image-20210513120935007"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513121420931.png" alt="image-20210513121420931"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210513121512807.png" alt="image-20210513121512807"></p>
+<h4 id="5-4-5-5-哲学家进餐问题"><a href="#5-4-5-5-哲学家进餐问题" class="headerlink" title="5.4.5.5 哲学家进餐问题"></a>5.4.5.5 哲学家进餐问题</h4><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210514093558290.png" alt="image-20210514093558290"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210514095433678.png" alt="image-20210514095433678"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210514095605753.png" alt="image-20210514095605753"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210514095731840.png" alt="image-20210514095731840"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210514100222399.png" alt="image-20210514100222399"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210514102124362.png" alt="image-20210514102124362"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210514110233707.png" alt="image-20210514110233707"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210514110448654.png" alt="image-20210514110448654"></p>
+<h2 id="5-5-管程"><a href="#5-5-管程" class="headerlink" title="5.5 管程"></a>5.5 管程</h2><h3 id="5-5-1-管程的定义"><a href="#5-5-1-管程的定义" class="headerlink" title="5.5.1 管程的定义"></a>5.5.1 管程的定义</h3><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519085608771.png" alt="image-20210519085608771"></p>
+<p>过程其实就是函数</p>
+<h3 id="5-5-2-管程的基本特征"><a href="#5-5-2-管程的基本特征" class="headerlink" title="5.5.2 管程的基本特征"></a>5.5.2 管程的基本特征</h3><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519085737581.png" alt="image-20210519085737581"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519091113797.png" alt="image-20210519091113797"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519095315357.png" alt="image-20210519095315357"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519095541844.png" alt="image-20210519095541844"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519095657882.png" alt="image-20210519095657882"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519095801460.png" alt="image-20210519095801460"></p>
+<h1 id="6-死锁"><a href="#6-死锁" class="headerlink" title="6 死锁"></a>6 死锁</h1><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519095941306.png" alt="image-20210519095941306"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519101922183.png" alt="image-20210519101922183"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519100147618.png" alt="image-20210519100147618"></p>
+<p>什么是死锁？</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519100529458.png" alt="image-20210519100529458"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519100804470.png" alt="image-20210519100804470"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519101308692.png" alt="image-20210519101308692"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519101444479.png" alt="image-20210519101444479"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210519101843353.png"></p>
+<h2 id="6-1死锁的一种处理方法-预防死锁"><a href="#6-1死锁的一种处理方法-预防死锁" class="headerlink" title="6.1死锁的一种处理方法-预防死锁"></a>6.1死锁的一种处理方法-预防死锁</h2><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523093515540.png" alt="image-20210523093515540"></p>
+<p>静态策略 - 预防死锁</p>
+<ul>
+<li>破坏互斥条件</li>
+<li>破坏不剥夺条件</li>
+<li>破坏请求和保持条件</li>
+<li>破坏循环等待条件</li>
+</ul>
+<p>死锁的产生必须满足四个必要条件， 死锁的产生必须满足四个必要条件，只要其中一个或者几个条件不满足，死锁就不会发生。</p>
+<p>互斥条件: 只有对必须互斥使用的资源的竞争才会导致死锁。</p>
+<p>如果把只能互斥使用的资源改造为允许共享使用，则系统不会进入死锁状态。比如SPOOLing技术。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523090433764.png" alt="image-20210523090433764"></p>
+<p>该策略的缺点: 并不是所有的资源都可以改造成共享资源。并且为了系统安全，很多地方还必须保护这种互斥性。因此，很多时候都无法破坏互斥条件。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523091352497.png" alt="image-20210523091352497"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523091920815.png" alt="image-20210523091920815"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523092058238.png" alt="image-20210523092058238"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523093041581.png" alt="image-20210523093041581"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523093358236.png" alt="image-20210523093358236"></p>
+<h2 id="6-2-死锁的处理策略-避免死锁"><a href="#6-2-死锁的处理策略-避免死锁" class="headerlink" title="6.2 死锁的处理策略 - 避免死锁"></a>6.2 死锁的处理策略 - 避免死锁</h2><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523093642679.png" alt="image-20210523093642679"></p>
+<blockquote>
+<p> 什么是安全序列?</p>
+</blockquote>
+<p>​    所谓安全序列，就是指如果系统按照这种序列分配资源，则每个进程都能顺利完成。只要能找出一个安全序列，系统就是安全状态。当然，安全序列可能又很多个。</p>
+<p>​    如果分配了资源之后，系统中找不出任何一个安全序列，系统就进入了不安全状态。这就意味着之后可能所有进程都无法顺利的执行下去。当然，如果有进程提前归还了一些资源，那系统也有可能重新回到安全状态，不过我们在分配资源之前总是要考虑到最坏的情况。</p>
+<p>​    如果系统处于安全状态，就一定不会发生死锁。如果系统进入不安全状态，就可能发生死锁（处于不安全状态未必就是发生了死锁，但发生死锁时一定是在不安全状态)</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523095852791.png" alt="image-20210523095852791"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523094616407.png" alt="image-20210523094616407"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523094604908.png" alt="image-20210523094604908"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523094715830.png" alt="image-20210523094715830"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523094904225.png" alt="image-20210523094904225"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523095030011.png" alt="image-20210523095030011"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523095122389.png" alt="image-20210523095122389"></p>
+<h2 id="6-3-死锁的处理策略-检测和接触"><a href="#6-3-死锁的处理策略-检测和接触" class="headerlink" title="6.3 死锁的处理策略 - 检测和接触"></a>6.3 死锁的处理策略 - 检测和接触</h2><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523101052156.png" alt="image-20210523101052156"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523095925376.png" alt="image-20210523095925376"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523100041188.png" alt="image-20210523100041188"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523100656839.png" alt="image-20210523100656839"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523100833429.png" alt="image-20210523100833429"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210523101037052.png" alt="image-20210523101037052"></p>
+<h1 id="7-内存的基础知识"><a href="#7-内存的基础知识" class="headerlink" title="7 内存的基础知识"></a>7 内存的基础知识</h1><h2 id="7-1内存的基本知识"><a href="#7-1内存的基本知识" class="headerlink" title="7.1内存的基本知识"></a>7.1内存的基本知识</h2><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526085554714.png" alt="image-20210526085554714"></p>
+<p>内存是用于存放数据的硬件。程序执行前需要先放到内存中才能被CPU处理。</p>
+<img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526085848211.png" alt="image-20210526085848211" style="zoom:80%;">
+
+<p>答案 给内存的存储单元编地址。</p>
+<p>内存的存储地址从0开始，每个地址对应一个存储单元。</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526090046018.png" alt="image-20210526090046018"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526090341306.png" alt="image-20210526090341306"></p>
+<blockquote>
+<p>进程的运行原理 -  指令  </p>
+</blockquote>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526091105279.png" alt="image-20210526091105279"></p>
+<img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526091215185.png" alt="image-20210526091215185" style="zoom:80%;">
+
+<img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526091409172.png" alt="image-20210526091409172" style="zoom:80%;">
+
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526091735237.png" alt="image-20210526091735237"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526092031400.png" alt="image-20210526092031400"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526092106853.png" alt="image-20210526092106853"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526092445360.png" alt="image-20210526092445360"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526092619647.png" alt="image-20210526092619647"></p>
+<img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526092701759.png" alt="image-20210526092701759" style="zoom:80%;">
+
+<h2 id="7-2内存管理"><a href="#7-2内存管理" class="headerlink" title="7.2内存管理"></a>7.2内存管理</h2><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526092948706.png" alt="image-20210526092948706"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526093041532.png" alt="image-20210526093041532"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526093117719.png" alt="image-20210526093117719"></p>
+<blockquote>
+<p>内存管理的四大功能</p>
+</blockquote>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526093611109.png" alt="image-20210526093611109"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526093533040.png" alt="image-20210526093533040"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526094029868.png" alt="image-20210526094029868"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526094036912.png" alt="image-20210526094036912"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526094330680.png" alt="image-20210526094330680"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526094616587.png" alt="image-20210526094616587"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526095057442.png" alt="image-20210526095057442"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526095354325.png" alt="image-20210526095354325"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526095841360.png" alt="image-20210526095841360"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526101303259.png" alt="image-20210526101303259"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526101354348.png" alt="image-20210526101354348"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210526101401627.png" alt="image-20210526101401627"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530191852383.png" alt="image-20210530191852383"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530192124309.png" alt="image-20210530192124309"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530192156346.png" alt="image-20210530192156346"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530192356933.png" alt="image-20210530192356933"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530192844112.png" alt="image-20210530192844112"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530192908161.png" alt="image-20210530192908161"></p>
+<h2 id="7-3-连续分配管理"><a href="#7-3-连续分配管理" class="headerlink" title="7.3 连续分配管理"></a>7.3 连续分配管理</h2><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530193454501.png" alt="image-20210530193454501"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530194148225.png" alt="image-20210530194148225"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530194313472.png" alt="image-20210530194313472"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530194708539.png" alt="image-20210530194708539"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530194911025.png" alt="image-20210530194911025"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530195541653.png" alt="image-20210530195541653"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530195657091.png" alt="image-20210530195657091"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530195755767.png" alt="image-20210530195755767"></p>
+<p>动态分区分配</p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530200820264.png" alt="image-20210530200820264"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530200929375.png" alt="image-20210530200929375"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530201040201.png" alt="image-20210530201040201"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530201237722.png" alt="image-20210530201237722"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530201509059.png" alt="image-20210530201509059"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530201611006.png" alt="image-20210530201611006"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530201726531.png" alt="image-20210530201726531"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530201747914.png" alt="image-20210530201747914"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530201835674.png" alt="image-20210530201835674"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530202724240.png" alt="image-20210530202724240"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530202819200.png" alt="image-20210530202819200"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530203028000.png" alt="image-20210530203028000"></p>
+<h3 id="7-3-1-动态分区分配算法"><a href="#7-3-1-动态分区分配算法" class="headerlink" title="7.3.1 动态分区分配算法"></a>7.3.1 动态分区分配算法</h3><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530203134237.png" alt="image-20210530203134237"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530203556096.png" alt="image-20210530203556096"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530204148877.png" alt="image-20210530204148877"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530204245092.png" alt="image-20210530204245092"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530204851463.png" alt="image-20210530204851463"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530210506141.png" alt="image-20210530210506141"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210530210516544.png" alt="image-20210530210516544"></p>
+<h2 id="7-4-基本分页存储管理的基本概念"><a href="#7-4-基本分页存储管理的基本概念" class="headerlink" title="7.4  基本分页存储管理的基本概念"></a>7.4  基本分页存储管理的基本概念</h2><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622175510605.png" alt="image-20210622175510605"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622175728916.png" alt="image-20210622175728916"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622175751813.png" alt="image-20210622175751813"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622175853191.png" alt="image-20210622175853191"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622180005396.png" alt="image-20210622180005396"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622180158634.png" alt="image-20210622180158634"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622180249553.png" alt="image-20210622180249553"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622180716564.png" alt="image-20210622180716564"></p>
+<h3 id="7-4-1-基本的地址变换机构"><a href="#7-4-1-基本的地址变换机构" class="headerlink" title="7.4.1 基本的地址变换机构"></a>7.4.1 基本的地址变换机构</h3><p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622183745454.png" alt="image-20210622183745454"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622180843087.png" alt="image-20210622180843087"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622181627220.png" alt="image-20210622181627220"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622182028443.png" alt="image-20210622182028443"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622182547638.png" alt="image-20210622182547638"></p>
+<p><img src="/2021/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/image-20210622183341429.png" alt="image-20210622183341429"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag"># 操作系统</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/03/12/Java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="next" title="Java数据结构">
+                <i class="fa fa-chevron-left"></i> Java数据结构
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/03/20/process/" rel="prev" title="process">
+                process <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%A6%82%E5%BF%B5%EF%BC%8C-%E5%8A%9F%E8%83%BD%E5%92%8C%E7%9B%AE%E6%A0%87"><span class="nav-number">1.</span> <span class="nav-text">1. 操作系统的概念， 功能和目标</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 操作系统的功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 操作系统的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E7%9B%AE%E6%A0%87"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 操作系统的功能和目标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%89%B9%E5%BE%81"><span class="nav-number">2.</span> <span class="nav-text">2. 操作系统的特征</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E5%B9%B6%E5%8F%91"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 并发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E5%85%B1%E4%BA%AB"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 共享</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E8%99%9A%E6%8B%9F"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 虚拟</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E5%BC%82%E6%AD%A5"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 异步</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%BF%90%E8%A1%8C%E4%BD%93%E5%88%B6%E4%B8%8E%E4%BD%93%E7%B3%BB"><span class="nav-number"></span> <span class="nav-text">3.操作系统的运行体制与体系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E9%A2%84%E8%A7%88"><span class="nav-number">0.1.</span> <span class="nav-text">3.1 预览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%BF%90%E8%A1%8C%E4%BD%93%E5%88%B6%E4%B8%8E%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="nav-number">0.2.</span> <span class="nav-text">3.2 操作系统的运行体制与体系结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E4%B8%AD%E6%96%AD%E5%92%8C%E5%BC%82%E5%B8%B8"><span class="nav-number">0.3.</span> <span class="nav-text">3.2 中断和异常</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8"><span class="nav-number">0.3.1.</span> <span class="nav-text">3.3 系统调用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6"><span class="nav-number">0.3.2.</span> <span class="nav-text">3.4 进程控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1"><span class="nav-number">0.3.3.</span> <span class="nav-text">3.5 进程通信</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E7%BA%BF%E7%A8%8B%E6%A6%82%E5%BF%B5%E5%92%8C%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span class="nav-number"></span> <span class="nav-text">4. 线程概念和多线程模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">4.1 线程的实现方式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E5%A4%84%E7%90%86%E5%99%A8%E8%B0%83%E5%BA%A6%E7%9A%84%E6%A6%82%E5%BF%B5%EF%BC%8C%E5%B1%82%E6%AC%A1"><span class="nav-number"></span> <span class="nav-text">5. 处理器调度的概念，层次</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6"><span class="nav-number">1.</span> <span class="nav-text">5.1 进程调度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%9A%84%E6%97%B6%E6%9C%BA%EF%BC%8C%E5%88%87%E6%8D%A2%E4%B8%8E%E6%96%B9%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">5.2 进程调度的时机，切换与方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-1-%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95%E7%9A%84%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87"><span class="nav-number">2.1.</span> <span class="nav-text">5.2.1 调度算法的评价指标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">5.3 调度算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-1-%E5%85%88%E6%9D%A5%E5%85%88%E6%9C%8D%E5%8A%A1%E7%AE%97%E6%B3%95-FCFS"><span class="nav-number">3.0.1.</span> <span class="nav-text">5.3.1 先来先服务算法(FCFS)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-2-%E7%9F%AD%E4%BD%9C%E4%B8%9A%E4%BC%98%E5%85%88"><span class="nav-number">3.0.2.</span> <span class="nav-text">5.3.2 短作业优先</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-3-%E9%AB%98%E5%93%8D%E5%BA%94%E6%AF%94%E4%BC%98%E5%85%88%E7%AE%97%E6%B3%95"><span class="nav-number">3.0.3.</span> <span class="nav-text">5.3.3 高响应比优先算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-4-%E6%97%B6%E9%97%B4%E7%89%87%E8%BD%AE%E8%BD%AC-RR-Round-Robin"><span class="nav-number">3.0.4.</span> <span class="nav-text">5.3.4 时间片轮转(RR,Round-Robin)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-5-%E4%BC%98%E5%85%88%E7%BA%A7%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95"><span class="nav-number">3.0.5.</span> <span class="nav-text">5.3.5  优先级调度算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-6-%E5%A4%9A%E7%BA%A7%E5%8F%8D%E9%A6%88%E9%98%9F%E5%88%97%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95"><span class="nav-number">3.0.6.</span> <span class="nav-text">5.3.6 多级反馈队列调度算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4-%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%EF%BC%8C%E4%BA%92%E6%96%A5%E9%97%AE%E9%A2%98"><span class="nav-number">4.</span> <span class="nav-text">5.4 进程同步，互斥问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-1-%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95"><span class="nav-number">4.1.</span> <span class="nav-text">5.4.1 进程互斥的软件实现方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-2-%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5%E7%9A%84%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">4.2.</span> <span class="nav-text">5.4.2 进程互斥的软件使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-3-%E4%BF%A1%E5%8F%B7%E9%87%8F%E6%9C%BA%E5%88%B6"><span class="nav-number">4.3.</span> <span class="nav-text">5.4.3 信号量机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-4-%E7%94%A8%E4%BF%A1%E5%8F%B7%E9%87%8F%E5%AE%9E%E7%8E%B0%E4%BA%92%E6%96%A5"><span class="nav-number">4.4.</span> <span class="nav-text">5.4.4 用信号量实现互斥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-5-PV%E4%B8%80%E4%BA%9B%E5%AE%9E%E9%99%85%E9%97%AE%E9%A2%98"><span class="nav-number">4.5.</span> <span class="nav-text">5.4.5 PV一些实际问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-5-1-%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98"><span class="nav-number">4.5.1.</span> <span class="nav-text">5.4.5.1 生产者消费者问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-5-2-%E5%A4%9A%E7%94%9F%E4%BA%A7%E8%80%85%E5%A4%9A%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98"><span class="nav-number">4.5.2.</span> <span class="nav-text">5.4.5.2 多生产者多消费者问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-5-3-%E6%8A%BD%E7%83%9F%E8%80%85%E9%97%AE%E9%A2%98"><span class="nav-number">4.5.3.</span> <span class="nav-text">5.4.5.3 抽烟者问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-5-4-%E8%AF%BB%E8%80%85%E5%86%99%E8%80%85%E9%97%AE%E9%A2%98"><span class="nav-number">4.5.4.</span> <span class="nav-text">5.4.5.4 读者写者问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-5-5-%E5%93%B2%E5%AD%A6%E5%AE%B6%E8%BF%9B%E9%A4%90%E9%97%AE%E9%A2%98"><span class="nav-number">4.5.5.</span> <span class="nav-text">5.4.5.5 哲学家进餐问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-5-%E7%AE%A1%E7%A8%8B"><span class="nav-number">5.</span> <span class="nav-text">5.5 管程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-5-1-%E7%AE%A1%E7%A8%8B%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">5.1.</span> <span class="nav-text">5.5.1 管程的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-5-2-%E7%AE%A1%E7%A8%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81"><span class="nav-number">5.2.</span> <span class="nav-text">5.5.2 管程的基本特征</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E6%AD%BB%E9%94%81"><span class="nav-number"></span> <span class="nav-text">6 死锁</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1%E6%AD%BB%E9%94%81%E7%9A%84%E4%B8%80%E7%A7%8D%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95-%E9%A2%84%E9%98%B2%E6%AD%BB%E9%94%81"><span class="nav-number">1.</span> <span class="nav-text">6.1死锁的一种处理方法-预防死锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-%E6%AD%BB%E9%94%81%E7%9A%84%E5%A4%84%E7%90%86%E7%AD%96%E7%95%A5-%E9%81%BF%E5%85%8D%E6%AD%BB%E9%94%81"><span class="nav-number">2.</span> <span class="nav-text">6.2 死锁的处理策略 - 避免死锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-%E6%AD%BB%E9%94%81%E7%9A%84%E5%A4%84%E7%90%86%E7%AD%96%E7%95%A5-%E6%A3%80%E6%B5%8B%E5%92%8C%E6%8E%A5%E8%A7%A6"><span class="nav-number">3.</span> <span class="nav-text">6.3 死锁的处理策略 - 检测和接触</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-%E5%86%85%E5%AD%98%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number"></span> <span class="nav-text">7 内存的基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-1%E5%86%85%E5%AD%98%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="nav-number">1.</span> <span class="nav-text">7.1内存的基本知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-2%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">7.2内存管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-3-%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D%E7%AE%A1%E7%90%86"><span class="nav-number">3.</span> <span class="nav-text">7.3 连续分配管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-1-%E5%8A%A8%E6%80%81%E5%88%86%E5%8C%BA%E5%88%86%E9%85%8D%E7%AE%97%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">7.3.1 动态分区分配算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-4-%E5%9F%BA%E6%9C%AC%E5%88%86%E9%A1%B5%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">4.</span> <span class="nav-text">7.4  基本分页存储管理的基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-1-%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%9C%B0%E5%9D%80%E5%8F%98%E6%8D%A2%E6%9C%BA%E6%9E%84"><span class="nav-number">4.1.</span> <span class="nav-text">7.4.1 基本的地址变换机构</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">❤feiyangHuang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by fy</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">
+   博客-feiyang
+   </div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/qwe/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

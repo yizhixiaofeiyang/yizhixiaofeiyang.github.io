@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/qwe/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/qwe/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Linux学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux学习">
+<meta property="og:url" content="http://example.com/2021/11/01/Linux%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="hfy up up">
+<meta property="og:description" content="Linux学习笔记">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2021/11/01/Linux%E5%AD%A6%E4%B9%A0/image-20220206143144749.png">
+<meta property="og:image" content="http://example.com/2021/11/01/Linux%E5%AD%A6%E4%B9%A0/Users/HuangFeiYang/AppData/Roaming/Typora/typora-user-images/image-20220806180006249.png">
+<meta property="og:image" content="http://example.com/2021/11/01/Linux%E5%AD%A6%E4%B9%A0/Users/HuangFeiYang/AppData/Roaming/Typora/typora-user-images/image-20220806163619053.png">
+<meta property="og:image" content="http://example.com/2021/11/01/Linux%E5%AD%A6%E4%B9%A0/Users/HuangFeiYang/AppData/Roaming/Typora/typora-user-images/image-20220806180201384.png">
+<meta property="og:image" content="http://example.com/2021/11/01/Linux%E5%AD%A6%E4%B9%A0/Users/HuangFeiYang/AppData/Roaming/Typora/typora-user-images/image-20220806180013051.png">
+<meta property="og:image" content="http://example.com/2021/11/01/Linux%E5%AD%A6%E4%B9%A0/Users/HuangFeiYang/AppData/Roaming/Typora/typora-user-images/image-20220806230527493.png">
+<meta property="og:image" content="http://example.com/2021/11/01/Linux%E5%AD%A6%E4%B9%A0/Users/HuangFeiYang/AppData/Roaming/Typora/typora-user-images/image-20220806230612386.png">
+<meta property="article:published_time" content="2021-11-01T10:26:19.000Z">
+<meta property="article:modified_time" content="2022-08-06T15:06:42.488Z">
+<meta property="article:author" content="feiyangHuang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/11/01/Linux%E5%AD%A6%E4%B9%A0/image-20220206143144749.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2021/11/01/Linux学习/"/>
+
+
+
+
+
+  <title>Linux学习 | hfy up up</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">hfy up up</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/01/Linux%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hfy up up">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Linux学习</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-11-01T18:26:19+08:00">
+                2021-11-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Linux学习笔记</p>
+<a id="more"></a>
+
+
+
+<h3 id="1-常用的文件管理命令"><a href="#1-常用的文件管理命令" class="headerlink" title="1. 常用的文件管理命令"></a>1. 常用的文件管理命令</h3><h4 id="1-1-文件系统"><a href="#1-1-文件系统" class="headerlink" title="1.1 文件系统"></a>1.1 文件系统</h4><h5 id="1-1-1文件系统结构"><a href="#1-1-1文件系统结构" class="headerlink" title="1.1.1文件系统结构"></a>1.1.1文件系统结构</h5><h5 id="1-1-2路径"><a href="#1-1-2路径" class="headerlink" title="1.1.2路径"></a>1.1.2路径</h5><p> a 绝对路径 /</p>
+<p> b 相对路径</p>
+<p> c ~/  home目录</p>
+<blockquote>
+<p>常用命令</p>
+</blockquote>
+<p>ls- l 输出长信息</p>
+<p>ls - h 人性化输出</p>
+<p>ls - a 显示全部 所有以.开头的文件都是隐藏文件</p>
+<p>ls -A 不显示当前目录和上层目录</p>
+<p>ll == ls -la</p>
+<p>cp 目录一/文件一  目录二/文件二</p>
+<p>名称里面有空格 需要用\转义</p>
+<p>对文件夹进行操作需要加上 -r</p>
+<h3 id="2-vim"><a href="#2-vim" class="headerlink" title="2.vim"></a>2.vim</h3><p><img src="/2021/11/01/Linux%E5%AD%A6%E4%B9%A0/image-20220206143144749.png" alt="image-20220206143144749"></p>
+<h3 id="3-shell编程"><a href="#3-shell编程" class="headerlink" title="3. shell编程"></a>3. shell编程</h3><p><img src="/2021/11/01/Linux%E5%AD%A6%E4%B9%A0/Users\HuangFeiYang\AppData\Roaming\Typora\typora-user-images\image-20220806180006249.png" alt="image-20220806180006249"></p>
+<p><img src="/2021/11/01/Linux%E5%AD%A6%E4%B9%A0/Users\HuangFeiYang\AppData\Roaming\Typora\typora-user-images\image-20220806163619053.png" alt="image-20220806163619053"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">! /bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> homework_0</span></span><br><span class="line">dir0=/home/acs/homework/lesson_1/homework_0</span><br><span class="line"></span><br><span class="line">for i in dir_a dir_b dir_c</span><br><span class="line">do</span><br><span class="line">    mkdir $&#123;dir0&#125;/$i</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> homework_1</span></span><br><span class="line">dir1=/home/acs/homework/lesson_1/homework_1</span><br><span class="line"></span><br><span class="line">for dir in a.txt b.txt c.txt</span><br><span class="line">do</span><br><span class="line">    cp $&#123;dir1&#125;/$&#123;dir&#125; $&#123;dir1&#125;/$&#123;dir&#125;.bak</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> homework_2</span></span><br><span class="line">dir2=/home/acs/homework/lesson_1/homework_2</span><br><span class="line"></span><br><span class="line">for dir in a.txt b.txt c.txt</span><br><span class="line">do</span><br><span class="line">    mv $&#123;dir2&#125;/$&#123;dir&#125; $&#123;dir2&#125;/$(expr substr &quot;$&#123;dir&#125;&quot; 1 1)_new.txt</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> homework_3</span></span><br><span class="line">dir3=/home/acs/homework/lesson_1/homework_3</span><br><span class="line"></span><br><span class="line">for dir in a.txt b.txt c.txt</span><br><span class="line">do</span><br><span class="line">    mv $&#123;dir3&#125;/dir_a/$&#123;dir&#125; $&#123;dir3&#125;/dir_b/</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> homework_4</span></span><br><span class="line">dir4=/home/acs/homework/lesson_1/homework_4</span><br><span class="line"></span><br><span class="line">for dir in a.txt b.txt c.tt</span><br><span class="line">do</span><br><span class="line">    rm $&#123;dir4&#125;/$&#123;dir&#125;</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> homework_5</span></span><br><span class="line">dir5=/home/acs/homework/lesson_1/homework_5</span><br><span class="line"></span><br><span class="line">for dir in dir_a dir_b dir_c</span><br><span class="line">do</span><br><span class="line">    rm -rf $&#123;dir5&#125;/$&#123;dir&#125;</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> homework_6</span></span><br><span class="line">dir6=/home/acs/homework/lesson_1/homework_6</span><br><span class="line"></span><br><span class="line">mv $&#123;dir6&#125;/task.txt &quot;$&#123;dir6&#125;/done.txt&quot;</span><br><span class="line">mkdir $&#123;dir6&#125;/dir_a</span><br><span class="line">mv &quot;$&#123;dir6&#125;/done.txt&quot; $&#123;dir6&#125;/dir_a</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> homework_7</span></span><br><span class="line">dir7=/home/acs/homework/lesson_1/homework_7</span><br><span class="line"></span><br><span class="line">for dir in dir_0 dir_1 dir_2</span><br><span class="line">do</span><br><span class="line">    mkdir $&#123;dir7&#125;/$&#123;dir&#125;</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">for dir in dir_0 dir_1 dir_2</span><br><span class="line">do</span><br><span class="line">    for txt in a b c</span><br><span class="line">    do</span><br><span class="line">        cp $&#123;dir7&#125;/$&#123;txt&#125;.txt $&#123;dir7&#125;/$&#123;dir&#125;/$&#123;txt&#125;$(expr substr &quot;$&#123;dir&#125;&quot; 5 1).txt</span><br><span class="line">    done</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> homework_8</span></span><br><span class="line">dir8=/home/acs/homework/lesson_1/homework_8</span><br><span class="line"></span><br><span class="line">rm $&#123;dir8&#125;/dir_a/a.txt</span><br><span class="line">mv $&#123;dir8&#125;/dir_b/b.txt $&#123;dir8&#125;/dir_b/b_new.txt</span><br><span class="line">cp $&#123;dir8&#125;/dir_c/c.txt $&#123;dir8&#125;/dir_c/c.txt.bak</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> homework_9</span></span><br><span class="line">dir9=/home/acs/homework/lesson_1/homework_9</span><br><span class="line"></span><br><span class="line">rm $&#123;dir9&#125;/*.txt</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/2021/11/01/Linux%E5%AD%A6%E4%B9%A0/Users\HuangFeiYang\AppData\Roaming\Typora\typora-user-images\image-20220806180201384.png" alt="image-20220806180201384"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">! /bin/bash</span></span><br><span class="line"></span><br><span class="line">if [ $# -ne 1 ]</span><br><span class="line">then</span><br><span class="line">    echo &quot;arguments not valid&quot;</span><br><span class="line">    exit 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if ! [ -e &quot;$1&quot; ]</span><br><span class="line">then</span><br><span class="line">    echo &quot;not exist&quot;</span><br><span class="line">    exit 2</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ -f &quot;$1&quot; ]</span><br><span class="line">then</span><br><span class="line">    echo &quot;regular file&quot;</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ -d &quot;$1&quot; ]</span><br><span class="line">then</span><br><span class="line">    echo &quot;directory&quot;</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ -r &quot;$1&quot; ]</span><br><span class="line">then</span><br><span class="line">    echo &quot;readable&quot;</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ -w &quot;$1&quot; ]</span><br><span class="line">then</span><br><span class="line">    echo &quot;writable&quot;</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ -x &quot;$1&quot; ]</span><br><span class="line">then</span><br><span class="line">    echo &quot;executable&quot;</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">exit 0</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/11/01/Linux%E5%AD%A6%E4%B9%A0/Users\HuangFeiYang\AppData\Roaming\Typora\typora-user-images\image-20220806180013051.png" alt="image-20220806180013051"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">! /bin/bash</span></span><br><span class="line"></span><br><span class="line">read n</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="function"><span class="title">fbnq</span></span>() &#123;</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    <span class="keyword">if</span> [ <span class="variable">$1</span> -eq 0 ] || [ <span class="variable">$1</span> -eq 1 ]</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    <span class="keyword">then</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">        <span class="built_in">echo</span> 1</span></span><br><span class="line"><span class="meta">#</span><span class="bash">        <span class="built_in">return</span> 0</span></span><br><span class="line"><span class="meta">#</span><span class="bash">    <span class="keyword">fi</span></span></span><br><span class="line"><span class="meta">#</span></span><br><span class="line"><span class="bash"><span class="comment">#    sum=$(expr $(fbnq $(expr $1 - 1)) + $(fbnq $(expr $1 - 2)))</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">    <span class="built_in">echo</span> <span class="variable">$sum</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">&#125;</span></span><br><span class="line">a[0]=1</span><br><span class="line">a[1]=1</span><br><span class="line"></span><br><span class="line">for((i=2; i &lt;= n; i++))</span><br><span class="line">do</span><br><span class="line">    x=$(expr $i - 1)</span><br><span class="line">    y=$(expr $i - 2)</span><br><span class="line">    a[$i]=$(expr $&#123;a[$x]&#125; + $&#123;a[$y]&#125;)</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">echo $&#123;a[$n]&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/11/01/Linux%E5%AD%A6%E4%B9%A0/Users\HuangFeiYang\AppData\Roaming\Typora\typora-user-images\image-20220806230527493.png" alt="image-20220806230527493"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">! /bin/bash</span></span><br><span class="line"></span><br><span class="line">read n</span><br><span class="line">read m</span><br><span class="line"></span><br><span class="line">for((i=0; i &lt;= n; i++))</span><br><span class="line">do</span><br><span class="line">    st[$i]=0</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">dfs()&#123;</span><br><span class="line">    if [ $1 -eq $n ]</span><br><span class="line">    then</span><br><span class="line">        m=`expr $m - 1`</span><br><span class="line">        if [ $m -eq 0 ]</span><br><span class="line">        then</span><br><span class="line">            echo $&#123;path[@]&#125;</span><br><span class="line">            return 0</span><br><span class="line">        fi</span><br><span class="line">        return 1</span><br><span class="line">    fi</span><br><span class="line"></span><br><span class="line">    local j=0</span><br><span class="line">    for((j=1; j&lt;=n; j++))</span><br><span class="line">    do</span><br><span class="line">        if [ $&#123;st[$j]&#125; -eq 0 ]</span><br><span class="line">        then</span><br><span class="line">            path[$1]=$j</span><br><span class="line">            st[$j]=1</span><br><span class="line"></span><br><span class="line">            if dfs `expr $1 + 1`</span><br><span class="line">            then</span><br><span class="line">                return 0</span><br><span class="line">            fi</span><br><span class="line">            </span><br><span class="line">            st[$j]=0</span><br><span class="line">        fi</span><br><span class="line">    done</span><br><span class="line">    </span><br><span class="line">    return 1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dfs 0</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>C++版本</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">110</span>;</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"><span class="keyword">int</span> path[N];</span><br><span class="line"><span class="keyword">bool</span> st[N];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(u==n)<span class="comment">//获得了一个全排列</span></span><br><span class="line">    &#123;</span><br><span class="line">        m--;</span><br><span class="line">        <span class="keyword">if</span>(!m)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)<span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,path[i]);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i ++ )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(!st[i])</span><br><span class="line">        &#123;</span><br><span class="line">            st[i]=<span class="literal">true</span>;</span><br><span class="line">            path[u]=i;</span><br><span class="line">            <span class="keyword">if</span>(dfs(u+<span class="number">1</span>))<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            st[i]=<span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    dfs(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/11/01/Linux%E5%AD%A6%E4%B9%A0/Users\HuangFeiYang\AppData\Roaming\Typora\typora-user-images\image-20220806230612386.png" alt="image-20220806230612386"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">! /bin/bash</span></span><br><span class="line"></span><br><span class="line">inputfile=$1</span><br><span class="line">outputfile=$2</span><br><span class="line"></span><br><span class="line">read n &lt; $&#123;inputfile&#125;</span><br><span class="line"></span><br><span class="line">sum=0</span><br><span class="line">for((i=1; i&lt;=n; i++))</span><br><span class="line">do</span><br><span class="line">    sqr=`expr $i \* $i`</span><br><span class="line">    sum=`expr $sqr + $sum`</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">echo $sum &gt; $&#123;outputfile&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/10/26/%E4%B8%80%E7%BB%B4%E5%B7%AE%E5%88%86%E5%92%8C%E4%BA%8C%E7%BB%B4%E5%B7%AE%E5%88%86/" rel="next" title="一维差分和二维差分">
+                <i class="fa fa-chevron-left"></i> 一维差分和二维差分
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/01/10/%E5%9F%BA%E7%A1%80%E8%AF%BE/" rel="prev" title="基础课">
+                基础课 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%B8%B8%E7%94%A8%E7%9A%84%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">1. 常用的文件管理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 文件系统</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-1%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1.1文件系统结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-2%E8%B7%AF%E5%BE%84"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.1.2路径</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-vim"><span class="nav-number">2.</span> <span class="nav-text">2.vim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-shell%E7%BC%96%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">3. shell编程</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">❤feiyangHuang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by fy</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">
+   博客-feiyang
+   </div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/qwe/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

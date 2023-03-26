@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/qwe/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/qwe/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="计算机网络学习," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="计网知识点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络">
+<meta property="og:url" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.html">
+<meta property="og:site_name" content="hfy up up">
+<meta property="og:description" content="计网知识点">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/20190324183705231.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210523232712034.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210523232729171.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210523232810106.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210523232824148.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210523233024529.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/dcdbb96c-9077-4121-aeb8-743e54ac02a4.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/a1616dac-0e12-40b2-827d-9e3f7f0b940d.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210523233335781.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210523233602630.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/c34f4503-f62c-4043-9dc6-3e03288657df.jpg">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525105113519.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525105201216.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525105625046.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525105702314.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525105725305.png">
+<meta property="og:image" content="https://latex.codecogs.com/gif.latex?%5Cvec%7BS%7D">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/gif.latex">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525105925931.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/gif.latex">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525110309382.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/gif.latex">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/gif.latex">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/gif.latex">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525110328790.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525110412038.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525110434811.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525110448271.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525110528884.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525110548890.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525110612617.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525110634804.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210628202957187.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210628203602699.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210628203612146.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210628203658082.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210628230519380.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210628230741743.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210628231758206.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210628232113042.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210628233627224.png">
+<meta property="og:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210626192902314.png">
+<meta property="article:published_time" content="2021-04-07T12:27:59.000Z">
+<meta property="article:modified_time" content="2021-06-30T12:39:48.968Z">
+<meta property="article:author" content="feiyangHuang">
+<meta property="article:tag" content="计算机网络学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/20190324183705231.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2021/04/07/计算机网络/"/>
+
+
+
+
+
+  <title>计算机网络 | hfy up up</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">hfy up up</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hfy up up">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">计算机网络</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-04-07T20:27:59+08:00">
+                2021-04-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>计网知识点</p>
+<a id="more"></a>
+
+<h1 id="1-计算机网络概述"><a href="#1-计算机网络概述" class="headerlink" title="1 计算机网络概述"></a>1 计算机网络概述</h1><p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/20190324183705231.png" alt="img"></p>
+<ul>
+<li>网络边缘: 连接因特网的计算机和其他设备。</li>
+<li>接入网:  将端系统物理连接到其边缘路由器的网络。</li>
+<li>网络核心:  互联网因特网端系统的分组交换机和链路构成的网状网络。</li>
+</ul>
+<blockquote>
+<p>ISP</p>
+</blockquote>
+<p>​    互联网服务提供商 ISP 可以从互联网管理机构获得许多 IP 地址，同时拥有通信线路以及路由器等联网设备，个人或机构向 ISP 缴纳一定的费用就可以接入互联网。</p>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210523232712034.png" alt="image-20210523232712034"></p>
+<p>​    目前的互联网是一种多层次 ISP 结构，ISP 根据覆盖面积的大小分为第一层 ISP、区域 ISP 和接入 ISP。互联网交换点 IXP 允许两个 ISP 直接相连而不用经过第三个 ISP。</p>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210523232729171.png" alt="image-20210523232729171"></p>
+<blockquote>
+<p>主机间的通信方式</p>
+</blockquote>
+<ul>
+<li>客户-服务器（C/S）：客户是服务的请求方，服务器是服务的提供方。</li>
+</ul>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210523232810106.png" alt="image-20210523232810106"></p>
+<ul>
+<li>对等（P2P）：不区分客户和服务器。</li>
+</ul>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210523232824148.png" alt="image-20210523232824148"></p>
+<blockquote>
+<p>电路交换和分组交换</p>
+</blockquote>
+<ol>
+<li> 电路交换</li>
+</ol>
+<p>​    电路交换用于电话通信系统，两个用户要通信之前需要建立一条专用的物理链路，并且在整个通信过程中始终占用该链路。由于通信的过程中不可能一直在使用传输线路，因此电路交换对线路的利用率很低，往往不到 10%。 </p>
+<ol start="2">
+<li>分组交换</li>
+</ol>
+<p>​    每个分组都有首部和尾部，包含了源地址和目的地址等控制信息，在同一个传输线路上同时传输多个分组互相不会影响，因此在同一条传输线路上允许同时传输多个分组，也就是说分组交换不需要占用传输线路。</p>
+<p>​    在一个邮局通信系统中，邮局收到一份邮件之后，先存储下来，然后把相同目的地的邮件一起转发到下一个目的地，这个过程就是存储转发过程，分组交换也使用了存储转发过程。</p>
+<blockquote>
+<p>时延</p>
+</blockquote>
+<p>总时延 = 排队时延 + 处理时延 + 传输时延 + 传播时延</p>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210523233024529.png" alt="image-20210523233024529"></p>
+<ul>
+<li><p>排队时延</p>
+<p>分组在路由器的输入队列和输出队列中排队等待的时间，取决于网络当前的通信量。</p>
+</li>
+<li><p>处理时延</p>
+<p>主机或路由器收到分组时进行处理所需要的时间，例如分析首部、从分组中提取数据、进行差错检验或查找适当的路由等</p>
+</li>
+<li><p>传输时延</p>
+<p>主机或路由器传输数据帧所需要的时间。</p>
+<img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/dcdbb96c-9077-4121-aeb8-743e54ac02a4.png" alt="img" style="zoom: 50%;">
+
+<p>其中 l 表示数据帧的长度，v 表示传输速率。</p>
+</li>
+<li><p>传播时延</p>
+<p>电磁波在信道中传播所需要花费的时间，电磁波传播的速度接近光速。</p>
+<img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/a1616dac-0e12-40b2-827d-9e3f7f0b940d.png" alt="img" style="zoom:50%;">
+
+<p>其中 l 表示信道长度，v 表示电磁波在信道上的传播速度。</p>
+</li>
+</ul>
+<blockquote>
+<p>计算机网络体系结构</p>
+</blockquote>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210523233335781.png" alt="image-20210523233335781"></p>
+<ul>
+<li><p>五层协议</p>
+<ul>
+<li><strong>应用层</strong> ：为特定应用程序提供数据传输服务，例如 HTTP、DNS 等协议。数据单位为报文。</li>
+<li><strong>传输层</strong> ：为进程提供通用数据传输服务。由于应用层协议很多，定义通用的传输层协议就可以支持不断增多的应用层协议。运输层包括两种协议：传输控制协议 TCP，提供面向连接、可靠的数据传输服务，数据单位为报文段；用户数据报协议 UDP，提供无连接、尽最大努力的数据传输服务，数据单位为用户数据报。TCP 主要提供完整性服务，UDP 主要提供及时性服务。</li>
+<li><strong>网络层</strong> ：为主机提供数据传输服务。而传输层协议是为主机中的进程提供数据传输服务。网络层把传输层传递下来的报文段或者用户数据报封装成分组。</li>
+<li><strong>数据链路层</strong> ：网络层针对的还是主机之间的数据传输服务，而主机之间可以有很多链路，链路层协议就是为同一链路的主机提供数据传输服务。数据链路层把网络层传下来的分组封装成帧。</li>
+<li><strong>物理层</strong> ：考虑的是怎样在传输媒体上传输数据比特流，而不是指具体的传输媒体。物理层的作用是尽可能屏蔽传输媒体和通信手段的差异，使数据链路层感觉不到这些差异。</li>
+</ul>
+</li>
+<li><p>OSI</p>
+<p>其中表示层和会话层用途如下：</p>
+<ul>
+<li><p><strong>表示层</strong> ：数据压缩、加密以及数据描述，这使得应用程序不必关心在各台主机中数据内部格式不同的问题。</p>
+</li>
+<li><p><strong>会话层</strong> ：建立及管理会话。</p>
+<p>五层协议没有表示层和会话层，而是将这些功能留给应用程序开发者处理。</p>
+</li>
+</ul>
+</li>
+<li><p>TCP/IP</p>
+<p>它只有四层，相当于五层协议中数据链路层和物理层合并为网络接口层。</p>
+<p>TCP/IP 体系结构不严格遵循 OSI 分层概念，应用层可能会直接使用 IP 层或者网络接口层。</p>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210523233602630.png" alt="image-20210523233602630"></p>
+</li>
+<li><p>数据在各层之间的传递过程</p>
+<p>在向下的过程中，需要添加下层协议所需要的首部或者尾部，而在向上的过程中不断拆开首部和尾部。</p>
+<p>路由器只有下面三层协议，因为路由器位于网络核心中，不需要为进程或者应用程序提供服务，因此也就不需要应用层和传输层。</p>
+</li>
+</ul>
+<h1 id="2-计算机网络-物理层"><a href="#2-计算机网络-物理层" class="headerlink" title="2. 计算机网络 - 物理层"></a>2. 计算机网络 - 物理层</h1><blockquote>
+<p>通信方式</p>
+</blockquote>
+<p>根据信息在传输线上的传送方向，分为以下三种通信方式：</p>
+<ul>
+<li>单工通信：单向传输</li>
+<li>半双工通信：双向交替传输</li>
+<li>全双工通信：双向同时传输</li>
+</ul>
+<p>模拟信号是连续的信号，数字信号是离散的信号。带通调制把数字信号转换为模拟信号。</p>
+<img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/c34f4503-f62c-4043-9dc6-3e03288657df.jpg" alt="img" style="zoom:50%;">
+
+<h1 id="3-计算机网络-链路层"><a href="#3-计算机网络-链路层" class="headerlink" title="3. 计算机网络 - 链路层"></a>3. 计算机网络 - 链路层</h1><blockquote>
+<p>基本问题</p>
+</blockquote>
+<ol>
+<li><p>封装成帧</p>
+<p>将网络层传下来的分组添加首部和尾部，用于标记帧的开始和结束。</p>
+</li>
+</ol>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525105113519.png" alt="image-20210525105113519"></p>
+<ol start="2">
+<li><p>透明传输</p>
+<p>透明表示一个实际存在的事物看起来好像不存在一样。</p>
+<p>帧使用首部和尾部进行定界，如果帧的数据部分含有和首部尾部相同的内容，那么帧的开始和结束位置就会被错误的判定。需要在数据部分出现首部尾部相同的内容前面插入转义字符。如果数据部分出现转义字符，那么就在转义字符前面再加个转义字符。在接收端进行处理之后可以还原出原始数据。这个过程透明传输的内容是转义字符，用户察觉不到转义字符的存在。</p>
+</li>
+</ol>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525105201216.png" alt="image-20210525105201216"></p>
+<ol start="3">
+<li><p>差错检测</p>
+<p>目前数据链路层广泛使用了循环冗余检验（CRC）来检查比特差错。</p>
+</li>
+</ol>
+<blockquote>
+<p>信道分类</p>
+</blockquote>
+<ol>
+<li><p>广播信道</p>
+<p>一对多通信，一个节点发送的数据能够被广播信道上所有的节点接收到。</p>
+<p>所有的节点都在同一个广播信道上发送数据，因此需要有专门的控制方法进行协调，避免发生冲突（冲突也叫碰撞）。</p>
+<p>主要有两种控制方法进行协调，一个是使用信道复用技术，一是使用 CSMA/CD 协议。</p>
+</li>
+<li><p>点对点信道</p>
+<p>一对一通信。</p>
+<p>因为不会发生碰撞，因此也比较简单，使用 PPP 协议进行控制。</p>
+</li>
+</ol>
+<blockquote>
+<p> 信道复用技术</p>
+</blockquote>
+<ol>
+<li><p>频分复用</p>
+<p>频分复用的所有主机在相同的时间占用不同的频率带宽资源。</p>
+<img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525105625046.png" alt="image-20210525105625046" style="zoom:80%;">
+
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p>时分复用</p>
+<p>时分复用的所有主机在不同的时间占用相同的频率带宽资源。</p>
+</li>
+</ol>
+<img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525105702314.png" alt="image-20210525105702314" style="zoom:67%;">
+
+<ol start="3">
+<li><p>统计时分复用</p>
+<p>是对时分复用的一种改进，不固定每个用户在时分复用帧中的位置，只要有数据就集中起来组成统计时分复用帧然后发送。</p>
+</li>
+</ol>
+<img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525105725305.png" alt="image-20210525105725305" style="zoom:80%;">
+
+<ol start="4">
+<li><p>波分复用</p>
+<p>光的频分复用。由于光的频率很高，因此习惯上用波长而不是频率来表示所使用的光载波。</p>
+</li>
+<li><p>码分复用</p>
+<p>为每个用户分配 m bit 的码片，并且所有的码片正交，对于任意两个码片 <img src="https://latex.codecogs.com/gif.latex?%5Cvec%7BS%7D" alt="img"> 和 <img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/gif.latex" alt="img"> 有</p>
+</li>
+</ol>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525105925931.png" alt="image-20210525105925931"></p>
+<p>​        为了讨论方便，取 m=8，设码片 <img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/gif.latex" alt="img"> 为 00011011。在拥有该码片的用户发送比特 1 时就发送该码片，发送比特 0 时就发送该码片的反码 11100100。</p>
+<p>​        在计算时将 00011011 记作 (-1 -1 -1 +1 +1 -1 +1 +1)，可以得到</p>
+<img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525110309382.png" alt="image-20210525110309382" style="zoom:80%;">
+
+<p>其中 <img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/gif.latex" alt="img"> 为 <img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/gif.latex" alt="img"> 的反码。</p>
+<p>利用上面的式子我们知道，当接收端使用码片 <img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/gif.latex" alt="img"> 对接收到的数据进行内积运算时，结果为 0 的是其它用户发送的数据，结果为 1 的是用户发送的比特 1，结果为 -1 的是用户发送的比特 0。</p>
+<p>码分复用需要发送的数据量为原先的 m 倍。</p>
+<img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525110328790.png" alt="image-20210525110328790" style="zoom:80%;">
+
+
+
+<blockquote>
+<p>CSMA/CD 协议</p>
+</blockquote>
+<p>CSMA/CD 表示载波监听多点接入 / 碰撞检测。</p>
+<ul>
+<li><strong>多点接入</strong> ：说明这是总线型网络，许多主机以多点的方式连接到总线上。</li>
+<li><strong>载波监听</strong> ：每个主机都必须不停地监听信道。在发送前，如果监听到信道正在使用，就必须等待。</li>
+<li><strong>碰撞检测</strong> ：在发送中，如果监听到信道已有其它主机正在发送数据，就表示发生了碰撞。虽然每个主机在发送数据之前都已经监听到信道为空闲，但是由于电磁波的传播时延的存在，还是有可能会发生碰撞。</li>
+</ul>
+<p>记端到端的传播时延为 τ，最先发送的站点最多经过 2τ 就可以知道是否发生了碰撞，称 2τ 为 <strong>争用期</strong> 。只有经过争用期之后还没有检测到碰撞，才能肯定这次发送不会发生碰撞。</p>
+<p>当发生碰撞时，站点要停止发送，等待一段时间再发送。这个时间采用 <strong>截断二进制指数退避算法</strong> 来确定。从离散的整数集合 {0, 1, .., (2k-1)} 中随机取出一个数，记作 r，然后取 r 倍的争用期作为重传等待时间。</p>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525110412038.png" alt="image-20210525110412038"></p>
+<blockquote>
+<p>PPP协议</p>
+</blockquote>
+<p>互联网用户通常需要连接到某个 ISP 之后才能接入到互联网，PPP 协议是用户计算机和 ISP 进行通信时所使用的数据链路层协议。</p>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525110434811.png" alt="image-20210525110434811"></p>
+<p>PPP 的帧格式：</p>
+<ul>
+<li>F 字段为帧的定界符</li>
+<li>A 和 C 字段暂时没有意义</li>
+<li>FCS 字段是使用 CRC 的检验序列</li>
+<li>信息部分的长度不超过 1500</li>
+</ul>
+<img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525110448271.png" alt="image-20210525110448271" style="zoom:80%;">
+
+<blockquote>
+<p> MAC地址</p>
+</blockquote>
+<p>MAC 地址是链路层地址，长度为 6 字节（48 位），用于唯一标识网络适配器（网卡）。</p>
+<p>一台主机拥有多少个网络适配器就有多少个 MAC 地址。例如笔记本电脑普遍存在无线网络适配器和有线网络适配器，因此就有两个 MAC 地址。</p>
+<blockquote>
+<p>局域网</p>
+</blockquote>
+<p>局域网是一种典型的广播信道，主要特点是网络为一个单位所拥有，且地理范围和站点数目均有限。</p>
+<p>主要有以太网、令牌环网、FDDI 和 ATM 等局域网技术，目前以太网占领着有线局域网市场。</p>
+<p>可以按照网络拓扑结构对局域网进行分类：</p>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525110528884.png" alt="image-20210525110528884"></p>
+<blockquote>
+<p>以太网</p>
+</blockquote>
+<p>以太网是一种星型拓扑结构局域网。</p>
+<p>早期使用集线器进行连接，集线器是一种物理层设备， 作用于比特而不是帧，当一个比特到达接口时，集线器重新生成这个比特，并将其能量强度放大，从而扩大网络的传输距离，之后再将这个比特发送到其它所有接口。如果集线器同时收到两个不同接口的帧，那么就发生了碰撞。</p>
+<p>目前以太网使用交换机替代了集线器，交换机是一种链路层设备，它不会发生碰撞，能根据 MAC 地址进行存储转发。</p>
+<p>以太网帧格式：</p>
+<ul>
+<li><strong>类型</strong> ：标记上层使用的协议；</li>
+<li><strong>数据</strong> ：长度在 46-1500 之间，如果太小则需要填充；</li>
+<li><strong>FCS</strong> ：帧检验序列，使用的是 CRC 检验方法；</li>
+</ul>
+<img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525110548890.png" alt="image-20210525110548890" style="zoom:80%;">
+
+<blockquote>
+<p>交换机</p>
+</blockquote>
+<p>交换机具有自学习能力，学习的是交换表的内容，交换表中存储着 MAC 地址到接口的映射。</p>
+<p>正是由于这种自学习能力，因此交换机是一种即插即用设备，不需要网络管理员手动配置交换表内容。</p>
+<p>下图中，交换机有 4 个接口，主机 A 向主机 B 发送数据帧时，交换机把主机 A 到接口 1 的映射写入交换表中。为了发送数据帧到 B，先查交换表，此时没有主机 B 的表项，那么主机 A 就发送广播帧，主机 C 和主机 D 会丢弃该帧，主机 B 回应该帧向主机 A 发送数据包时，交换机查找交换表得到主机 A 映射的接口为 1，就发送数据帧到接口 1，同时交换机添加主机 B 到接口 2 的映射。</p>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525110612617.png" alt="image-20210525110612617"></p>
+<blockquote>
+<p>虚拟局域网</p>
+</blockquote>
+<p>虚拟局域网可以建立与物理位置无关的逻辑组，只有在同一个虚拟局域网中的成员才会收到链路层广播信息。</p>
+<p>例如下图中 (A1, A2, A3, A4) 属于一个虚拟局域网，A1 发送的广播会被 A2、A3、A4 收到，而其它站点收不到。</p>
+<p>使用 VLAN 干线连接来建立虚拟局域网，每台交换机上的一个特殊接口被设置为干线接口，以互连 VLAN 交换机。IEEE 定义了一种扩展的以太网帧格式 802.1Q，它在标准以太网帧上加进了 4 字节首部 VLAN 标签，用于表示该帧属于哪一个虚拟局域网。</p>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210525110634804.png" alt="image-20210525110634804"></p>
+<h1 id="4-计算机网络-网络层"><a href="#4-计算机网络-网络层" class="headerlink" title="4. 计算机网络 - 网络层"></a>4. 计算机网络 - 网络层</h1><h1 id="5-计算机网络-传输层"><a href="#5-计算机网络-传输层" class="headerlink" title="5. 计算机网络 - 传输层"></a>5. 计算机网络 - 传输层</h1><blockquote>
+<p>运输层的作用</p>
+</blockquote>
+<p>​    运输层为运行在不同主机上的应用进程之间提供了逻辑通信。</p>
+<p>​    运输层发送的是报文段。实现的方法可能是将应用报文划分为较小的块， 并为每块加上一个运输层首部以生成运输层报文段。</p>
+<p>​    <strong>注意</strong>:</p>
+<p>​        网络路由器仅作用于该数据报的网络层字段； 即他们不检查封装在该数据报的运输层报文段的字段。 </p>
+<blockquote>
+<p>运输层和网络层之间的关系</p>
+</blockquote>
+<ul>
+<li>运输层的作用仅仅是将端系统中来自应用进程的报文移动到网络边缘(网络层)。运输层协议只工作在端系统中。</li>
+<li>运输协议能够提供的服务常常受制于底层网络协议的服务模型，如果网络层协议无法为主机之间发送的运输层报文段提供时延或者是带宽保证的话， 运输层协议也就无法为进程之间发送的应用程序报文提供时延或带宽保证。</li>
+<li>即使底层网络协议不能在网络层提供相应的服务， 运输层协议也能提供某些服务。</li>
+</ul>
+<blockquote>
+<p> 传输层的主要作用</p>
+</blockquote>
+<p>​    TCP,UDP最基本的责任是，将两个<strong>端系统</strong>间IP的交付服务扩展为运行在端系统上的两个<strong>进程</strong>之间的交付服务。将主机间交付扩展到进程间交付被称为运输层的多路复用与多路分解。</p>
+<p>​    进程到进程的数据交付和差错检测是两种最低限度的运输层服务，也是UDP仅能提供的两种服务。</p>
+<blockquote>
+<p>多路复用与多路分解</p>
+</blockquote>
+<p>​    定义: 将网络层提供的  主机到主机的交付服务延伸到为运行在主机上的应用程序提供进程到进程的交付服务。</p>
+<p>​    <strong>Attention</strong>:一个进程有一个或者多个套接字(socket)</p>
+<p>​    在接收主机的运输层其实没有直接把数据交付给进程， 而是将数据交给了一个中间的套接字。</p>
+<p>​    <strong>多路分解</strong></p>
+<p>​    定义: 将运输层的报文段中 的数据交付到正确的套接字的工作称为多路分解。</p>
+<p>​    <strong>多路复用</strong></p>
+<p>​    定义: 在源主机从不同的套接字中收集数据块，并为每个数据块封装上首部信息(这将在以后用于分解)从而生成报文段，然后将报文段传递到网络层， 所有的这些工作称为多路复用。源端口号喝目的端口号指示该报文段咬交付到的套接字。</p>
+<p>​    定义</p>
+<blockquote>
+<p>UDP(User datagram protocol) 用户数据报协议</p>
+</blockquote>
+<ul>
+<li>UDP为调用它的应用程序提供了一种不可靠，无连接的服务。 一般将分组称为<strong>数据报</strong> 在自顶向下的计算机网络中统称为报文段 </li>
+<li>与IP一样, UDP也是一种不可靠的服务，即不能保证一个进程所发送的数据能够完整地到达目的进程。</li>
+</ul>
+<p><strong>UDP</strong>的报文段结构</p>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210628202957187.png" alt="image-20210628202957187"></p>
+<p><strong>源端口</strong>：源端口号。在需要对方回信时选用。不需要时可用全0。</p>
+<p><strong>目的端口</strong>：目的端口号。这在终点交付报文时必须要使用到。</p>
+<p><strong>长度</strong>： UDP用户数据报的长度，其最小值是8（仅有首部）。</p>
+<p><strong>校验和</strong>：检测UDP用户数据报在传输中是否有错。有错就丢弃</p>
+<p>每个字段两个字节</p>
+<p><strong>UDP检验和</strong></p>
+<p>发送方的UDP对报文段中所有16比特字的和进行反码运算，求和时遇到的任何溢出都被回卷，得到的结果放在UDP报文段中的检验和字段</p>
+<p>举例：</p>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210628203602699.png" alt="image-20210628203602699"></p>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210628203612146.png" alt="image-20210628203612146"></p>
+<p>反码运算结果存在发送方的报文段中的检验和字段后发出去</p>
+<p>接收方收到报文后，将所有的16比特字（包括检验和）加在一起，如果没有差错，则得到的和应该是1111111111111111，如果这之间有一个是0，则出现差错</p>
+<p>另外：</p>
+<p>UDP数据报需包含一个12字节长的伪首部，它是为了计算检验和而设置的</p>
+<p>伪首部既不向下传送也不向上递交，而仅仅是为了计算校验和</p>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210628203658082.png" alt="image-20210628203658082"></p>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210628230519380.png" alt="image-20210628230519380"></p>
+<blockquote>
+<p>TCP(Transmission datagram protocol) 传输控制协议</p>
+</blockquote>
+<ul>
+<li>TCP为调用它的应用程序提供了一种可靠的、面向连接的服务。一般将分组称为<strong>报文段</strong></li>
+<li>TCP 提供<strong>可靠数据传输</strong>，通过使用流量控制、序号、确认和定时器，TCP确保正确地、按序地将数据从发送进程交付给接收进程。</li>
+<li>TCP提供<strong>拥塞控制</strong></li>
+<li>TCP提供全双工通信(发送缓存，接收缓存)</li>
+<li>TCP 首部 20个字节</li>
+</ul>
+<p>​                                                                                           <strong>TCP报文段首部格式</strong></p>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210628230741743.png" alt="image-20210628230741743"></p>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210628231758206.png"></p>
+<p><strong>TCP三次握手</strong></p>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210628232113042.png" alt="image-20210628232113042"></p>
+<p><strong>TCP连接释放</strong></p>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210628233627224.png" alt="image-20210628233627224"></p>
+<blockquote>
+<p> TCP连接双方随即初始序号的目的</p>
+</blockquote>
+<p>​    这样做可以减少那些仍在网络中存在的来自两台主机先前已经终止的连接的报文段，误认为是后来这两台主机之间新建连接所产生的有效报文段的可能性(它碰巧与旧连接使用了相同的端口号)。</p>
+<p><strong>为什么是3次冗余ACK,不是两次的解答</strong></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u010202588/article/details/54563648">https://blog.csdn.net/u010202588/article/details/54563648</a></p>
+<p>​    主要的考虑还是要区分包的丢失是由于链路故障还是乱序等其他因素引发。两次duplicated ACK时很可能是乱序造成的！三次duplicated ACK时很可能是丢包造成的！四次duplicated ACK更更更可能是丢包造成的！但是这样的响应策略太慢。丢包肯定会造成三次duplicated ACK!综上是选择收到三个重复确认时窗口减半效果最好，这是实践经验。</p>
+<blockquote>
+<p>UDP不粘包, TCP粘包问题</p>
+</blockquote>
+<p>粘包产生原因：</p>
+<p>​    保护消息边界和流 (UDP有保护消息边界，TCP没有, TCP是流机制)</p>
+<p>​    先说TCP：由于TCP协议本身的机制（面向连接的可靠地协议-三次握手机制）客户端与服务器会维持一个连接（Channel），数据在连接不断开的情况下，可以持续不断地将多个数据包发往服务器，但是如果发送的网络数据包太小，那么他本身会启用Nagle算法（可配置是否启用）对较小的数据包进行合并（基于此，TCP的网络延迟要UDP的高些）然后再发送（超时或者包大小足够）。</p>
+<p>​    那么这样的话，服务器在接收到消息（数据流）的时候就无法区分哪些数据包是客户端自己分开发送的，这样产生了粘包；服务器在接收到数据包后，放到缓冲区中，如果消息没有被及时从缓存区取走，下次在取数据的时候可能就会出现一次取出多个数据包的情况，造成粘包现象（确切来讲，对于基于TCP协议的应用，不应用包来描述，而应用流来描述），个人认为服务器接收端产生的粘包应该与linux内核处理socket的方式 select轮询机制的线性扫描频度无关。</p>
+<p>​    再说UDP：本身作为无连接的不可靠的传输协议（适合频繁发送较小的数据包），他不会对数据包进行合并发送（也就没有Nagle算法之说了），他直接是一端发送什么数据，直接就发出去了，既然他不会对数据合并，每一个数据包都是完整的（数据+UDP头+IP头等等发一次数据封装一次）也就没有粘包一说了。 </p>
+<p>​    分包产生的原因就简单的多：可能是IP分片传输导致的，也可能是传输过程中丢失部分包导致出现的半包，还有可能就是一个包可能被分成了两次传输，在取数据的时候，先取到了一部分（还可能与接收的缓冲区大小有关系），总之就是一个数据包被分成了多次接收。 </p>
+<blockquote>
+<p>解决办法：</p>
+</blockquote>
+<p>粘包与分包的处理方法：</p>
+<p>我根据现有的一些开源资料做了如下总结（常用的解决方案）：</p>
+<ul>
+<li>一个是采用分隔符的方式，即我们在封装要传输的数据包的时候，采用固定的符号作为结尾符（数据中不能含结尾符），这样我们接收到数据后，如果出现结尾标识，即人为的将粘包分开，如果一个包中没有出现结尾符，认为出现了分包，则等待下个包中出现后 组合成一个完整的数据包，这种方式适合于文本传输的数据，如采用/r/n之类的分隔符</li>
+<li>另一种是采用在数据包中添加长度的方式，即在数据包中的固定位置封装数据包的长度信息（或可计算数据包总长度的信息），服务器接收到数据后，先是解析包长度，然后根据包长度截取数据包（此种方式常出现于自定义协议中），但是有个小问题就是如果客户端第一个数据包数据长度封装的有错误，那么很可能就会导致后面接收到的所有数据包都解析出错（由于TCP建立连接后流式传输机制），只有客户端关闭连接后重新打开才可以消除此问题，我在处理这个问题的时候对数据长度做了校验，会适时的对接收到的有问题的包进行人为的丢弃处理（客户端有自动重发机制，故而在应用层不会导致数据的不完整性）</li>
+</ul>
+<h2 id="5-1-滑动窗口协议"><a href="#5-1-滑动窗口协议" class="headerlink" title="5.1 滑动窗口协议"></a>5.1 滑动窗口协议</h2><blockquote>
+<p> TCP背景介绍</p>
+</blockquote>
+<p>从传输数据来讲，TCP/UDP以及其他协议都可以完成数据的传输，从一端传输到另外一端，TCP比较出众的一点就是提供一个<strong>可靠的，流量控制</strong>的数据传输，所以实现起来要比其他协议复杂的多，先来看下这两个修饰词的意义：</p>
+<ol>
+<li><strong>Reliability</strong> ，提供TCP的<strong>可靠性</strong> ，TCP的传输要保证数据能够准确到达目的地，如果不能，需要能检测出来并且重新发送数据。</li>
+<li><strong>Data Flow Control</strong> ，提供TCP的<strong>流量控制</strong> 特性，管理发送数据的速率，不要超过设备的承载能力。m<br>为了能够实现以上2点，TCP实现了很多细节的功能来保证<strong>数据传输</strong> ，比如说 <strong>滑动窗口适应机制</strong> ，超时重传机制，累计ACK等，这次先介绍一下<strong>滑动窗口的一些知识点</strong> 。</li>
+</ol>
+<blockquote>
+<p>滑动窗口的引入</p>
+</blockquote>
+<p>IP层协议属于不可靠的协议，IP层并不关心数据<strong>是否发送到了对端</strong> ，TCP通过确认机制来<strong>保证数据传输的可靠性</strong> ，在比较早的时候使用的是<strong>send–wait–send</strong> 的模式，其实这种模式叫做<strong>stop-wait模式</strong> ，发送数据方在发送数据之后会启动定时器，但是<strong>如果数据或者ACK丢失，那么定时器到期之后，收不到ACK就认为发送出现状况，要进行重传</strong> 。这样就会降低了通信的效率，如下图所示，这种方式被称为 <strong>positive acknowledgment with retransmission (PAR)</strong></p>
+<p>滑动窗口机制可以<strong>优化一下PAR效率低的缺点</strong> ，比如我让发送的每一个包都有一个id，接收端必须对每一个包进行确认，这样设备A一次多发送几个片段，而不必等候ACK，同时接收端也要告知它能够收多少，这样发送端发起来也有个限制。当然还需要保证数据发送的顺序性，尽量不要乱序。可以允许一段时间内的乱序情况，比如说先缓存提前到的数据，然后去等待需要的数据，但是如果一定时间需要的数据还没来就DROP掉，不管他，继续进行下一个步骤。</p>
+<blockquote>
+<p>3 滑动窗口机制的概念</p>
+</blockquote>
+<p>滑动窗口实现了TCP流控制。首先明确<strong>滑动窗口的范畴</strong> ：TCP是<strong>双工的协议</strong> ，会话的双方都可以同时接收和发送数据。TCP会话的双方都各自维护一个<strong>发送窗口</strong> 和一个<strong>接收窗口</strong> 。各自的接收窗口大小取决于应用、系统、硬件的限制（TCP传输速率不能大于应用的数据处理速率）。各自的发送窗口则要求取决于对端通告的<strong>接收窗口</strong> ，<strong>要求相同</strong> 。</p>
+<p>滑动窗口解决的是<strong>流量控制</strong> 的的问题，就是如果接收端和发送端对数据包的处理速度不同，如何让双方达成一致。接收端的缓存传输数据给应用层，但这个过程不一定是即时的，如果发送速度太快，会出现接收端数据overflow，流量控制解决的是这个问题。</p>
+<p><strong>发送方的发送缓存内的数据</strong> 都可以被分为4类:</p>
+<ol>
+<li>已发送，已收到ACK</li>
+<li>已发送，未收到ACK</li>
+<li>未发送，但允许发送</li>
+<li>未发送，但不允许发送<br>其中<strong>类型2和3</strong>都属于<strong>发送窗口</strong> 。</li>
+</ol>
+<p><strong>接收方的缓存数据</strong> 分为3类：</p>
+<ol>
+<li>已接收</li>
+<li>未接收但准备接收</li>
+<li>未接收而且不准备接收<br>其中<strong>类型2</strong>属于接收窗口。</li>
+</ol>
+<p>窗口大小代表了<strong>设备一次能从对端处理多少数据</strong> ，之后再传给应用层。缓存传给应用层的数据不能是乱序的，窗口机制保证了这一点。现实中，应用层可能无法立刻从缓存中读取数据。</p>
+<blockquote>
+<p>滑动机制</p>
+</blockquote>
+<ol>
+<li>发送窗口<strong>只有收到发送窗口内字节的ACK确认</strong> ，才会移动发送窗口的左边界。</li>
+<li>接收窗口<strong>只有在前面所有的段都确认的情况下才会移动左边界</strong> 。当在前面还有字节未接收但收到后面字节的情况下，窗口不会移动，并不对后续字节确认。以此确保对端会对这些数据重传。</li>
+<li><strong>遵循快速重传、累计确认、选择确认等规则</strong> 。</li>
+<li>发送方发的window size = 8192;就是接收端最多发送8192字节，这个8192一般就是发送方接收缓存的大小。</li>
+</ol>
+<blockquote>
+<p>对比滑动窗口和拥塞窗口</p>
+</blockquote>
+<p>滑动窗口是<strong>控制接收以及同步数据范围的，通知发送端目前接收的数据范围，用于流量控制，接收端使用</strong> 。拥塞窗口是控制发送速率的，避免发的过多，发送端使用。因为tcp是全双工，所以<strong>两边都有滑动窗口</strong> 。<br>两个窗口的维护是独立的，滑动窗口主要由<strong>接收方反馈缓存情况来维护</strong> ，拥塞窗口主要由<strong>发送方的拥塞控制算法检测出的网络拥塞程度来决定的</strong> 。</p>
+<p>拥塞窗口控制sender向connection传输数据的速率，使这个速率为网络拥堵状况的函数。</p>
+<h1 id="6-计算机网络-应用层"><a href="#6-计算机网络-应用层" class="headerlink" title="6. 计算机网络 - 应用层"></a>6. 计算机网络 - 应用层</h1><p>在网络中，进行通信的实际上是进程而不是程序。</p>
+<p>在两个不同端系统上的进程，通过跨越计算机网络交换报文。</p>
+<blockquote>
+<p>套接字</p>
+</blockquote>
+<p>进程与计算机网络之间的接口。</p>
+<p>进程通过一个称为套接字的软件接口向网络发送报文和从 网络接收报文。</p>
+<p>进程寻址-&gt; 根据IP地址(标识主机) 和 端口号(标识套接字)</p>
+<p>这里简单提及了一下 运输层协议需要满足四点: 可靠数据传输，吞吐量，定时，安全性</p>
+<blockquote>
+<p>SSL</p>
+</blockquote>
+<p>TCP安全 通过SSL实现，SSL有自己的套接字API，当一个应用使用SSL时,发送进程向SSL套接字传递明文数据；在发送主机中的SSL则加密该数据并将加密的数据传递给TCP套接字。加密的数据经因特网传送到接收进程中的TCP套接字。该接收套接字将加密数据传递给SSL，由其进行解密后，SSL通过它的SSL套接字将铭文数据传递给接收进程。</p>
+<blockquote>
+<p>应用层协议</p>
+</blockquote>
+<p><strong>应用层协议</strong>定义了运行在不同端系统上的应用进程如何相互传递报文。特别是应用层协议定义了</p>
+<ul>
+<li>交换的报文类型，例如请求报文和响应报文</li>
+<li>各种报文类型的语法，如报文中的各个字段及这些字段是如何描述的。</li>
+<li>字段的语义，即这些字段中的信息的含义。</li>
+<li>确定一个进程何时以及如何发送报文，对报文进行响应的规则。</li>
+</ul>
+<blockquote>
+<p>HTTP</p>
+</blockquote>
+<p>HTTP 无状态协议 -&gt; Cookie 保存状态</p>
+<p>非持续连接的HTTP</p>
+<p>持续连接的HTTP</p>
+<blockquote>
+<p>WEB 缓存</p>
+</blockquote>
+<p>当输入URL的时候 ， 首先创建一个向WEB缓存器的TCP连接，并向WEB缓存器中的对象发送一个HTTP请求。</p>
+<p><strong>注意</strong> 如果WEB缓存中没有， 后面的向目的地的TCP连接是WEB缓存器和对方建立的。</p>
+<p>WEB缓存也带来了一个问题，存放在缓存器中的对象副本可能是陈旧的。</p>
+<p><strong>条件GET</strong> 解决  包含一个 If-Modified-Since</p>
+<p>该条件GET报文告诉WEB服务器:仅当自指定日期之后对该对象被修改过，才发送对象。假设没有被修改，回返回304 Not Modified 告诉缓存器可以使用该对象，能像请求的浏览器转发缓存器中的对象副本。</p>
+<hr>
+<blockquote>
+<p>邮件部分</p>
+</blockquote>
+<p> 因特网电子邮件的三部分</p>
+<ul>
+<li>用户代理</li>
+<li>邮件服务器</li>
+<li>简单邮件传输协议(SMTP)</li>
+</ul>
+<blockquote>
+<p>STMP(简单邮件传输协议)</p>
+</blockquote>
+<ul>
+<li>SMTP是因特网电子邮件中主要的应用层协议。它使用TCP可靠数据传输服务，从发送方的邮件服务器向接收方的邮件服务器发送邮件。</li>
+<li>和大多数应用层协议一样,SMTP也有两个部分，运行在发送方邮件服务器是客户端，运行在接收方邮件服务器的是服务器端。</li>
+<li>每天邮件服务器上既运行SMTP的客户端也运行SMTP的服务器端。</li>
+<li>限制了所有邮件报文的体部分只能采用简单的7比特ASCII表示。</li>
+<li>使用HTTP传送前不需要将多媒体数据编码为ASCII码。</li>
+<li>端口号 25</li>
+</ul>
+<p>SMTP 是推操作， 自然需要有拉操作(POP3, IMAP)</p>
+<blockquote>
+<p>POP3(第三版邮局协议)</p>
+</blockquote>
+<ul>
+<li>运行端口 110</li>
+<li>三个阶段: 特许、事务处理、更新</li>
+</ul>
+<blockquote>
+<p>IMAP(因特网邮件访问协议)</p>
+</blockquote>
+<ul>
+<li>与POP3不同,IMAP服务器维护了IMAP会话的用户状态信息</li>
+</ul>
+<p>现在从用户代理到邮件服务器的大多部分都变成了基于WEB(HTTP)的电子邮件</p>
+<blockquote>
+<p>DNS: 因特网的目录服务</p>
+</blockquote>
+<ul>
+<li><p>端口号 53</p>
+</li>
+<li><p>主机别名</p>
+</li>
+<li><p>邮件服务器别名</p>
+</li>
+<li><p>负载分配</p>
+</li>
+</ul>
+<blockquote>
+<p>DNS工作机理概述</p>
+</blockquote>
+<p>​    </p>
+<p>DNS服务器采用了分布式、层次数据库的方案</p>
+<ul>
+<li>根DNS服务器</li>
+<li>顶级域(Top-Level Domain, TLD)DNS服务器</li>
+<li>权威DNS服务器</li>
+</ul>
+<blockquote>
+<p>DNS 查询方式</p>
+</blockquote>
+<ul>
+<li>递归查询</li>
+<li>迭代查询</li>
+<li>注意DNS有缓存，本地DNS查询之后会保存，一般两天清理一次</li>
+</ul>
+<p><img src="/2021/04/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/image-20210626192902314.png" alt="image-20210626192902314"></p>
+<p>如果是某特定主机的权威DNS  那么含有一条A记录</p>
+<p>如果不是某特定主机的权威DNS，含有两条记录 一条NS 记录 域和对应的权威DNS 域名 一个A 记录 对应(权威DNS域名， 权威DNS IP)</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0/" rel="tag"># 计算机网络学习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/04/07/database/" rel="next" title="database">
+                <i class="fa fa-chevron-left"></i> database
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/04/07/HTTP/" rel="prev" title="HTTP">
+                HTTP <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">1 计算机网络概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%89%A9%E7%90%86%E5%B1%82"><span class="nav-number">2.</span> <span class="nav-text">2. 计算机网络 - 物理层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E9%93%BE%E8%B7%AF%E5%B1%82"><span class="nav-number">3.</span> <span class="nav-text">3. 计算机网络 - 链路层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%BD%91%E7%BB%9C%E5%B1%82"><span class="nav-number">4.</span> <span class="nav-text">4. 计算机网络 - 网络层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E4%BC%A0%E8%BE%93%E5%B1%82"><span class="nav-number">5.</span> <span class="nav-text">5. 计算机网络 - 传输层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E5%8D%8F%E8%AE%AE"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 滑动窗口协议</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E5%BA%94%E7%94%A8%E5%B1%82"><span class="nav-number">6.</span> <span class="nav-text">6. 计算机网络 - 应用层</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">❤feiyangHuang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by fy</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">
+   博客-feiyang
+   </div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/qwe/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

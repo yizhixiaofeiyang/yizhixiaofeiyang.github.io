@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/qwe/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/qwe/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="又要开始学Java啦," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Java核心卷1笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java核心卷-1笔记">
+<meta property="og:url" content="http://example.com/2023/02/21/Java%E6%A0%B8%E5%BF%83%E5%8D%B7-1%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="hfy up up">
+<meta property="og:description" content="Java核心卷1笔记">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2023/02/21/Java%E6%A0%B8%E5%BF%83%E5%8D%B7-1%E7%AC%94%E8%AE%B0/Users/HuangFeiYang/AppData/Roaming/Typora/typora-user-images/image-20230307234041565.png">
+<meta property="og:image" content="http://example.com/2023/02/21/Java%E6%A0%B8%E5%BF%83%E5%8D%B7-1%E7%AC%94%E8%AE%B0/Users/HuangFeiYang/AppData/Roaming/Typora/typora-user-images/image-20230307233535286.png">
+<meta property="article:published_time" content="2023-02-21T12:32:14.000Z">
+<meta property="article:modified_time" content="2023-03-26T10:40:07.461Z">
+<meta property="article:author" content="feiyangHuang">
+<meta property="article:tag" content="又要开始学Java啦">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/02/21/Java%E6%A0%B8%E5%BF%83%E5%8D%B7-1%E7%AC%94%E8%AE%B0/Users/HuangFeiYang/AppData/Roaming/Typora/typora-user-images/image-20230307234041565.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2023/02/21/Java核心卷-1笔记/"/>
+
+
+
+
+
+  <title>Java核心卷-1笔记 | hfy up up</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">hfy up up</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/21/Java%E6%A0%B8%E5%BF%83%E5%8D%B7-1%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hfy up up">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java核心卷-1笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-02-21T20:32:14+08:00">
+                2023-02-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Java核心卷1笔记</p>
+<a id="more"></a>
+
+<h1 id="1-第一章"><a href="#1-第一章" class="headerlink" title="1 第一章"></a>1 第一章</h1><h2 id="1-1-Java的十一个特性"><a href="#1-1-Java的十一个特性" class="headerlink" title="1.1 Java的十一个特性"></a>1.1 Java的十一个特性</h2><ul>
+<li>简单性（省去指针等）</li>
+<li>面向对象</li>
+<li>分布式</li>
+<li>健壮性</li>
+<li>安全性</li>
+<li>体系结构中立（字节码虚拟机可以使得Java程序可以在多种操作系统上简单运行）</li>
+<li>可移植性（基本数据类型的大小及有关运算的行为都有明确的说明，例 int永远为32位）</li>
+<li>解释性（Java解释器可以在任何移植了解释器的机器上执行Java字节码）</li>
+<li>高性能</li>
+<li>多线程</li>
+<li>动态性</li>
+</ul>
+<h3 id="1-2-JAVA类型转换"><a href="#1-2-JAVA类型转换" class="headerlink" title="1.2 JAVA类型转换"></a>1.2 JAVA类型转换</h3><p><img src="/2023/02/21/Java%E6%A0%B8%E5%BF%83%E5%8D%B7-1%E7%AC%94%E8%AE%B0/Users\HuangFeiYang\AppData\Roaming\Typora\typora-user-images\image-20230307234041565.png" alt="image-20230307234041565"></p>
+<p>跟自己指向箭头（上一级）结合时，变为上一级的类型</p>
+<h2 id="1-3-JAVA运算符号优先级顺序"><a href="#1-3-JAVA运算符号优先级顺序" class="headerlink" title="1.3 JAVA运算符号优先级顺序"></a>1.3 JAVA运算符号优先级顺序</h2><p><img src="/2023/02/21/Java%E6%A0%B8%E5%BF%83%E5%8D%B7-1%E7%AC%94%E8%AE%B0/Users\HuangFeiYang\AppData\Roaming\Typora\typora-user-images\image-20230307233535286.png" alt="image-20230307233535286"></p>
+<h2 id="1-4-JAVA-码点"><a href="#1-4-JAVA-码点" class="headerlink" title="1.4 JAVA 码点"></a>1.4 JAVA 码点</h2><p>utf16编码存在的原因，特殊字符，如啤酒，emo表情，占两个，需要用码点遍历。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">testCodePoint</span><span class="params">()</span> </span>&#123;</span><br><span class="line">String s = <span class="string">&quot;\uD83C\uDF7Ahello&quot;</span>;</span><br><span class="line">System.out.println(s);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 利用codePointCount返回长度判断</span></span><br><span class="line"><span class="keyword">int</span> cpCount = s.codePointCount(<span class="number">0</span>, s.length());</span><br><span class="line">System.out.println(cpCount);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; cpCount;) &#123;</span><br><span class="line"><span class="keyword">int</span> cp = s.codePointAt(i);</span><br><span class="line"><span class="keyword">if</span>(Character.isSupplementaryCodePoint(cp)) &#123;</span><br><span class="line">    <span class="keyword">int</span> index = s.offsetByCodePoints(<span class="number">0</span>, i);</span><br><span class="line">    System.out.println(s.codePointAt(index));</span><br><span class="line">    i+=<span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>  i++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将字符串转为码点数组判断</span></span><br><span class="line"><span class="keyword">int</span>[] codePoints = s.codePoints().toArray();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; codePoints.length; i++) &#123;</span><br><span class="line">	System.out.println(codePoints[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 转回字符串</span></span><br><span class="line">String str = <span class="keyword">new</span> String(codePoints, <span class="number">0</span>, codePoints.length);</span><br><span class="line">System.out.println(str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%8F%88%E8%A6%81%E5%BC%80%E5%A7%8B%E5%AD%A6Java%E5%95%A6/" rel="tag"># 又要开始学Java啦</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2023/01/14/acwingSpringBoot/" rel="next" title="acwingSpringBoot">
+                <i class="fa fa-chevron-left"></i> acwingSpringBoot
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2023/02/26/mybatis-plus-generator%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" rel="prev" title="mybatis-plus-generator最新版本生成代码使用方法">
+                mybatis-plus-generator最新版本生成代码使用方法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="nav-number">1.</span> <span class="nav-text">1 第一章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Java%E7%9A%84%E5%8D%81%E4%B8%80%E4%B8%AA%E7%89%B9%E6%80%A7"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 Java的十一个特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-JAVA%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.2 JAVA类型转换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-JAVA%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%B7%E4%BC%98%E5%85%88%E7%BA%A7%E9%A1%BA%E5%BA%8F"><span class="nav-number">1.2.</span> <span class="nav-text">1.3 JAVA运算符号优先级顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-JAVA-%E7%A0%81%E7%82%B9"><span class="nav-number">1.3.</span> <span class="nav-text">1.4 JAVA 码点</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">❤feiyangHuang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by fy</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">
+   博客-feiyang
+   </div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/qwe/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

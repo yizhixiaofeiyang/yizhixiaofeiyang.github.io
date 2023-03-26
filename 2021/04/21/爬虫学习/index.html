@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/qwe/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/qwe/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="爬虫框架级普通知识点学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="爬虫学习">
+<meta property="og:url" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="hfy up up">
+<meta property="og:description" content="爬虫框架级普通知识点学习">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211214120354671.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211214120700071.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211214122320492.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211214122827108.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211214125309486.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211214130013651.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211214130523367.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211214133747007.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211215144023128.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211221225748690.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211221225948269.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211221225957807.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211222220137693.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211222220149679.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211222220255343.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211222220419425.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211222221934630.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220104161354547.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211227135017597.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211227143511520.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220106171711968.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220109151051808.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220109172751313.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220109172835797.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220109174921507.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220109175555418.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220109175801321.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220109180531298.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220109180726386.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220109223516934.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220110163850632.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220110163918322.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220110164043776.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220110164336735.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20210421173701273.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20210421173843580.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20210421173922401.png">
+<meta property="og:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20210421175215076.png">
+<meta property="article:published_time" content="2021-04-21T09:35:41.000Z">
+<meta property="article:modified_time" content="2022-01-10T08:45:12.309Z">
+<meta property="article:author" content="feiyangHuang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211214120354671.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2021/04/21/爬虫学习/"/>
+
+
+
+
+
+  <title>爬虫学习 | hfy up up</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">hfy up up</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hfy up up">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">爬虫学习</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-04-21T17:35:41+08:00">
+                2021-04-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>爬虫框架级普通知识点学习</p>
+<a id="more"></a>
+
+
+
+
+
+
+
+<p>[TOC]</p>
+<h1 id="1-爬虫基础"><a href="#1-爬虫基础" class="headerlink" title="1. 爬虫基础"></a>1. 爬虫基础</h1><blockquote>
+<p>模拟客户端，发送请求，获取响应</p>
+</blockquote>
+<h2 id="1-1爬虫概述"><a href="#1-1爬虫概述" class="headerlink" title="1.1爬虫概述"></a>1.1爬虫概述</h2><h3 id="1-1-1爬虫的作用"><a href="#1-1-1爬虫的作用" class="headerlink" title="1.1.1爬虫的作用"></a>1.1.1爬虫的作用</h3><ul>
+<li>数据采集</li>
+<li>软件测试</li>
+<li>12306抢票</li>
+<li>网络上的投票</li>
+<li>网络安全<ul>
+<li> 短信轰炸</li>
+<li>web漏洞扫描</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-1-爬虫的分类"><a href="#1-2-1-爬虫的分类" class="headerlink" title="1.2.1 爬虫的分类"></a>1.2.1 爬虫的分类</h3><h4 id="1-2-1-1-根据被爬网站的数量不同，可以分为"><a href="#1-2-1-1-根据被爬网站的数量不同，可以分为" class="headerlink" title="1.2.1.1 根据被爬网站的数量不同，可以分为"></a>1.2.1.1 根据被爬网站的数量不同，可以分为</h4><ul>
+<li><p>通用爬虫，如搜索引擎</p>
+</li>
+<li><p>聚焦爬虫，如12306抢票，或专门抓取某一个（某一类）网站数据</p>
+</li>
+</ul>
+<h4 id="1-2-1-2-根据是否以获取数据为目的，可以分为"><a href="#1-2-1-2-根据是否以获取数据为目的，可以分为" class="headerlink" title="1.2.1.2 根据是否以获取数据为目的，可以分为"></a>1.2.1.2 根据是否以获取数据为目的，可以分为</h4><ul>
+<li>​    功能性爬虫，给你喜欢的明星投票，点赞</li>
+<li>​    数据增量爬虫，比如招聘信息</li>
+</ul>
+<h4 id="1-2-1-3-根据URL地址和对应的页面内容是否改变，数据增量爬虫可以分为"><a href="#1-2-1-3-根据URL地址和对应的页面内容是否改变，数据增量爬虫可以分为" class="headerlink" title="1.2.1.3 根据URL地址和对应的页面内容是否改变，数据增量爬虫可以分为"></a>1.2.1.3 根据URL地址和对应的页面内容是否改变，数据增量爬虫可以分为</h4><ul>
+<li>基于URL地址变化、内容也随之变化的数据增量爬虫</li>
+<li>URL地址不变、内容变化的数据增量爬虫</li>
+</ul>
+<p><strong>总结来说</strong></p>
+<ol>
+<li>数量</li>
+<li>是否获取数据</li>
+<li>URL与数据的关系</li>
+</ol>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211214120354671.png" alt="image-20211214120354671"></p>
+<h3 id="1-1-3-爬虫的流程"><a href="#1-1-3-爬虫的流程" class="headerlink" title="1.1.3 爬虫的流程"></a>1.1.3 爬虫的流程</h3><p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211214120700071.png" alt="image-20211214120700071"></p>
+<ol>
+<li>获取一个URL</li>
+<li>向URL发送请求，并获取相应(需要HTTP协议)</li>
+<li>如果从响应中提取URL,则继续发送请求获取响应</li>
+<li>如果从响应中提取数据，则将数据进行保存</li>
+</ol>
+<h2 id="1-2-http协议"><a href="#1-2-http协议" class="headerlink" title="1.2 http协议"></a>1.2 http协议</h2><h3 id="1-2-1-http和https的概念和区别"><a href="#1-2-1-http和https的概念和区别" class="headerlink" title="1.2.1 http和https的概念和区别"></a>1.2.1 http和https的概念和区别</h3><p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211214122320492.png" alt="image-20211214122320492"></p>
+<h3 id="1-2-2-爬虫的请求头"><a href="#1-2-2-爬虫的请求头" class="headerlink" title="1.2.2 爬虫的请求头"></a>1.2.2 爬虫的请求头</h3><p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211214122827108.png" alt="image-20211214122827108"></p>
+<h3 id="1-2-3-响应头"><a href="#1-2-3-响应头" class="headerlink" title="1.2.3 响应头"></a>1.2.3 响应头</h3><p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211214125309486.png" alt="image-20211214125309486"></p>
+<h3 id="1-2-4-常见的响应状态码"><a href="#1-2-4-常见的响应状态码" class="headerlink" title="1.2.4 常见的响应状态码"></a>1.2.4 常见的响应状态码</h3><p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211214130013651.png" alt="image-20211214130013651"></p>
+<h3 id="1-2-5-浏览器的运行过程"><a href="#1-2-5-浏览器的运行过程" class="headerlink" title="1.2.5 浏览器的运行过程"></a>1.2.5 浏览器的运行过程</h3><p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211214130523367.png" alt="image-20211214130523367"></p>
+<h4 id="1-2-5-1-http请求过程"><a href="#1-2-5-1-http请求过程" class="headerlink" title="1.2.5.1 http请求过程"></a>1.2.5.1 http请求过程</h4><ol>
+<li>浏览器在拿到对应域名的ip后，先向地址栏中的URL发起请求，并获取响应</li>
+<li>在返回的响应内容(HTML)中，会带有css，js，图片等url地址，以及ajax代码，浏览器按照下响应内容中的顺序依次发送其他的请求，并获取相应的响应。</li>
+<li>浏览器每获取一个响应就展示出的结果进行添加（加载），js，css等内容会修改页面的内容，js也可以重新发送请求，获取响应。</li>
+<li>从获取第一个响应并在浏览器中展示，知道最终获取全部响应，并在展示的结果中添加内容或修改—这个过程叫做浏览器的渲染。</li>
+</ol>
+<h4 id="1-2-5-2-注意"><a href="#1-2-5-2-注意" class="headerlink" title="1.2.5.2 注意"></a>1.2.5.2 注意</h4><p>但是在爬虫中，爬虫只会请求url地址，对应的拿到url地址对应的响应（该响应可以是html，css，js，图片等）</p>
+<p>浏览器渲染出来的页面和爬虫请求的页面很多时候并不一样，是因为爬虫不具备渲染的能力（当然后续课程中我们会借助其它工具或包来帮助爬虫对响应内容进行渲染）</p>
+<ul>
+<li><strong>浏览器最终展示的结果是由多个url地址分别发送的多次请求对应的多次响应共同渲染的结果</strong></li>
+<li><strong>所以在爬虫中，需要以发送请求的一个url地址对应的响应为准来进行数据的提取</strong></li>
+<li><strong>爬虫只发送指定请求，不会渲染</strong></li>
+</ul>
+<p>骨骼文件</p>
+<p> html静态文件</p>
+<p>肌肉文件</p>
+<p> js/ajax请求</p>
+<p>皮肤</p>
+<p> css/font/图片</p>
+<p><strong>理解:</strong> 浏览器展示的结果可以由多次请求对应的共同响应共同渲染出来，而爬虫是一次请求对应的一个响应</p>
+<h1 id="2-request模块"><a href="#2-request模块" class="headerlink" title="2. request模块"></a>2. request模块</h1><p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211214133747007.png" alt="image-20211214133747007"></p>
+<p>官方文档</p>
+<p><a target="_blank" rel="noopener" href="https://docs.python-requests.org/zh_CN/latest/">https://docs.python-requests.org/zh_CN/latest/</a></p>
+<ol>
+<li>导入模块</li>
+<li>发送请求</li>
+</ol>
+<h2 id="2-1-response响应对象"><a href="#2-1-response响应对象" class="headerlink" title="2.1 response响应对象"></a>2.1 response响应对象</h2><p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211215144023128.png" alt="image-20211215144023128"></p>
+<h3 id="2-1-1-response-text-和-response-content的区别"><a href="#2-1-1-response-text-和-response-content的区别" class="headerlink" title="2.1.1 response.text 和 response.content的区别"></a>2.1.1 response.text 和 response.content的区别</h3><ul>
+<li>response.text<ul>
+<li>类型: str</li>
+<li>解码类型: requests模块自动根据HTTP头部对响应的编码做出有根据的推测，推测的文本编码</li>
+</ul>
+</li>
+<li>response.content<ul>
+<li>类型： bytes</li>
+<li>解码类型： 没有指定</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-1-2-通过对response-content进行decode，来解决中文乱码"><a href="#2-1-2-通过对response-content进行decode，来解决中文乱码" class="headerlink" title="2.1.2 通过对response.content进行decode，来解决中文乱码"></a>2.1.2 通过对response.content进行decode，来解决中文乱码</h3><ul>
+<li>response.content.decode（） 默认utf-8</li>
+<li>response.content.decode(“GBK”)</li>
+<li>常见的编码字符集<ul>
+<li>utf-8</li>
+<li>gbk</li>
+<li>gb2313</li>
+<li>ascii</li>
+<li>iso-8859-1</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-1-3-response响应对象的其他常用属性或方法"><a href="#2-1-3-response响应对象的其他常用属性或方法" class="headerlink" title="2.1.3 response响应对象的其他常用属性或方法"></a>2.1.3 response响应对象的其他常用属性或方法</h3><blockquote>
+<p> response = requests.get(url)中response是发送请求获取的响应对象；response响应对象中除了text，content获取响应对象意外还有其他常用的属性或者方法</p>
+</blockquote>
+<ul>
+<li>respnse.url 有时候响应的url和请求的url并不一致</li>
+<li>response.status_code 响应状态码</li>
+<li>response.request.headers 响应对象的请求头</li>
+<li>response.request._cookies 响应对象请求的cookie； 返回cookieJar类型</li>
+<li>response.cookies 响应的cookie（经过了set-cookie动作） 返回cookieJar类型</li>
+<li>response.json（）自动将json字符串类型的响应内容转换为python对象（dict or list）</li>
+</ul>
+<p>​            </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 常见的响应对象参数和方法</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 响应url</span></span><br><span class="line">print(r.url)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 状态码</span></span><br><span class="line">print(r.status_code)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 响应头</span></span><br><span class="line">print(r.headers)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 响应的cookie</span></span><br><span class="line">print(r.cookies)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 转化为json对象,不是json对象无法转换</span></span><br><span class="line">print(r.json())</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-1-4-发送带参数的请求"><a href="#2-1-4-发送带参数的请求" class="headerlink" title="2.1.4 发送带参数的请求"></a>2.1.4 发送带参数的请求</h3><blockquote>
+<p>发送带参数的请求</p>
+</blockquote>
+<p>通过params属性</p>
+<h3 id="2-1-5-cookie"><a href="#2-1-5-cookie" class="headerlink" title="2.1.5 cookie"></a>2.1.5 cookie</h3><p>header 和 cookies属性都可以添加cookie，保持状态</p>
+<h4 id="2-1-5-1-cookieJar对象转化为cookies字典的方法"><a href="#2-1-5-1-cookieJar对象转化为cookies字典的方法" class="headerlink" title="2.1.5.1 cookieJar对象转化为cookies字典的方法"></a>2.1.5.1 cookieJar对象转化为cookies字典的方法</h4><blockquote>
+<p>使用request获取的response对象，具有cookies属性，该属性是一个cookieJar类型，包含了对方服务器设置在本地的cookie，我们该如何将其转化为cookies字典呢？</p>
+</blockquote>
+<ol>
+<li>转换方法</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cookies_dict = utils.dict_from_cookiejar(response.cookies)</span><br><span class="line">print(cookies_dict)</span><br><span class="line"></span><br><span class="line">jar_cookies = requests.utils.cookiejar_from_dict(cookies_dict)</span><br><span class="line">print(jar_cookies)</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>其中response.cookies返回的就是cookieJar类型的对象</li>
+<li>requests.utils.dict_from_cookieJar函数返回的是cookies字典</li>
+</ol>
+<h3 id="2-1-6-超时参数timeout的使用"><a href="#2-1-6-超时参数timeout的使用" class="headerlink" title="2.1.6 超时参数timeout的使用"></a>2.1.6 超时参数timeout的使用</h3><blockquote>
+<p>很久没有反应的时候，用timeout参数解决问题</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response = requests.get(<span class="string">&quot;https://www.baidu.com&quot;</span>,timeout=<span class="number">3</span>)  <span class="comment"># 3秒内返回响应，否则抛出异常</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-1-7-代理proxies的使用"><a href="#2-1-7-代理proxies的使用" class="headerlink" title="2.1.7 代理proxies的使用"></a>2.1.7 代理proxies的使用</h3><p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211221225748690.png" alt="image-20211221225748690"></p>
+<blockquote>
+<p>总结: 正向代理和反向代理的区别，发送者知不知道最终服务器的地址作为判断标准。</p>
+</blockquote>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211221225948269.png" alt="image-20211221225948269"></p>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211221225957807.png" alt="image-20211221225957807"></p>
+<p>匿名度</p>
+<ul>
+<li>透明</li>
+<li>匿名</li>
+<li>高匿</li>
+</ul>
+<p>协议</p>
+<ul>
+<li>http</li>
+<li>https</li>
+<li>socks</li>
+</ul>
+<blockquote>
+<p>使用</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">proxies = &#123;</span><br><span class="line">    <span class="string">&quot;http&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="string">&quot;https&quot;</span>: <span class="string">&quot;&quot;</span></span><br><span class="line">&#125;</span><br><span class="line">response = requests.get(<span class="string">&quot;https://www.baidu.com&quot;</span>, proxies=proxies)</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-2-发送post请求"><a href="#2-2-发送post请求" class="headerlink" title="2.2 发送post请求"></a>2.2 发送post请求</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">data = &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">r = requests.post(url, data=data)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>post的数据来源</p>
+</blockquote>
+<ul>
+<li>固定值                     抓包比较不变值</li>
+<li>输入值                     抓包比较根据自身变化值</li>
+<li>预设值-静态文件     需要提前从静态html中用正则提取出来</li>
+<li>预设值-发请求         需要对指定地址发送请求获取数据</li>
+<li>在客户端生成的      分析js，模拟生成数据</li>
+</ul>
+<h3 id="2-3-来利用request-session进行状态保持"><a href="#2-3-来利用request-session进行状态保持" class="headerlink" title="2.3 来利用request-session进行状态保持"></a>2.3 来利用request-session进行状态保持</h3><blockquote>
+<p>request模块中的Session类能够自动处理发送请求获取响应过程中产生的cookie，进而达到状态保持的目的</p>
+</blockquote>
+<h4 id="2-3-1-requests-session的作用以及应用场景"><a href="#2-3-1-requests-session的作用以及应用场景" class="headerlink" title="2.3.1 requests.session的作用以及应用场景"></a>2.3.1 requests.session的作用以及应用场景</h4><ul>
+<li>requests.session的作用<ul>
+<li>自动处理cookie，即下一次请求会带上上一次的cookie</li>
+</ul>
+</li>
+<li>requests.session的应用场景<ul>
+<li>自动处理连续的多次请求过程中产生的cookie</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-3-2-requests-session的使用方法"><a href="#2-3-2-requests-session的使用方法" class="headerlink" title="2.3.2 requests.session的使用方法"></a>2.3.2 requests.session的使用方法</h4><blockquote>
+<p>session实例在请求了一个网站后，对方服务器设置在本地的cookie会保持在session中，下次一次再使用session请求对方服务器的时候，会带上上一次的cookie</p>
+</blockquote>
+<p>作用:</p>
+<p>​    自动处理cookie</p>
+<p>场景:</p>
+<p>​    连续的多次请求</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">url = <span class="string">&quot;www.baidu.com&quot;</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">data = &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">session = requests.session()</span><br><span class="line">response = session.get(url, headers=headers)</span><br><span class="line">response = session.post(url, data)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>session对象发送get或post请求的参数， 与requests模块发送请求的参数完全一致</li>
+</ul>
+<h4 id="2-3-2-1-GitHub登录案例"><a href="#2-3-2-1-GitHub登录案例" class="headerlink" title="2.3.2.1 GitHub登录案例"></a>2.3.2.1 GitHub登录案例</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># github登录案例</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">login</span>():</span></span><br><span class="line">    <span class="comment"># session</span></span><br><span class="line">    session = requests.session()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># headers</span></span><br><span class="line">    session.headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36&quot;</span>,</span><br><span class="line">        <span class="string">&#x27;referer&#x27;</span>: <span class="string">&quot;https://github.com/&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># url1 获取token</span></span><br><span class="line">    url1 = <span class="string">&#x27;https://github.com/login&#x27;</span></span><br><span class="line">    <span class="comment"># 发送请求获取响应</span></span><br><span class="line">    res_1 = session.get(url1).content.decode()</span><br><span class="line">    <span class="comment"># 正则提取</span></span><br><span class="line"></span><br><span class="line">    token = re.findall(<span class="string">&#x27;name=&quot;authenticity_token&quot; value=&quot;(.*?)&quot; /&gt;&#x27;</span>, res_1)</span><br><span class="line">    print(token)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># url2登录</span></span><br><span class="line">    url2 = <span class="string">&quot;https://github.com/session&quot;</span></span><br><span class="line">    <span class="comment"># 构建表单数据</span></span><br><span class="line">    data = &#123;</span><br><span class="line">        <span class="string">&quot;commit&quot;</span>: <span class="string">&quot;Sign in&quot;</span>,</span><br><span class="line">        <span class="string">&quot;authenticity_token&quot;</span>: token[<span class="number">0</span>],</span><br><span class="line">        <span class="string">&quot;login&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;password&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;trusted_device&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;webauthn-support&quot;</span>: <span class="string">&quot;supported&quot;</span>,</span><br><span class="line">        <span class="string">&quot;webauthn-iuvpaa-support&quot;</span>: <span class="string">&quot;unsupported&quot;</span>,</span><br><span class="line">        <span class="string">&quot;return_to&quot;</span>: <span class="string">&quot;https://github.com/login&quot;</span>,</span><br><span class="line">        <span class="string">&quot;allow_signup&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;client_id&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;integration&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;required_field_3d11&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;timestamp&quot;</span>: <span class="string">&quot;1640177882187&quot;</span>,</span><br><span class="line">        <span class="string">&quot;timestamp_secret&quot;</span>: <span class="string">&quot;7b0e66df9546e8ccad38b609096f4ca041738af739b243abda3ee7b5a5f96f0f&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    print(data)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 发送请求 登录</span></span><br><span class="line">    session.post(url2, data=data)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># verifiycode</span></span><br><span class="line">    url3 = <span class="string">&quot;https://github.com/sessions/verified-device&quot;</span></span><br><span class="line">    opt = <span class="built_in">input</span>(<span class="string">&quot;请输入opt:&quot;</span>)</span><br><span class="line">    data_verify = &#123;</span><br><span class="line">        <span class="string">&quot;authenticity_token&quot;</span>: token[<span class="number">0</span>],</span><br><span class="line">        <span class="string">&quot;opt&quot;</span>: opt</span><br><span class="line">    &#125;</span><br><span class="line">    res_ver = session.post(url3, data_verify)</span><br><span class="line">    print(res_ver.content.decode())</span><br><span class="line"></span><br><span class="line">    <span class="comment"># url4 验证</span></span><br><span class="line">    url4 = <span class="string">&quot;https://github.com/feiyangHuang-Scu?tab=projects&quot;</span></span><br><span class="line">    session.headers[<span class="string">&#x27;referer&#x27;</span>] = url3</span><br><span class="line">    response = session.get(url4)</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;github.html&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(response.content)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    login()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="3-数据提取"><a href="#3-数据提取" class="headerlink" title="3. 数据提取"></a>3. 数据提取</h1><p>知识点</p>
+<ul>
+<li>了解响应内容的分类</li>
+<li>了解xml和html的区别</li>
+</ul>
+<hr>
+<h3 id="3-1-响应内容的分类"><a href="#3-1-响应内容的分类" class="headerlink" title="3.1 响应内容的分类"></a>3.1 响应内容的分类</h3><blockquote>
+<p>在发送请求获取响应之后， 可能存在多种不同类型的响应内容； 而且很多时候， 我们只需要响应内容中的一部分数据</p>
+</blockquote>
+<ul>
+<li>结构化的响应内容<ul>
+<li>json字符串<ul>
+<li>可以使用re，json等模块来提取特定数据</li>
+<li>json字符串的例子</li>
+</ul>
+</li>
+<li>xml字符串<ul>
+<li>可以使用re，lxml等模块来提取特定数据</li>
+<li>xml字符串的例子</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>非结构化的响应内容<ul>
+<li>html<ul>
+<li>re模块提取</li>
+<li>lxml模块提取</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-认识xml以及html的区别"><a href="#3-2-认识xml以及html的区别" class="headerlink" title="3.2 认识xml以及html的区别"></a>3.2 认识xml以及html的区别</h3><h4 id="3-2-1-xml"><a href="#3-2-1-xml" class="headerlink" title="3.2.1 xml"></a>3.2.1 xml</h4><blockquote>
+<p>xml是一种可扩展标记语言，样子和html很像，功能更专注于对传输和存储数据</p>
+</blockquote>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211222220137693.png" alt="image-20211222220137693"></p>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211222220149679.png" alt="image-20211222220149679"></p>
+<h4 id="3-2-2-xml和html的区别"><a href="#3-2-2-xml和html的区别" class="headerlink" title="3.2.2 xml和html的区别"></a>3.2.2 xml和html的区别</h4><blockquote>
+<p>二者区别如下图</p>
+</blockquote>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211222220255343.png" alt="image-20211222220255343"></p>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211222220419425.png" alt="image-20211222220419425"></p>
+<h3 id="3-3-jsonpath模块的使用场景"><a href="#3-3-jsonpath模块的使用场景" class="headerlink" title="3.3 jsonpath模块的使用场景"></a>3.3 jsonpath模块的使用场景</h3><blockquote>
+<p>如果有一个多层嵌套的复杂字典， 想要根据key和下标批量来提取value，这是比较困难的。jsonpath模块就能解决这个痛点</p>
+</blockquote>
+<p><strong>jsonpath可以按照key对python字典进行批量数据获取</strong></p>
+<p>语法(常用三个)</p>
+<ul>
+<li><p>$  根节点(最外层的大括号)</p>
+</li>
+<li><p>.   子节点</p>
+</li>
+<li><p>..   内部任意位置，子孙节点 </p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> jsonpath <span class="keyword">import</span> jsonpath</span><br><span class="line"><span class="comment"># 场景：多层嵌套的复杂字典直接提取数据</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">data = &#123;<span class="string">&quot;key1&quot;</span>: &#123;<span class="string">&quot;key2&quot;</span>: &#123;<span class="string">&quot;key3&quot;</span>: &#123;<span class="string">&quot;key4&quot;</span>: &#123;<span class="string">&quot;key5&quot;</span>: <span class="string">&quot;python&quot;</span>&#125;&#125;&#125;&#125;&#125;</span><br><span class="line"></span><br><span class="line">print(data[<span class="string">&#x27;key1&#x27;</span>])</span><br><span class="line"></span><br><span class="line">print(jsonpath(data,<span class="string">&#x27;$.key1.key2.key3.key4.key5&#x27;</span>)[<span class="number">0</span>])</span><br><span class="line">print(jsonpath(data, <span class="string">&#x27;$..key5&#x27;</span>)[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211222221934630.png" alt="image-20211222221934630"></p>
+<h3 id="3-4-lxml模块"><a href="#3-4-lxml模块" class="headerlink" title="3.4 lxml模块"></a>3.4 lxml模块</h3><p>教程</p>
+<p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/xpath/index.asp">https://www.w3school.com.cn/xpath/index.asp</a></p>
+<blockquote>
+<p>lxml模块和Xpath语法</p>
+</blockquote>
+<p>//titile/text()</p>
+<p>//link/@href 从选定的标签中获取指定属性的值</p>
+<p>//span[i&gt;2000] i为span下面的子标签</p>
+<p>//div[span[2]&gt;=9.4] span为div下的子标签</p>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220104161354547.png" alt="image-20220104161354547"></p>
+<blockquote>
+<p>选取节点的语法</p>
+</blockquote>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211227135017597.png" alt="image-20211227135017597"></p>
+<blockquote>
+<p> 节点修饰语法</p>
+</blockquote>
+<ol>
+<li>通过索引修饰节点</li>
+<li>通过属性值修饰节点</li>
+</ol>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20211227143511520.png" alt="image-20211227143511520"></p>
+<ul>
+<li>在xpath中，第一个元素的位置是1</li>
+<li>最后一个元素的位置是last()</li>
+<li>倒数第二个是last()-1</li>
+</ul>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220106171711968.png" alt="image-20220106171711968"></p>
+<p>找翻页URL时候尽量不用索引</p>
+<blockquote>
+<p>etree.tostring()</p>
+</blockquote>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220109151051808.png" alt="image-20220109151051808"></p>
+<h1 id="4-常见的反爬手段和解决思路"><a href="#4-常见的反爬手段和解决思路" class="headerlink" title="4. 常见的反爬手段和解决思路"></a>4. 常见的反爬手段和解决思路</h1><p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220109172751313.png" alt="image-20220109172751313"></p>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220109172835797.png" alt="image-20220109172835797"></p>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220109174921507.png" alt="image-20220109174921507"></p>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220109175555418.png" alt="image-20220109175555418"></p>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220109175801321.png" alt="image-20220109175801321"></p>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220109180531298.png" alt="image-20220109180531298"></p>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220109180726386.png" alt="image-20220109180726386"></p>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220109223516934.png" alt="image-20220109223516934"></p>
+<h1 id="5-js定位"><a href="#5-js定位" class="headerlink" title="5. js定位"></a>5. js定位</h1><p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220110163850632.png" alt="image-20220110163850632"></p>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220110163918322.png" alt="image-20220110163918322"></p>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220110164043776.png" alt="image-20220110164043776"></p>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20220110164336735.png" alt="image-20220110164336735"></p>
+<h1 id="Scrapy"><a href="#Scrapy" class="headerlink" title="Scrapy"></a>Scrapy</h1><h3 id="Scrapy学习"><a href="#Scrapy学习" class="headerlink" title="Scrapy学习"></a>Scrapy学习</h3><p>原来的爬虫</p>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20210421173701273.png" alt="image-20210421173701273"></p>
+<p>现在</p>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20210421173843580.png" alt="image-20210421173843580"></p>
+<p>Scheduler就是一个队列，存放URL地址</p>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20210421173922401.png" alt="image-20210421173922401"></p>
+<p><img src="/2021/04/21/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/image-20210421175215076.png" alt="image-20210421175215076"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/04/07/HTTP/" rel="next" title="HTTP">
+                <i class="fa fa-chevron-left"></i> HTTP
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/04/26/Redis%E5%AD%A6%E4%B9%A0/" rel="prev" title="带你学Redis-总述">
+                带你学Redis-总述 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">1. 爬虫基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1%E7%88%AC%E8%99%AB%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">1.1爬虫概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1%E7%88%AC%E8%99%AB%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1.1爬虫的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1-%E7%88%AC%E8%99%AB%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2.1 爬虫的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1-1-%E6%A0%B9%E6%8D%AE%E8%A2%AB%E7%88%AC%E7%BD%91%E7%AB%99%E7%9A%84%E6%95%B0%E9%87%8F%E4%B8%8D%E5%90%8C%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%88%86%E4%B8%BA"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">1.2.1.1 根据被爬网站的数量不同，可以分为</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1-2-%E6%A0%B9%E6%8D%AE%E6%98%AF%E5%90%A6%E4%BB%A5%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE%E4%B8%BA%E7%9B%AE%E7%9A%84%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%88%86%E4%B8%BA"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">1.2.1.2 根据是否以获取数据为目的，可以分为</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1-3-%E6%A0%B9%E6%8D%AEURL%E5%9C%B0%E5%9D%80%E5%92%8C%E5%AF%B9%E5%BA%94%E7%9A%84%E9%A1%B5%E9%9D%A2%E5%86%85%E5%AE%B9%E6%98%AF%E5%90%A6%E6%94%B9%E5%8F%98%EF%BC%8C%E6%95%B0%E6%8D%AE%E5%A2%9E%E9%87%8F%E7%88%AC%E8%99%AB%E5%8F%AF%E4%BB%A5%E5%88%86%E4%B8%BA"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">1.2.1.3 根据URL地址和对应的页面内容是否改变，数据增量爬虫可以分为</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-3-%E7%88%AC%E8%99%AB%E7%9A%84%E6%B5%81%E7%A8%8B"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.1.3 爬虫的流程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-http%E5%8D%8F%E8%AE%AE"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 http协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1-http%E5%92%8Chttps%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E5%8C%BA%E5%88%AB"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.2.1 http和https的概念和区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2-%E7%88%AC%E8%99%AB%E7%9A%84%E8%AF%B7%E6%B1%82%E5%A4%B4"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.2.2 爬虫的请求头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-3-%E5%93%8D%E5%BA%94%E5%A4%B4"><span class="nav-number">1.2.3.</span> <span class="nav-text">1.2.3 响应头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-4-%E5%B8%B8%E8%A7%81%E7%9A%84%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81"><span class="nav-number">1.2.4.</span> <span class="nav-text">1.2.4 常见的响应状态码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-5-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%90%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="nav-number">1.2.5.</span> <span class="nav-text">1.2.5 浏览器的运行过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-5-1-http%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B"><span class="nav-number">1.2.5.1.</span> <span class="nav-text">1.2.5.1 http请求过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-5-2-%E6%B3%A8%E6%84%8F"><span class="nav-number">1.2.5.2.</span> <span class="nav-text">1.2.5.2 注意</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-request%E6%A8%A1%E5%9D%97"><span class="nav-number">2.</span> <span class="nav-text">2. request模块</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-response%E5%93%8D%E5%BA%94%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 response响应对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-response-text-%E5%92%8C-response-content%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1 response.text 和 response.content的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-%E9%80%9A%E8%BF%87%E5%AF%B9response-content%E8%BF%9B%E8%A1%8Cdecode%EF%BC%8C%E6%9D%A5%E8%A7%A3%E5%86%B3%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2 通过对response.content进行decode，来解决中文乱码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-response%E5%93%8D%E5%BA%94%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7%E6%88%96%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.3.</span> <span class="nav-text">2.1.3 response响应对象的其他常用属性或方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-4-%E5%8F%91%E9%80%81%E5%B8%A6%E5%8F%82%E6%95%B0%E7%9A%84%E8%AF%B7%E6%B1%82"><span class="nav-number">2.1.4.</span> <span class="nav-text">2.1.4 发送带参数的请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-5-cookie"><span class="nav-number">2.1.5.</span> <span class="nav-text">2.1.5 cookie</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-5-1-cookieJar%E5%AF%B9%E8%B1%A1%E8%BD%AC%E5%8C%96%E4%B8%BAcookies%E5%AD%97%E5%85%B8%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.5.1.</span> <span class="nav-text">2.1.5.1 cookieJar对象转化为cookies字典的方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-6-%E8%B6%85%E6%97%B6%E5%8F%82%E6%95%B0timeout%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">2.1.6.</span> <span class="nav-text">2.1.6 超时参数timeout的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-7-%E4%BB%A3%E7%90%86proxies%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">2.1.7.</span> <span class="nav-text">2.1.7 代理proxies的使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E5%8F%91%E9%80%81post%E8%AF%B7%E6%B1%82"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 发送post请求</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E6%9D%A5%E5%88%A9%E7%94%A8request-session%E8%BF%9B%E8%A1%8C%E7%8A%B6%E6%80%81%E4%BF%9D%E6%8C%81"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.3 来利用request-session进行状态保持</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-1-requests-session%E7%9A%84%E4%BD%9C%E7%94%A8%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">2.3.1 requests.session的作用以及应用场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-2-requests-session%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">2.2.1.2.</span> <span class="nav-text">2.3.2 requests.session的使用方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-2-1-GitHub%E7%99%BB%E5%BD%95%E6%A1%88%E4%BE%8B"><span class="nav-number">2.2.1.3.</span> <span class="nav-text">2.3.2.1 GitHub登录案例</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E6%95%B0%E6%8D%AE%E6%8F%90%E5%8F%96"><span class="nav-number">3.</span> <span class="nav-text">3. 数据提取</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E5%93%8D%E5%BA%94%E5%86%85%E5%AE%B9%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">3.0.1.</span> <span class="nav-text">3.1 响应内容的分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E8%AE%A4%E8%AF%86xml%E4%BB%A5%E5%8F%8Ahtml%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">3.0.2.</span> <span class="nav-text">3.2 认识xml以及html的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-1-xml"><span class="nav-number">3.0.2.1.</span> <span class="nav-text">3.2.1 xml</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-2-xml%E5%92%8Chtml%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">3.0.2.2.</span> <span class="nav-text">3.2.2 xml和html的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-jsonpath%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.0.3.</span> <span class="nav-text">3.3 jsonpath模块的使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-lxml%E6%A8%A1%E5%9D%97"><span class="nav-number">3.0.4.</span> <span class="nav-text">3.4 lxml模块</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8F%8D%E7%88%AC%E6%89%8B%E6%AE%B5%E5%92%8C%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF"><span class="nav-number">4.</span> <span class="nav-text">4. 常见的反爬手段和解决思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-js%E5%AE%9A%E4%BD%8D"><span class="nav-number">5.</span> <span class="nav-text">5. js定位</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Scrapy"><span class="nav-number">6.</span> <span class="nav-text">Scrapy</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Scrapy%E5%AD%A6%E4%B9%A0"><span class="nav-number">6.0.1.</span> <span class="nav-text">Scrapy学习</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">❤feiyangHuang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by fy</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">
+   博客-feiyang
+   </div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/qwe/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
