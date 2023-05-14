@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/qwe/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/qwe/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="InnoDB is surprising！," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="InnoDB学习！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="存储引擎之InnoDB学习">
+<meta property="og:url" content="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="hfy up up">
+<meta property="og:description" content="InnoDB学习！">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/innodb-architecture-8-0.png">
+<meta property="og:image" content="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425123031056.png">
+<meta property="og:image" content="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425130446035.png">
+<meta property="og:image" content="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425134913832.png">
+<meta property="og:image" content="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425141102056.png">
+<meta property="og:image" content="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425141220790.png">
+<meta property="og:image" content="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425141612764.png">
+<meta property="og:image" content="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425141845007.png">
+<meta property="og:image" content="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425144503243.png">
+<meta property="og:image" content="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425145815899.png">
+<meta property="og:image" content="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425155152715.png">
+<meta property="og:image" content="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425161325383.png">
+<meta property="og:image" content="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230426112033937.png">
+<meta property="og:image" content="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230426114217867.png">
+<meta property="og:image" content="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230426141205402.png">
+<meta property="og:image" content="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230426144902814.png">
+<meta property="og:image" content="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230426145416707.png">
+<meta property="article:published_time" content="2023-04-24T12:57:32.000Z">
+<meta property="article:modified_time" content="2023-04-26T07:53:01.846Z">
+<meta property="article:author" content="feiyangHuang">
+<meta property="article:tag" content="InnoDB is surprising！">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/innodb-architecture-8-0.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2023/04/24/存储引擎之InnoDB学习/"/>
+
+
+
+
+
+  <title>存储引擎之InnoDB学习 | hfy up up</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">hfy up up</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hfy up up">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">存储引擎之InnoDB学习</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-04-24T20:57:32+08:00">
+                2023-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>InnoDB学习！</p>
+<a id="more"></a>
+
+<h3 id="1-InnoDB架构-内存结构"><a href="#1-InnoDB架构-内存结构" class="headerlink" title="1. InnoDB架构-内存结构"></a>1. InnoDB架构-内存结构</h3><p>​    MySQL从5.5版本开始，默认使用InnoDB存储引擎，它擅长事务处理，具有崩溃恢复特性，在日常开发中使用非常广泛。下面是InnoDB的架构图，左侧是内存结构，右侧为磁盘结构。</p>
+<p><img src="/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/innodb-architecture-8-0.png" alt="InnoDB architecture diagram showing in-memory and on-disk structures. In-memory structures include the buffer pool, adaptive hash index, change buffer, and log buffer. On-disk structures include tablespaces, redo logs, and doublewrite buffer files."></p>
+<h4 id="1-1-Buffer-Pool"><a href="#1-1-Buffer-Pool" class="headerlink" title="1.1.  Buffer Pool"></a>1.1.  Buffer Pool</h4><p>​    缓冲池是主内存中的一个区域，里面可以缓存磁盘上经常操作的真实数据，在执行增删改查操作时，先操作缓冲池中的数据（若缓冲池没有数据，则从磁盘加载并缓存），然后再以一定频率刷新到磁盘，从而减少磁盘IO，加快处理速度。</p>
+<p>​    缓冲池以Page为单位，底层采用链表数据结构管理Page。根据状态，将Page分为三类：</p>
+<ul>
+<li>free page：空闲page，未被使用。</li>
+<li>clean page：被使用page，数据没有被修改过。</li>
+<li>dirty page： 脏页，被使用page，数据被修改过，页中数据与磁盘产生了不一致。</li>
+</ul>
+<h4 id="1-2-Change-Buffer"><a href="#1-2-Change-Buffer" class="headerlink" title="1.2. Change Buffer"></a>1.2. Change Buffer</h4><pre><code> 更改缓冲区（针对于非唯一二级索引页，唯一索引和主键索引不会），在指定DML语句时，如果这些数据Page没有在Buffer Pool中，不会直接操作磁盘，而会将数据变更存在更改缓冲区Change Buffer中，在未来数据被读取时，再将数据合并恢复到Buffer Pool中，再将合并后的数据刷新到磁盘中。</code></pre>
+<p><img src="/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425123031056.png" alt="image-20230425123031056"></p>
+<blockquote>
+<p>Change Buffer的意义</p>
+</blockquote>
+<p>​    与聚簇索引不同，二级索引通常是非唯一的，并且以相对随机的顺序插入二级索引。同样，删除和更新可能会影响索引树中不相邻的二级索引页，如果每一次都操作磁盘，会造成大量的磁盘IO。有了ChangeBuffer之后，我们可以在缓冲池中进行合并处理，减少磁盘IO</p>
+<h4 id="1-3-Adaptive-Hash-Index"><a href="#1-3-Adaptive-Hash-Index" class="headerlink" title="1.3. Adaptive Hash Index"></a>1.3. Adaptive Hash Index</h4><p>​    自适应hash索引，用于优化对Buffer Pool数据的查询。InnoDB存储引擎会监控对表上各索引页的查询，如果观察到hash索引可以提升速度，则建立hash索引，称为自适应hash索引。</p>
+<p><strong>自适应哈希索引，无需人工干预，是系统根据情况自动完成的。</strong></p>
+<p>参数： adaptive_hash_index</p>
+<p>查看是否默认开启</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> show variables like <span class="string">&#x27;%hash_index%&#x27;</span>;</span></span><br><span class="line">+----------------------------------+-------+</span><br><span class="line">| Variable_name                    | Value |</span><br><span class="line">+----------------------------------+-------+</span><br><span class="line">| innodb_adaptive_hash_index       | ON    |</span><br><span class="line">| innodb_adaptive_hash_index_parts | 8     |</span><br><span class="line">+----------------------------------+-------+</span><br><span class="line">2 rows in set, 1 warning (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-4-Log-Buffer"><a href="#1-4-Log-Buffer" class="headerlink" title="1.4. Log Buffer"></a>1.4. Log Buffer</h4><p>Log Buffer: 日志缓冲区，用来保存要写入到磁盘中的log日志数据（redo log， undo log），默认大小为16MB，日志缓冲区的日志会定期刷新到磁盘中。如果需要更新、插入或删除许多行的事务，增加日志缓冲区的大小可以节省磁盘IO。</p>
+<p>参数：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">innodb_log_buffer_size: 缓冲区大小</span><br><span class="line">innodb_flush_log_at_trx_commit: 日志刷新到磁盘时机</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看默认大小</span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> show variables like <span class="string">&quot;%log_buffer_size%&quot;</span>;</span></span><br><span class="line">+------------------------+---------+</span><br><span class="line">| Variable_name          | Value   |</span><br><span class="line">+------------------------+---------+</span><br><span class="line">| innodb_log_buffer_size | 1048576 |</span><br><span class="line">+------------------------+---------+</span><br><span class="line">1 row in set, 1 warning (0.00 sec)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看日志刷新到磁盘的时机</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 1：日志在每次事务提交时写入并刷新到磁盘</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 0：每秒将日志写入并刷新到磁盘一次</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 2：日志在每次事务提交后写入，并每秒刷新到磁盘一次</span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> show variables like <span class="string">&quot;%flush_log%&quot;</span>;</span></span><br><span class="line">+--------------------------------+-------+</span><br><span class="line">| Variable_name                  | Value |</span><br><span class="line">+--------------------------------+-------+</span><br><span class="line">| innodb_flush_log_at_timeout    | 1     |</span><br><span class="line">| innodb_flush_log_at_trx_commit | 1     |</span><br><span class="line">+--------------------------------+-------+</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-InnoDB的磁盘架构"><a href="#2-InnoDB的磁盘架构" class="headerlink" title="2. InnoDB的磁盘架构"></a>2. InnoDB的磁盘架构</h3><img src="/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425130446035.png" alt="image-20230425130446035" style="zoom: 50%;">
+
+<h4 id="2-1-System-TableSpace"><a href="#2-1-System-TableSpace" class="headerlink" title="2.1. System TableSpace"></a>2.1. System TableSpace</h4><p>​    系统表空间是更改缓冲区的存储区域。如果表是在系统表空间而不是每个表文件或通用表空间中创建的，它也可能包含表和索引数据。(在MySQL 5.x版本中还包含InnoDB数据字典、undolog等，8.x主要就是change buffer区域了)</p>
+<p>​    参数：innodb_data_file_path</p>
+<p>​    查看系统表空间存放地址</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> show variables like <span class="string">&quot;%data_file_path%&quot;</span>;</span></span><br><span class="line">+----------------------------+------------------------+</span><br><span class="line">| Variable_name              | Value                  |</span><br><span class="line">+----------------------------+------------------------+</span><br><span class="line">| innodb_data_file_path      | ibdata1:12M:autoextend |</span><br><span class="line">| innodb_temp_data_file_path | ibtmp1:12M:autoextend  |</span><br><span class="line">+----------------------------+------------------------+</span><br><span class="line">2 rows in set, 1 warning (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-File-Per-Table-Tablespaces"><a href="#2-2-File-Per-Table-Tablespaces" class="headerlink" title="2.2. File-Per-Table Tablespaces"></a>2.2. File-Per-Table Tablespaces</h4><p>​    每个表的文件表空间包含单个InnoDB表的数据和索引，并存储在文件系统上的单个数据文件中。</p>
+<p>​    参数：innodb_file_per_table</p>
+<p>​    默认为开着的，每一张表都会生成对应的表空间文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; show variables like &quot;%file_per_table%&quot;;</span><br><span class="line">+-----------------------+-------+</span><br><span class="line">| Variable_name         | Value |</span><br><span class="line">+-----------------------+-------+</span><br><span class="line">| innodb_file_per_table | ON    |</span><br><span class="line">+-----------------------+-------+</span><br><span class="line">1 row in set, 1 warning (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-3-General-Tablespaces"><a href="#2-3-General-Tablespaces" class="headerlink" title="2.3. General Tablespaces"></a>2.3. General Tablespaces</h4><p>​    通用表空间，需要通过CREATE TABLESPACE 语法创建通用表空间，在创建表时，可以指定表空间。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLESPACE xxx ADD DATAFILE &#x27;file_name&#x27; ENGINE=&#x27;engine_name&#x27;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> create tablespace ts_fy add datafile <span class="string">&#x27;myfy.ibd&#x27;</span> engine = <span class="string">&#x27;innodb&#x27;</span>;</span></span><br><span class="line">Query OK, 0 rows affected (0.05 sec)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> create table a(id int primary key auto_increment, name varchar(10)) engine=innodb tablespace ts_fy;</span></span><br><span class="line">Query OK, 0 rows affected (0.02 sec)</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-4-Undo-TableSpaces"><a href="#2-4-Undo-TableSpaces" class="headerlink" title="2.4. Undo TableSpaces"></a>2.4. Undo TableSpaces</h4><p>​    撤销表空间，MySQL实例在初始化时会自动创建两个默认的undo表空间（初始大小16M），用于存储undo log日志。</p>
+<h4 id="2-5-Temporary-Tablespaces"><a href="#2-5-Temporary-Tablespaces" class="headerlink" title="2.5. Temporary Tablespaces"></a>2.5. Temporary Tablespaces</h4><p>​    InnoDB使用会话临时表空间和全局临时表空间。存储用户创建的临时表等数据。</p>
+<h4 id="2-6-Doublewrite-Buffer-Files"><a href="#2-6-Doublewrite-Buffer-Files" class="headerlink" title="2.6. Doublewrite Buffer Files"></a>2.6. Doublewrite Buffer Files</h4><p>​    双写缓冲区，innoDB引擎将数据页从Buffer Pool刷新到磁盘前，先将数据页写入双写缓冲区文件中，便于系统异常时恢复数据。</p>
+<p>​    <img src="/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425134913832.png" alt="image-20230425134913832"></p>
+<h4 id="2-7-Redo-log"><a href="#2-7-Redo-log" class="headerlink" title="2.7 Redo log"></a>2.7 Redo log</h4><p>​    重做日志，是用来实现事务的持久性。该日志文件由两部分组成：重做日志缓冲(redo log buffer)以及重做日志文件（redo log），前者是在内存中，后者在磁盘中。当事务提交之后会把所有修改信息都会存到该日志中，用于在刷新脏页到磁盘时，发生错误的时候进行数据恢复使用。</p>
+<p>​    以循环的方式写入重做日志文件，涉及两个文件： <img src="/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425141102056.png" alt="image-20230425141102056" style="zoom: 67%;"></p>
+<h3 id="3-后台线程"><a href="#3-后台线程" class="headerlink" title="3. 后台线程"></a>3. 后台线程</h3><img src="/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425141220790.png" alt="image-20230425141220790" style="zoom:67%;">
+
+<h4 id="3-1-Master-Thread"><a href="#3-1-Master-Thread" class="headerlink" title="3.1. Master Thread"></a>3.1. Master Thread</h4><p>​    核心后台线程，负责调度其他线程，还负责将缓冲池中的数据异步刷新到磁盘中，保持数据的一致性，还包括脏页的刷新，合并插入缓存，undo页的回收。</p>
+<h4 id="3-2-IO-Thread"><a href="#3-2-IO-Thread" class="headerlink" title="3.2. IO Thread"></a>3.2. IO Thread</h4><p>在InnoDB存储引擎中大量的AIO来处理IO请求，这样可以极大地提高数据库的性能，而IO Thread主要负责这些IO请求的回调。</p>
+<p><img src="/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425141612764.png" alt="image-20230425141612764"></p>
+<p>查看innodb状态</p>
+<img src="/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425141845007.png" alt="image-20230425141845007" style="zoom:50%;">
+
+<p>从状态中可以看到</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">FILE I/O</span><br><span class="line">--------</span><br><span class="line">I/O thread 0 state: wait Windows aio (insert buffer thread)</span><br><span class="line">I/O thread 1 state: wait Windows aio (log thread)</span><br><span class="line">I/O thread 2 state: wait Windows aio (read thread)</span><br><span class="line">I/O thread 3 state: wait Windows aio (read thread)</span><br><span class="line">I/O thread 4 state: wait Windows aio (read thread)</span><br><span class="line">I/O thread 5 state: wait Windows aio (read thread)</span><br><span class="line">I/O thread 6 state: wait Windows aio (write thread)</span><br><span class="line">I/O thread 7 state: wait Windows aio (write thread)</span><br><span class="line">I/O thread 8 state: wait Windows aio (write thread)</span><br><span class="line">I/O thread 9 state: wait Windows aio (write thread)</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-3-Purge-Thread"><a href="#3-3-Purge-Thread" class="headerlink" title="3.3. Purge Thread"></a>3.3. Purge Thread</h4><p>​    主要负责用于回收事务已经提交的undo log，在事务提交之后，undo log可能不用了，就用它来回收。</p>
+<h4 id="3-4-Page-Cleaner-Thread"><a href="#3-4-Page-Cleaner-Thread" class="headerlink" title="3.4. Page Cleaner Thread"></a>3.4. Page Cleaner Thread</h4><p>​    协助Master Thread 刷新脏页到磁盘的线程，它可以减轻Master Thread的工作压力，减少阻塞。</p>
+<h3 id="4-事务原理"><a href="#4-事务原理" class="headerlink" title="4. 事务原理"></a>4. 事务原理</h3><p>​    <strong>事务</strong>：事务是一组操作的集合，它是一个不可分割的工作单位，事务会把所有的操作作为一个整体一起向系统提交或撤销操作请求，即这些操作要么同时成功，要么同时失败。</p>
+<blockquote>
+<p>事务的特性</p>
+</blockquote>
+<ul>
+<li>原子性（Atomicity）: 事务是不可分割的最小操作单元，要么全部成功，要么全部失败。</li>
+<li>一致性（Consistency）:事务完成时，必须所有的数据都保持一致状态。</li>
+<li>隔离性（Isolation）：数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境中运行。<ul>
+<li>读取未提交（脏读，读取未提交的事务，解决脏读 锁行）</li>
+<li>读取已提交（可避免脏读，事务只有提交了才能读到 解决幻读 锁表）</li>
+<li>可重复读（不可避免幻读，通过MVCC控制，MySQL的默认隔离级别）</li>
+<li>串行化（强制要求事务排序，效率低，产生大量的Timeout和锁竞争现象）</li>
+</ul>
+</li>
+<li>持久性（Durability）：事务一旦提交或回滚，它对数据库中数据的改变就是永久的。</li>
+</ul>
+<blockquote>
+<p>事务的原理</p>
+</blockquote>
+<p><img src="/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425144503243.png" alt="image-20230425144503243"></p>
+<h4 id="4-1-redo-log"><a href="#4-1-redo-log" class="headerlink" title="4.1. redo log"></a>4.1. redo log</h4><p>​    redo log 保证事务的持久性。</p>
+<p>​    重做日志，记录的是事务提交时数据页的物理修改，是用来实现事物的持久性。</p>
+<p>​    该日志文件由两部分组成：重做日志缓冲（redo log buffer）以及重做日志文件（redo log file），前者是在内存中，后者在磁盘中。当事务提交之后会把所有的修改信息都存在该日志文件中，用于在刷新页到磁盘，发生错误时，进行数据恢复使用。</p>
+<p>​    当事务进行增删改操作的时候，首先会被记录在redo log buffer中，当事务提交的时候，将redo log buffer 刷新到磁盘redo log file中，当脏页提交失败的时候可以从redo log file中恢复，从而可以保证持久性。（WAL技术，Write-Ahead Logging技术），日志是顺序写入，追加的。buffer pool是随机操作页，是随机磁盘io。</p>
+<p>​    redo log是保证脏页刷新到磁盘出现错误的时候进行数据恢复。</p>
+<p><img src="/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425145815899.png" alt="image-20230425145815899"></p>
+<h4 id="4-2-undo-log"><a href="#4-2-undo-log" class="headerlink" title="4.2. undo log"></a>4.2. undo log</h4><p>​    undo log 保证事务的原子性</p>
+<p>​    回滚日志，用于记录数据被修改前的信息，作用包括两个：提供回滚和MVCC(多版本并发控制)</p>
+<p>​    undo log和redo log记录物理日志（比如某个数据的内容是啥样的）不一样，它是逻辑日志。可以认为当delete一条记录的时候，undo log中会记录一条对应的insert记录，反之亦然，当update一条记录的时候，它记录一条对应相反的update记录。当执行rollback时，就可以从undo log中的逻辑记录读取到相应的内容并进行回滚。</p>
+<p>​    undo log销毁：undo log在事务执行时产生，事务提交时，并不会立即删除undo log，因为这些日志还有可能用于MVCC。</p>
+<p>​    undo log存储：undo log采用段的方式进行管理和存储，存放在前面介绍的rollback segment回滚段中，内部包含1024个undo log segment。</p>
+<h3 id="5-MVCC"><a href="#5-MVCC" class="headerlink" title="5. MVCC"></a>5. MVCC</h3><h4 id="5-1-MVCC的基本概念"><a href="#5-1-MVCC的基本概念" class="headerlink" title="5.1 MVCC的基本概念"></a>5.1 MVCC的基本概念</h4><ul>
+<li>​    <strong>当前读：</strong>读取的是记录的最新版本，读取的时候还要保证其他并发事务不能修改当前记录，会对读取的记录进行加锁。对于我们日常的操作，如：select … lock in share mode(共享锁)，select…for update、update、insert、delete（排他锁）都是一种当前读。</li>
+</ul>
+<p><img src="/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425155152715.png" alt="image-20230425155152715"></p>
+<ul>
+<li><strong>快照读</strong>：简单的select(不加锁)就是快照读，快照读读取的是记录的可见版本，有可能是历史数据，不加锁，是非阻塞读。<ul>
+<li>Read Commited：每次select，都生成一个快照读。</li>
+<li>Repeadable Read：开启事务后第一个select语句才是快照读的地方，后续再查的时候使用的是第一个快照。</li>
+<li>Serializable：快照读会退化为当前读。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>RR模式出现幻读的场景</p>
+</blockquote>
+<p>如果RR模式，如果事务1先select，然后事务2insert，事务1update事务2insert的内容，再select内容会多，出现幻读。</p>
+<p>mysql InnoDB 引擎默认可重复读。</p>
+<p>普通的select 使用的快照读，当前读针对的delete,insert,update.</p>
+<p>针对快照读，是通过 MVCC 方式解决了幻读.</p>
+<p>针对当前读，是通过next-key lock（记录锁+间隙锁）方式解决了幻读。</p>
+<p>上面是一般场景解决幻读问题，特殊情况下，幻读还存在。</p>
+<p>事务 A 先开始快照读  -》事务B插入一条语句后提交  -》事务A更新了刚才事务 B 插入的记录。  在查询时就能查到事务B插入的数据。产生幻读，即最开始说的模式。<br>事务 A 先开始快照读  -》事务B插入一条语句后提交  -》事务A使用当前读select * from X for update。  就能查到事务B插入的数据。产生幻读。</p>
+<blockquote>
+<p>MVCC</p>
+</blockquote>
+<p>​    全称Muti-Version Concurrency Control，多版本并发控制。指维护一个数据的多个版本，使得读写操作没有冲突，快照读为MySQL实现MVCC提供了一个非阻塞读功能。MVCC的具体实现，还需要依赖数据库记录中的三个隐式字段，undo log日志，readView</p>
+<h4 id="5-2-隐式字段"><a href="#5-2-隐式字段" class="headerlink" title="5.2. 隐式字段"></a>5.2. 隐式字段</h4><p>​    <img src="/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230425161325383.png" alt="image-20230425161325383"></p>
+<p>​    **DB_TRX_ID: **最近修改事务ID，记录插入这条记录或最后一次修改该记录的事务ID。</p>
+<p>​    **DB_ROLL_PTR: **回顾指针，指向这条记录的上一个版本，用于配合undo log，指向上一个版本。</p>
+<p>​    <strong>DB_ROW_ID:</strong> 隐藏主键，如果表结构没有指定主键，将会生成该隐藏字段。</p>
+<h4 id="5-3-undo-log"><a href="#5-3-undo-log" class="headerlink" title="5.3 undo log"></a>5.3 undo log</h4><p>​    回滚日志，在insert，update，delete的时候产生的便于回滚的日志。</p>
+<p>​    当insert的时候，产生的undo log日志只需要在回滚时需要，在事务提交后，可被立即删除。</p>
+<p>​    而update，delete的时候，产生的undo log日志不仅在回滚时需要，在快照读时也需要，不会被立即删除。</p>
+<blockquote>
+<p>undo log 版本链</p>
+</blockquote>
+<p><img src="/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230426112033937.png" alt="image-20230426112033937"></p>
+<p><img src="/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230426114217867.png" alt="image-20230426114217867"></p>
+<p>​    不同事务或相同事务对同一条记录进行修改，会导致该记录的undolog生成一条记录版本链，链表的头部是最新的旧版本，链表尾部是最早的旧版本。</p>
+<h4 id="5-4-ReadView"><a href="#5-4-ReadView" class="headerlink" title="5.4 ReadView"></a>5.4 ReadView</h4><p>​    ReadView(读视图)是快照读SQL执行时MVCC提取数据的依据，记录并维护当前活跃的事务（未提交的）id。</p>
+<p>​    ReadView中包含了四个核心字段：</p>
+<ul>
+<li>m_ids: 当前活跃的事务的ID集合</li>
+<li>min_trx_id: 最小活跃事务ID</li>
+<li>max_trx_id: 预分配事务ID, 当前最大事务ID+1(因为事务ID是自增的)</li>
+<li>creator_trx_id: ReadView创建者的事务ID</li>
+</ul>
+<p><img src="/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230426141205402.png" alt="image-20230426141205402"></p>
+<p>​    不同的隔离级别，生成ReadView的时机不同:</p>
+<ul>
+<li>READ COMMITTED: 在事务中每一次执行快照读时生成ReadView</li>
+<li>REPEATABLE READ: 仅在事务中第一次执行快照读时生成ReadView，后续复用该ReadView。</li>
+</ul>
+<blockquote>
+<p>RC模式下分析</p>
+</blockquote>
+<p><img src="/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230426144902814.png" alt="image-20230426144902814"></p>
+<p><img src="/2023/04/24/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8BInnoDB%E5%AD%A6%E4%B9%A0/image-20230426145416707.png" alt="image-20230426145416707"></p>
+<p>​    第二次快照读一样的套路读到003</p>
+<blockquote>
+<p>RR模式下</p>
+</blockquote>
+<p>​    RR级别下，仅在事务中第一次执行快照读时生成ReadView，后续复用该ReadView</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/InnoDB-is-surprising%EF%BC%81/" rel="tag"># InnoDB is surprising！</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2023/04/11/netty%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="next" title="netty学习笔记">
+                <i class="fa fa-chevron-left"></i> netty学习笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2023/05/06/KMP/" rel="prev" title="KMP">
+                KMP <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-InnoDB%E6%9E%B6%E6%9E%84-%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">1. InnoDB架构-内存结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-Buffer-Pool"><span class="nav-number">1.1.</span> <span class="nav-text">1.1.  Buffer Pool</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-Change-Buffer"><span class="nav-number">1.2.</span> <span class="nav-text">1.2. Change Buffer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-Adaptive-Hash-Index"><span class="nav-number">1.3.</span> <span class="nav-text">1.3. Adaptive Hash Index</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-Log-Buffer"><span class="nav-number">1.4.</span> <span class="nav-text">1.4. Log Buffer</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-InnoDB%E7%9A%84%E7%A3%81%E7%9B%98%E6%9E%B6%E6%9E%84"><span class="nav-number">2.</span> <span class="nav-text">2. InnoDB的磁盘架构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-System-TableSpace"><span class="nav-number">2.1.</span> <span class="nav-text">2.1. System TableSpace</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-File-Per-Table-Tablespaces"><span class="nav-number">2.2.</span> <span class="nav-text">2.2. File-Per-Table Tablespaces</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-General-Tablespaces"><span class="nav-number">2.3.</span> <span class="nav-text">2.3. General Tablespaces</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-Undo-TableSpaces"><span class="nav-number">2.4.</span> <span class="nav-text">2.4. Undo TableSpaces</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-Temporary-Tablespaces"><span class="nav-number">2.5.</span> <span class="nav-text">2.5. Temporary Tablespaces</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6-Doublewrite-Buffer-Files"><span class="nav-number">2.6.</span> <span class="nav-text">2.6. Doublewrite Buffer Files</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-7-Redo-log"><span class="nav-number">2.7.</span> <span class="nav-text">2.7 Redo log</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%90%8E%E5%8F%B0%E7%BA%BF%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">3. 后台线程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-Master-Thread"><span class="nav-number">3.1.</span> <span class="nav-text">3.1. Master Thread</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-IO-Thread"><span class="nav-number">3.2.</span> <span class="nav-text">3.2. IO Thread</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-Purge-Thread"><span class="nav-number">3.3.</span> <span class="nav-text">3.3. Purge Thread</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-Page-Cleaner-Thread"><span class="nav-number">3.4.</span> <span class="nav-text">3.4. Page Cleaner Thread</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E4%BA%8B%E5%8A%A1%E5%8E%9F%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">4. 事务原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-redo-log"><span class="nav-number">4.1.</span> <span class="nav-text">4.1. redo log</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-undo-log"><span class="nav-number">4.2.</span> <span class="nav-text">4.2. undo log</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-MVCC"><span class="nav-number">5.</span> <span class="nav-text">5. MVCC</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-MVCC%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 MVCC的基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-%E9%9A%90%E5%BC%8F%E5%AD%97%E6%AE%B5"><span class="nav-number">5.2.</span> <span class="nav-text">5.2. 隐式字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-undo-log"><span class="nav-number">5.3.</span> <span class="nav-text">5.3 undo log</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-ReadView"><span class="nav-number">5.4.</span> <span class="nav-text">5.4 ReadView</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">❤feiyangHuang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by fy</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">
+   博客-feiyang
+   </div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/qwe/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/qwe/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
